@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "danhMucFileUploadKyso": {
+      "home": {
+        "title": "Danh Muc File Upload Kysos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc File Upload Kyso",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc File Upload Kyso",
+        "notFound": "No Danh Muc File Upload Kysos found"
+      },
+      "created": "Một Danh Muc File Upload Kyso mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc File Upload Kyso cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc File Upload Kyso đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc File Upload Kyso {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc File Upload Kyso"
+      },
+      "id": "ID",
+      "idFile": "Id File",
+      "tenFile": "Ten File",
+      "fileUrl": "File Url",
+      "fileSignedUrl": "File Signed Url",
+      "idCanBo": "Id Can Bo",
+      "idDonVi": "Id Don Vi",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "trangThai": "Trang Thai",
+      "filePdfUrl": "File Pdf Url"
+    }
+  }
+}

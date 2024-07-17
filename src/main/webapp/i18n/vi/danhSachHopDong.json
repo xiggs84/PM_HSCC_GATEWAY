@@ -1,0 +1,50 @@
+{
+  "gatewayApp": {
+    "danhSachHopDong": {
+      "home": {
+        "title": "Danh Sach Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Sach Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Sach Hop Dong",
+        "notFound": "No Danh Sach Hop Dongs found"
+      },
+      "created": "Một Danh Sach Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Sach Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Sach Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Sach Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Sach Hop Dong"
+      },
+      "id": "ID",
+      "ngayLapHd": "Ngay Lap Hd",
+      "nguoiLapHd": "Nguoi Lap Hd",
+      "trangThai": "Trang Thai",
+      "idLoaiHd": "Id Loai Hd",
+      "idDonVi": "Id Don Vi",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "srcHopDong": "Src Hop Dong",
+      "soCongChung": "So Cong Chung",
+      "congChungVien": "Cong Chung Vien",
+      "soTienRutTrich": "So Tien Rut Trich",
+      "hdThuCong": "Hd Thu Cong",
+      "trangThaiRutTrich": "Trang Thai Rut Trich",
+      "chuKyNgoaiTruSo": "Chu Ky Ngoai Tru So",
+      "strSearch": "Str Search",
+      "ngayText": "Ngay Text",
+      "ngayRutTrichText": "Ngay Rut Trich Text",
+      "ngayThaoTacRutTrich": "Ngay Thao Tac Rut Trich",
+      "thuLaoCongChung": "Thu Lao Cong Chung",
+      "quyenLaiSt": "Quyen Lai St",
+      "soLaiSt": "So Lai St",
+      "quyenLaiTl": "Quyen Lai Tl",
+      "soLaiTl": "So Lai Tl",
+      "srcKySoPdf": "Src Ky So Pdf",
+      "srcKySoPdfSigned": "Src Ky So Pdf Signed",
+      "idHopDong": "Id Hop Dong",
+      "idSoCongChung": "Id So Cong Chung"
+    }
+  }
+}

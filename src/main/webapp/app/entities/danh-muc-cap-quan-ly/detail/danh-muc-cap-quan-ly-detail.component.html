@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucCapQuanLy()) {
+      <div>
+        <h2 data-cy="danhMucCapQuanLyDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhMucCapQuanLy.detail.title">Danh Muc Cap Quan Ly</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucCapQuanLy()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucCapQuanLy.idCapQl">Id Cap Ql</span></dt>
+          <dd>
+            <span>{{ danhMucCapQuanLy()!.idCapQl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucCapQuanLy.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ danhMucCapQuanLy()!.dienGiai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-cap-quan-ly', danhMucCapQuanLy()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

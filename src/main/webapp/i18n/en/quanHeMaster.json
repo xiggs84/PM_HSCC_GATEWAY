@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "quanHeMaster": {
+      "home": {
+        "title": "Quan He Masters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Quan He Master",
+        "createOrEditLabel": "Create or edit a Quan He Master",
+        "notFound": "No Quan He Masters found"
+      },
+      "created": "A new Quan He Master is created with identifier {{ param }}",
+      "updated": "A Quan He Master is updated with identifier {{ param }}",
+      "deleted": "A Quan He Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Quan He Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Quan He Master"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "idDuongSuQh": "Id Duong Su Qh"
+    }
+  }
+}

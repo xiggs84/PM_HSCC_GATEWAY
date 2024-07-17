@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "logDownloadFileDrive": {
+      "home": {
+        "title": "Log Download File Drives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Log Download File Drive",
+        "createOrEditLabel": "Create or edit a Log Download File Drive",
+        "notFound": "No Log Download File Drives found"
+      },
+      "created": "A new Log Download File Drive is created with identifier {{ param }}",
+      "updated": "A Log Download File Drive is updated with identifier {{ param }}",
+      "deleted": "A Log Download File Drive is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Log Download File Drive {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Download File Drive"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "noiDung": "Noi Dung",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "key": "Key"
+    }
+  }
+}

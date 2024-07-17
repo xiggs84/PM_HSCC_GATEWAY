@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quanHeDuongSu": {
+      "home": {
+        "title": "Quan He Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Quan He Duong Su",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Quan He Duong Su",
+        "notFound": "No Quan He Duong Sus found"
+      },
+      "created": "Một Quan He Duong Su mới được tạo với định danh {{ param }}",
+      "updated": "Một Quan He Duong Su cập nhật với định danh {{ param }}",
+      "deleted": "Một Quan He Duong Su đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Quan He Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Quan He Duong Su"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "idDuongSuQh": "Id Duong Su Qh",
+      "idQuanHe": "Id Quan He",
+      "thongTinQuanHe": "Thong Tin Quan He",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

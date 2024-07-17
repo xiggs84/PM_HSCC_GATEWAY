@@ -1,0 +1,48 @@
+{
+  "gatewayApp": {
+    "cauHinhMauHopDong": {
+      "home": {
+        "title": "Cau Hinh Mau Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Cau Hinh Mau Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Cau Hinh Mau Hop Dong",
+        "notFound": "No Cau Hinh Mau Hop Dongs found"
+      },
+      "created": "Một Cau Hinh Mau Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Cau Hinh Mau Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Cau Hinh Mau Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Cau Hinh Mau Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Mau Hop Dong"
+      },
+      "id": "ID",
+      "idLoaiHd": "Id Loai Hd",
+      "dienGiai": "Dien Giai",
+      "idVaiTro1": "Id Vai Tro 1",
+      "idVaiTro2": "Id Vai Tro 2",
+      "fileHopDong": "File Hop Dong",
+      "srcHopDong": "Src Hop Dong",
+      "dieuKhoan": "Dieu Khoan",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "srcLoiChung": "Src Loi Chung",
+      "idNhom": "Id Nhom",
+      "fileLoiChung": "File Loi Chung",
+      "chuyenTaiSan": "Chuyen Tai San",
+      "loaiSuaDoi": "Loai Sua Doi",
+      "loaiHuyBo": "Loai Huy Bo",
+      "trangThaiDuyet": "Trang Thai Duyet",
+      "idPhanLoaiHopDong": "Id Phan Loai Hop Dong",
+      "srcCv": "Src Cv",
+      "srcTb": "Src Tb",
+      "srcTtpc": "Src Ttpc",
+      "idVaiTro3": "Id Vai Tro 3",
+      "idLoaiHD": "Id Loai HD",
+      "idPhanLoaiHD": "Id Phan Loai HD"
+    }
+  }
+}

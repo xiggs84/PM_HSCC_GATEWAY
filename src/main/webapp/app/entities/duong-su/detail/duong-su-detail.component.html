@@ -1,0 +1,102 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (duongSu()) {
+      <div>
+        <h2 data-cy="duongSuDetailsHeading"><span jhiTranslate="gatewayApp.duongSu.detail.title">Duong Su</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ duongSu()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ duongSu()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.tenDuongSu">Ten Duong Su</span></dt>
+          <dd>
+            <span>{{ duongSu()!.tenDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.diaChi">Dia Chi</span></dt>
+          <dd>
+            <span>{{ duongSu()!.diaChi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ duongSu()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.thongTinDs">Thong Tin Ds</span></dt>
+          <dd>
+            <span>{{ duongSu()!.thongTinDs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ duongSu()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ duongSu()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idDsGoc">Id Ds Goc</span></dt>
+          <dd>
+            <span>{{ duongSu()!.idDsGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ duongSu()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ duongSu()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.strSearch">Str Search</span></dt>
+          <dd>
+            <span>{{ duongSu()!.strSearch }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.soGiayTo">So Giay To</span></dt>
+          <dd>
+            <span>{{ duongSu()!.soGiayTo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idLoaiNganChan">Id Loai Ngan Chan</span></dt>
+          <dd>
+            <span>{{ duongSu()!.idLoaiNganChan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.syncStatus">Sync Status</span></dt>
+          <dd>
+            <span>{{ duongSu()!.syncStatus }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idTinhTrang">Id Tinh Trang</span></dt>
+          <dd>
+            @if (duongSu()!.idTinhTrang) {
+              <div>
+                <a [routerLink]="['/danh-muc-tinh-trang-hon-nhan', duongSu()!.idTinhTrang?.id, 'view']">{{ duongSu()!.idTinhTrang?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSu.idLoaiDs">Id Loai Ds</span></dt>
+          <dd>
+            @if (duongSu()!.idLoaiDs) {
+              <div>
+                <a [routerLink]="['/danh-muc-loai-duong-su', duongSu()!.idLoaiDs?.id, 'view']">{{ duongSu()!.idLoaiDs?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/duong-su', duongSu()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (hdMasterCoCcv()) {
+      <div>
+        <h2 data-cy="hdMasterCoCcvDetailsHeading"><span jhiTranslate="gatewayApp.hdMasterCoCcv.detail.title">Hd Master Co Ccv</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdMasterCoCcv.repRefUnique">Rep Ref Unique</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.repRefUnique }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdMasterCoCcv.persCode">Pers Code</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.persCode }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdMasterCoCcv.ldUnique">Ld Unique</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.ldUnique }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdMasterCoCcv.tenCanBo">Ten Can Bo</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.tenCanBo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdMasterCoCcv.idCanBo">Id Can Bo</span></dt>
+          <dd>
+            <span>{{ hdMasterCoCcv()!.idCanBo }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/hd-master-co-ccv', hdMasterCoCcv()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

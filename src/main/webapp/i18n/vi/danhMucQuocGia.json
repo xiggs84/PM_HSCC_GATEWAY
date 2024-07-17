@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucQuocGia": {
+      "home": {
+        "title": "Danh Muc Quoc Gias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Quoc Gia",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Quoc Gia",
+        "notFound": "No Danh Muc Quoc Gias found"
+      },
+      "created": "Một Danh Muc Quoc Gia mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Quoc Gia cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Quoc Gia đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Quoc Gia {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Quoc Gia"
+      },
+      "id": "ID",
+      "idQuocGia": "Id Quoc Gia",
+      "tenQuocGia": "Ten Quoc Gia",
+      "tenTiengAnh": "Ten Tieng Anh"
+    }
+  }
+}

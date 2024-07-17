@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20240717024713"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idFile",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fileUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fileSignedUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idCanBo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "filePdfUrl",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucFileUploadKyso",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

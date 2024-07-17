@@ -1,0 +1,102 @@
+<div>
+  <h2 id="page-heading" data-cy="MenuQuyenHeading">
+    <span jhiTranslate="gatewayApp.menuQuyen.home.title">Menu Quyens</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.menuQuyen.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-menu-quyen"
+        [routerLink]="['/menu-quyen/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.menuQuyen.home.createLabel">Thêm mới một Menu Quyen</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (menuQuyens?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.menuQuyen.home.notFound">No Menu Quyens found</span>
+    </div>
+  }
+
+  @if (menuQuyens && menuQuyens.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idQuyen">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.menuQuyen.idQuyen">Id Quyen</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.menuQuyen.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="listMenu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.menuQuyen.listMenu">List Menu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (menuQuyen of menuQuyens; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/menu-quyen', menuQuyen.id, 'view']">{{ menuQuyen.id }}</a>
+              </td>
+              <td>{{ menuQuyen.idQuyen }}</td>
+              <td>{{ menuQuyen.idDonVi }}</td>
+              <td>{{ menuQuyen.listMenu }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/menu-quyen', menuQuyen.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/menu-quyen', menuQuyen.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(menuQuyen)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

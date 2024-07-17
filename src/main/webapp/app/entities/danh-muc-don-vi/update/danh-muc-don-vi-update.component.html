@@ -1,0 +1,347 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danh-muc-don-vi-heading"
+        data-cy="DanhMucDonViCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhMucDonVi.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danh Muc Don Vi
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhMucDonVi.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.danhMucDonVi.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenDonVi" jhiTranslate="gatewayApp.danhMucDonVi.tenDonVi">Ten Don Vi</label>
+          <input type="text" class="form-control" name="tenDonVi" id="field_tenDonVi" data-cy="tenDonVi" formControlName="tenDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_diaChi" jhiTranslate="gatewayApp.danhMucDonVi.diaChi">Dia Chi</label>
+          <input type="text" class="form-control" name="diaChi" id="field_diaChi" data-cy="diaChi" formControlName="diaChi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiDaiDien" jhiTranslate="gatewayApp.danhMucDonVi.nguoiDaiDien">Nguoi Dai Dien</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nguoiDaiDien"
+            id="field_nguoiDaiDien"
+            data-cy="nguoiDaiDien"
+            formControlName="nguoiDaiDien"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soDienThoai" jhiTranslate="gatewayApp.danhMucDonVi.soDienThoai">So Dien Thoai</label>
+          <input
+            type="text"
+            class="form-control"
+            name="soDienThoai"
+            id="field_soDienThoai"
+            data-cy="soDienThoai"
+            formControlName="soDienThoai"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonViQl" jhiTranslate="gatewayApp.danhMucDonVi.idDonViQl">Id Don Vi Ql</label>
+          <input type="number" class="form-control" name="idDonViQl" id="field_idDonViQl" data-cy="idDonViQl" formControlName="idDonViQl" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiDonVi" jhiTranslate="gatewayApp.danhMucDonVi.loaiDonVi">Loai Don Vi</label>
+          <input type="number" class="form-control" name="loaiDonVi" id="field_loaiDonVi" data-cy="loaiDonVi" formControlName="loaiDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayKhaiBao" jhiTranslate="gatewayApp.danhMucDonVi.ngayKhaiBao">Ngay Khai Bao</label>
+          <div class="input-group">
+            <input
+              id="field_ngayKhaiBao"
+              data-cy="ngayKhaiBao"
+              type="text"
+              class="form-control"
+              name="ngayKhaiBao"
+              ngbDatepicker
+              #ngayKhaiBaoDp="ngbDatepicker"
+              formControlName="ngayKhaiBao"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayKhaiBaoDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhMucDonVi.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soNha" jhiTranslate="gatewayApp.danhMucDonVi.soNha">So Nha</label>
+          <input type="text" class="form-control" name="soNha" id="field_soNha" data-cy="soNha" formControlName="soNha" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maSoThue" jhiTranslate="gatewayApp.danhMucDonVi.maSoThue">Ma So Thue</label>
+          <input type="text" class="form-control" name="maSoThue" id="field_maSoThue" data-cy="maSoThue" formControlName="maSoThue" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCapQl" jhiTranslate="gatewayApp.danhMucDonVi.idCapQl">Id Cap Ql</label>
+          <input type="number" class="form-control" name="idCapQl" id="field_idCapQl" data-cy="idCapQl" formControlName="idCapQl" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiNhiemVu" jhiTranslate="gatewayApp.danhMucDonVi.loaiNhiemVu">Loai Nhiem Vu</label>
+          <input
+            type="number"
+            class="form-control"
+            name="loaiNhiemVu"
+            id="field_loaiNhiemVu"
+            data-cy="loaiNhiemVu"
+            formControlName="loaiNhiemVu"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hoaDonDt" jhiTranslate="gatewayApp.danhMucDonVi.hoaDonDt">Hoa Don Dt</label>
+          <input type="number" class="form-control" name="hoaDonDt" id="field_hoaDonDt" data-cy="hoaDonDt" formControlName="hoaDonDt" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maDonViIgate" jhiTranslate="gatewayApp.danhMucDonVi.maDonViIgate">Ma Don Vi Igate</label>
+          <input
+            type="text"
+            class="form-control"
+            name="maDonViIgate"
+            id="field_maDonViIgate"
+            data-cy="maDonViIgate"
+            formControlName="maDonViIgate"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maCoQuanIgate" jhiTranslate="gatewayApp.danhMucDonVi.maCoQuanIgate">Ma Co Quan Igate</label>
+          <input
+            type="text"
+            class="form-control"
+            name="maCoQuanIgate"
+            id="field_maCoQuanIgate"
+            data-cy="maCoQuanIgate"
+            formControlName="maCoQuanIgate"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_capDonVi" jhiTranslate="gatewayApp.danhMucDonVi.capDonVi">Cap Don Vi</label>
+          <input type="number" class="form-control" name="capDonVi" id="field_capDonVi" data-cy="capDonVi" formControlName="capDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_kySo" jhiTranslate="gatewayApp.danhMucDonVi.kySo">Ky So</label>
+          <input type="number" class="form-control" name="kySo" id="field_kySo" data-cy="kySo" formControlName="kySo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_qrScan" jhiTranslate="gatewayApp.danhMucDonVi.qrScan">Qr Scan</label>
+          <input type="number" class="form-control" name="qrScan" id="field_qrScan" data-cy="qrScan" formControlName="qrScan" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_verifyIdCard" jhiTranslate="gatewayApp.danhMucDonVi.verifyIdCard">Verify Id Card</label>
+          <input
+            type="number"
+            class="form-control"
+            name="verifyIdCard"
+            id="field_verifyIdCard"
+            data-cy="verifyIdCard"
+            formControlName="verifyIdCard"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isVerifyFace" jhiTranslate="gatewayApp.danhMucDonVi.isVerifyFace">Is Verify Face</label>
+          <input
+            type="number"
+            class="form-control"
+            name="isVerifyFace"
+            id="field_isVerifyFace"
+            data-cy="isVerifyFace"
+            formControlName="isVerifyFace"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isElastic" jhiTranslate="gatewayApp.danhMucDonVi.isElastic">Is Elastic</label>
+          <input type="number" class="form-control" name="isElastic" id="field_isElastic" data-cy="isElastic" formControlName="isElastic" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_apikeyCccd" jhiTranslate="gatewayApp.danhMucDonVi.apikeyCccd">Apikey Cccd</label>
+          <input
+            type="text"
+            class="form-control"
+            name="apikeyCccd"
+            id="field_apikeyCccd"
+            data-cy="apikeyCccd"
+            formControlName="apikeyCccd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_apikeyFace" jhiTranslate="gatewayApp.danhMucDonVi.apikeyFace">Apikey Face</label>
+          <input
+            type="text"
+            class="form-control"
+            name="apikeyFace"
+            id="field_apikeyFace"
+            data-cy="apikeyFace"
+            formControlName="apikeyFace"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_verifyCodeCccd" jhiTranslate="gatewayApp.danhMucDonVi.verifyCodeCccd"
+            >Verify Code Cccd</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="verifyCodeCccd"
+            id="field_verifyCodeCccd"
+            data-cy="verifyCodeCccd"
+            formControlName="verifyCodeCccd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_usernameElastic" jhiTranslate="gatewayApp.danhMucDonVi.usernameElastic"
+            >Username Elastic</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="usernameElastic"
+            id="field_usernameElastic"
+            data-cy="usernameElastic"
+            formControlName="usernameElastic"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_passwordElastic" jhiTranslate="gatewayApp.danhMucDonVi.passwordElastic"
+            >Password Elastic</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="passwordElastic"
+            id="field_passwordElastic"
+            data-cy="passwordElastic"
+            formControlName="passwordElastic"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idTinh" jhiTranslate="gatewayApp.danhMucDonVi.idTinh">Id Tinh</label>
+          <select
+            class="form-control"
+            id="field_idTinh"
+            data-cy="idTinh"
+            name="idTinh"
+            formControlName="idTinh"
+            [compareWith]="compareDanhMucTinh"
+          >
+            <option [ngValue]="null"></option>
+            @for (danhMucTinhOption of danhMucTinhsSharedCollection; track $index) {
+              <option [ngValue]="danhMucTinhOption">{{ danhMucTinhOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idHuyen" jhiTranslate="gatewayApp.danhMucDonVi.idHuyen">Id Huyen</label>
+          <select
+            class="form-control"
+            id="field_idHuyen"
+            data-cy="idHuyen"
+            name="idHuyen"
+            formControlName="idHuyen"
+            [compareWith]="compareDanhMucHuyen"
+          >
+            <option [ngValue]="null"></option>
+            @for (danhMucHuyenOption of danhMucHuyensSharedCollection; track $index) {
+              <option [ngValue]="danhMucHuyenOption">{{ danhMucHuyenOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idPhuongXa" jhiTranslate="gatewayApp.danhMucDonVi.idPhuongXa">Id Phuong Xa</label>
+          <select
+            class="form-control"
+            id="field_idPhuongXa"
+            data-cy="idPhuongXa"
+            name="idPhuongXa"
+            formControlName="idPhuongXa"
+            [compareWith]="compareDanhMucXa"
+          >
+            <option [ngValue]="null"></option>
+            @for (danhMucXaOption of danhMucXasSharedCollection; track $index) {
+              <option [ngValue]="danhMucXaOption">{{ danhMucXaOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiDv" jhiTranslate="gatewayApp.danhMucDonVi.idLoaiDv">Id Loai Dv</label>
+          <select
+            class="form-control"
+            id="field_idLoaiDv"
+            data-cy="idLoaiDv"
+            name="idLoaiDv"
+            formControlName="idLoaiDv"
+            [compareWith]="compareDanhMucLoaiDonVi"
+          >
+            <option [ngValue]="null"></option>
+            @for (danhMucLoaiDonViOption of danhMucLoaiDonVisSharedCollection; track $index) {
+              <option [ngValue]="danhMucLoaiDonViOption">{{ danhMucLoaiDonViOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

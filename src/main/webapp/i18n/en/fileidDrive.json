@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "fileidDrive": {
+      "home": {
+        "title": "Fileid Drives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Fileid Drive",
+        "createOrEditLabel": "Create or edit a Fileid Drive",
+        "notFound": "No Fileid Drives found"
+      },
+      "created": "A new Fileid Drive is created with identifier {{ param }}",
+      "updated": "A Fileid Drive is updated with identifier {{ param }}",
+      "deleted": "A Fileid Drive is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Fileid Drive {{ id }}?"
+      },
+      "detail": {
+        "title": "Fileid Drive"
+      },
+      "id": "ID",
+      "fileId": "File Id",
+      "trangThai": "Trang Thai",
+      "idHopDong": "Id Hop Dong"
+    }
+  }
+}

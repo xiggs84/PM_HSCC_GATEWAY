@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20240717022613"
+  },
+  "applications": ["gateway", "TaiSan"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDuongSu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idLoaiHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idChungThuc",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "TaiSanDuongSu",
+  "relationships": [
+    {
+      "otherEntityName": "taiSan",
+      "relationshipName": "idTaiSan",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

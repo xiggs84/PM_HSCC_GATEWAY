@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucCapQuanLy": {
+      "home": {
+        "title": "Danh Muc Cap Quan Lies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Cap Quan Ly",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Cap Quan Ly",
+        "notFound": "No Danh Muc Cap Quan Lies found"
+      },
+      "created": "Một Danh Muc Cap Quan Ly mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Cap Quan Ly cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Cap Quan Ly đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Cap Quan Ly {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Cap Quan Ly"
+      },
+      "id": "ID",
+      "idCapQl": "Id Cap Ql",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

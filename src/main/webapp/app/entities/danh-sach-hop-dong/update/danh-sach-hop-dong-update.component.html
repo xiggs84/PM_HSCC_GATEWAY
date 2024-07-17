@@ -1,0 +1,355 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danh-sach-hop-dong-heading"
+        data-cy="DanhSachHopDongCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhSachHopDong.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danh Sach Hop Dong
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhSachHopDong.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayLapHd" jhiTranslate="gatewayApp.danhSachHopDong.ngayLapHd">Ngay Lap Hd</label>
+          <div class="input-group">
+            <input
+              id="field_ngayLapHd"
+              data-cy="ngayLapHd"
+              type="text"
+              class="form-control"
+              name="ngayLapHd"
+              ngbDatepicker
+              #ngayLapHdDp="ngbDatepicker"
+              formControlName="ngayLapHd"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayLapHdDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiLapHd" jhiTranslate="gatewayApp.danhSachHopDong.nguoiLapHd">Nguoi Lap Hd</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiLapHd"
+            id="field_nguoiLapHd"
+            data-cy="nguoiLapHd"
+            formControlName="nguoiLapHd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhSachHopDong.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiHd" jhiTranslate="gatewayApp.danhSachHopDong.idLoaiHd">Id Loai Hd</label>
+          <input type="number" class="form-control" name="idLoaiHd" id="field_idLoaiHd" data-cy="idLoaiHd" formControlName="idLoaiHd" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.danhSachHopDong.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.danhSachHopDong.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.danhSachHopDong.nguoiThaoTac">Nguoi Thao Tac</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcHopDong" jhiTranslate="gatewayApp.danhSachHopDong.srcHopDong">Src Hop Dong</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcHopDong"
+            id="field_srcHopDong"
+            data-cy="srcHopDong"
+            formControlName="srcHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soCongChung" jhiTranslate="gatewayApp.danhSachHopDong.soCongChung">So Cong Chung</label>
+          <input
+            type="text"
+            class="form-control"
+            name="soCongChung"
+            id="field_soCongChung"
+            data-cy="soCongChung"
+            formControlName="soCongChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_congChungVien" jhiTranslate="gatewayApp.danhSachHopDong.congChungVien"
+            >Cong Chung Vien</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="congChungVien"
+            id="field_congChungVien"
+            data-cy="congChungVien"
+            formControlName="congChungVien"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soTienRutTrich" jhiTranslate="gatewayApp.danhSachHopDong.soTienRutTrich"
+            >So Tien Rut Trich</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="soTienRutTrich"
+            id="field_soTienRutTrich"
+            data-cy="soTienRutTrich"
+            formControlName="soTienRutTrich"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hdThuCong" jhiTranslate="gatewayApp.danhSachHopDong.hdThuCong">Hd Thu Cong</label>
+          <input type="number" class="form-control" name="hdThuCong" id="field_hdThuCong" data-cy="hdThuCong" formControlName="hdThuCong" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThaiRutTrich" jhiTranslate="gatewayApp.danhSachHopDong.trangThaiRutTrich"
+            >Trang Thai Rut Trich</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="trangThaiRutTrich"
+            id="field_trangThaiRutTrich"
+            data-cy="trangThaiRutTrich"
+            formControlName="trangThaiRutTrich"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_chuKyNgoaiTruSo" jhiTranslate="gatewayApp.danhSachHopDong.chuKyNgoaiTruSo"
+            >Chu Ky Ngoai Tru So</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="chuKyNgoaiTruSo"
+            id="field_chuKyNgoaiTruSo"
+            data-cy="chuKyNgoaiTruSo"
+            formControlName="chuKyNgoaiTruSo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_strSearch" jhiTranslate="gatewayApp.danhSachHopDong.strSearch">Str Search</label>
+          <input type="text" class="form-control" name="strSearch" id="field_strSearch" data-cy="strSearch" formControlName="strSearch" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayText" jhiTranslate="gatewayApp.danhSachHopDong.ngayText">Ngay Text</label>
+          <input type="text" class="form-control" name="ngayText" id="field_ngayText" data-cy="ngayText" formControlName="ngayText" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayRutTrichText" jhiTranslate="gatewayApp.danhSachHopDong.ngayRutTrichText"
+            >Ngay Rut Trich Text</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="ngayRutTrichText"
+            id="field_ngayRutTrichText"
+            data-cy="ngayRutTrichText"
+            formControlName="ngayRutTrichText"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTacRutTrich" jhiTranslate="gatewayApp.danhSachHopDong.ngayThaoTacRutTrich"
+            >Ngay Thao Tac Rut Trich</label
+          >
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTacRutTrich"
+              data-cy="ngayThaoTacRutTrich"
+              type="text"
+              class="form-control"
+              name="ngayThaoTacRutTrich"
+              ngbDatepicker
+              #ngayThaoTacRutTrichDp="ngbDatepicker"
+              formControlName="ngayThaoTacRutTrich"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacRutTrichDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thuLaoCongChung" jhiTranslate="gatewayApp.danhSachHopDong.thuLaoCongChung"
+            >Thu Lao Cong Chung</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="thuLaoCongChung"
+            id="field_thuLaoCongChung"
+            data-cy="thuLaoCongChung"
+            formControlName="thuLaoCongChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_quyenLaiSt" jhiTranslate="gatewayApp.danhSachHopDong.quyenLaiSt">Quyen Lai St</label>
+          <input
+            type="text"
+            class="form-control"
+            name="quyenLaiSt"
+            id="field_quyenLaiSt"
+            data-cy="quyenLaiSt"
+            formControlName="quyenLaiSt"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soLaiSt" jhiTranslate="gatewayApp.danhSachHopDong.soLaiSt">So Lai St</label>
+          <input type="text" class="form-control" name="soLaiSt" id="field_soLaiSt" data-cy="soLaiSt" formControlName="soLaiSt" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_quyenLaiTl" jhiTranslate="gatewayApp.danhSachHopDong.quyenLaiTl">Quyen Lai Tl</label>
+          <input
+            type="text"
+            class="form-control"
+            name="quyenLaiTl"
+            id="field_quyenLaiTl"
+            data-cy="quyenLaiTl"
+            formControlName="quyenLaiTl"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soLaiTl" jhiTranslate="gatewayApp.danhSachHopDong.soLaiTl">So Lai Tl</label>
+          <input type="text" class="form-control" name="soLaiTl" id="field_soLaiTl" data-cy="soLaiTl" formControlName="soLaiTl" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcKySoPdf" jhiTranslate="gatewayApp.danhSachHopDong.srcKySoPdf">Src Ky So Pdf</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcKySoPdf"
+            id="field_srcKySoPdf"
+            data-cy="srcKySoPdf"
+            formControlName="srcKySoPdf"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcKySoPdfSigned" jhiTranslate="gatewayApp.danhSachHopDong.srcKySoPdfSigned"
+            >Src Ky So Pdf Signed</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="srcKySoPdfSigned"
+            id="field_srcKySoPdfSigned"
+            data-cy="srcKySoPdfSigned"
+            formControlName="srcKySoPdfSigned"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idHopDong" jhiTranslate="gatewayApp.danhSachHopDong.idHopDong">Id Hop Dong</label>
+          <select
+            class="form-control"
+            id="field_idHopDong"
+            data-cy="idHopDong"
+            name="idHopDong"
+            formControlName="idHopDong"
+            [compareWith]="compareHopDongCongChung"
+          >
+            <option [ngValue]="null"></option>
+            @for (hopDongCongChungOption of hopDongCongChungsSharedCollection; track $index) {
+              <option [ngValue]="hopDongCongChungOption">{{ hopDongCongChungOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSoCongChung" jhiTranslate="gatewayApp.danhSachHopDong.idSoCongChung"
+            >Id So Cong Chung</label
+          >
+          <select
+            class="form-control"
+            id="field_idSoCongChung"
+            data-cy="idSoCongChung"
+            name="idSoCongChung"
+            formControlName="idSoCongChung"
+            [compareWith]="compareSoCongChung"
+          >
+            <option [ngValue]="null"></option>
+            @for (soCongChungOption of soCongChungsSharedCollection; track $index) {
+              <option [ngValue]="soCongChungOption">{{ soCongChungOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

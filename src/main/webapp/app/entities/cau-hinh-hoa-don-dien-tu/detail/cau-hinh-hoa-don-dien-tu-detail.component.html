@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cauHinhHoaDonDienTu()) {
+      <div>
+        <h2 data-cy="cauHinhHoaDonDienTuDetailsHeading">
+          <span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.detail.title">Cau Hinh Hoa Don Dien Tu</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.apiUrl">Api Url</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.apiUrl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.account">Account</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.account }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.accPass">Acc Pass</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.accPass }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.username">Username</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.username }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.password">Password</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.password }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.mauSo">Mau So</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.mauSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.kyHieu">Ky Hieu</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.kyHieu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ cauHinhHoaDonDienTu()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cau-hinh-hoa-don-dien-tu', cauHinhHoaDonDienTu()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

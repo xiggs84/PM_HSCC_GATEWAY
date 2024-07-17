@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "quanHeNhanThan": {
+      "home": {
+        "title": "Quan He Nhan Thans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Quan He Nhan Than",
+        "createOrEditLabel": "Create or edit a Quan He Nhan Than",
+        "notFound": "No Quan He Nhan Thans found"
+      },
+      "created": "A new Quan He Nhan Than is created with identifier {{ param }}",
+      "updated": "A Quan He Nhan Than is updated with identifier {{ param }}",
+      "deleted": "A Quan He Nhan Than is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Quan He Nhan Than {{ id }}?"
+      },
+      "detail": {
+        "title": "Quan He Nhan Than"
+      },
+      "id": "ID",
+      "idQuanHe": "Id Quan He",
+      "dienGiai": "Dien Giai",
+      "idQuanHeDoiUng": "Id Quan He Doi Ung",
+      "idGioiTinh": "Id Gioi Tinh"
+    }
+  }
+}

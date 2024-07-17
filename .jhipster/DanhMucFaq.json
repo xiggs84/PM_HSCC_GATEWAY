@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031213"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idCauHoi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "noiDung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cauTraLoi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "loai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucFaq",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

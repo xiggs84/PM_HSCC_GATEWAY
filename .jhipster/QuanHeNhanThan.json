@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717030113"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idQuanHe",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idQuanHeDoiUng",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idGioiTinh",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "QuanHeNhanThan",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "logSearchDsTs": {
+      "home": {
+        "title": "Log Search Ds Ts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Log Search Ds Ts",
+        "createOrEditLabel": "Create or edit a Log Search Ds Ts",
+        "notFound": "No Log Search Ds Ts found"
+      },
+      "created": "A new Log Search Ds Ts is created with identifier {{ param }}",
+      "updated": "A Log Search Ds Ts is updated with identifier {{ param }}",
+      "deleted": "A Log Search Ds Ts is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Log Search Ds Ts {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Search Ds Ts"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "noiDung": "Noi Dung",
+      "slKq": "Sl Kq",
+      "kqSearch": "Kq Search"
+    }
+  }
+}

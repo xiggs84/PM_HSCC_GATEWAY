@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "tinhTrangTaiSan": {
+      "home": {
+        "title": "Tinh Trang Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Tinh Trang Tai San",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tinh Trang Tai San",
+        "notFound": "No Tinh Trang Tai Sans found"
+      },
+      "created": "Một Tinh Trang Tai San mới được tạo với định danh {{ param }}",
+      "updated": "Một Tinh Trang Tai San cập nhật với định danh {{ param }}",
+      "deleted": "Một Tinh Trang Tai San đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tinh Trang Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Tinh Trang Tai San"
+      },
+      "id": "ID",
+      "idTinhTrang": "Id Tinh Trang",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "taiSan": "Tai San"
+    }
+  }
+}

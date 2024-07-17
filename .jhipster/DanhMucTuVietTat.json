@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240717030313"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idVietTat",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tuVietTat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucTuVietTat",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

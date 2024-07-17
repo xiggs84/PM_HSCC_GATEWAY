@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "dmNoiCapGpdkx": {
+      "home": {
+        "title": "Dm Noi Cap Gpdkxes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Dm Noi Cap Gpdkx",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Dm Noi Cap Gpdkx",
+        "notFound": "No Dm Noi Cap Gpdkxes found"
+      },
+      "created": "Một Dm Noi Cap Gpdkx mới được tạo với định danh {{ param }}",
+      "updated": "Một Dm Noi Cap Gpdkx cập nhật với định danh {{ param }}",
+      "deleted": "Một Dm Noi Cap Gpdkx đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Dm Noi Cap Gpdkx {{ id }}?"
+      },
+      "detail": {
+        "title": "Dm Noi Cap Gpdkx"
+      },
+      "id": "ID",
+      "idNoiCap": "Id Noi Cap",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

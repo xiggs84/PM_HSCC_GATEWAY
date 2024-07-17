@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021113"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idMenu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenMenu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idMenuCha",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "path",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "icon",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stt",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idLoaiMenu",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Menu",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

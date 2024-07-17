@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240717025613"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idQuocGia",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenQuocGia",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tenTiengAnh",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucQuocGia",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

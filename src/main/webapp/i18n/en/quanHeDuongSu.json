@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "quanHeDuongSu": {
+      "home": {
+        "title": "Quan He Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Quan He Duong Su",
+        "createOrEditLabel": "Create or edit a Quan He Duong Su",
+        "notFound": "No Quan He Duong Sus found"
+      },
+      "created": "A new Quan He Duong Su is created with identifier {{ param }}",
+      "updated": "A Quan He Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Quan He Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Quan He Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Quan He Duong Su"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "idDuongSuQh": "Id Duong Su Qh",
+      "idQuanHe": "Id Quan He",
+      "thongTinQuanHe": "Thong Tin Quan He",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

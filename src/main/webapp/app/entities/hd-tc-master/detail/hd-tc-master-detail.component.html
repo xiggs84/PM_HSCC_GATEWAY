@@ -1,0 +1,158 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (hdTcMaster()) {
+      <div>
+        <h2 data-cy="hdTcMasterDetailsHeading"><span jhiTranslate="gatewayApp.hdTcMaster.detail.title">Hd Tc Master</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idHopDong">Id Hop Dong</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.ngayLapHd">Ngay Lap Hd</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.ngayLapHd | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.nguoiLapHd">Nguoi Lap Hd</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.nguoiLapHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.thongTinDuongSu">Thong Tin Duong Su</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.thongTinDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.thongTinTaiSan">Thong Tin Tai San</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.thongTinTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.thongTinVanBan">Thong Tin Van Ban</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.thongTinVanBan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idLoaiHd">Id Loai Hd</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idLoaiHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.dieuKhoanHd">Dieu Khoan Hd</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.dieuKhoanHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idHdGoc">Id Hd Goc</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idHdGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.thongTinChuyenNhuong">Thong Tin Chuyen Nhuong</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.thongTinChuyenNhuong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.maHopDong">Ma Hop Dong</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.maHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.srcHopDong">Src Hop Dong</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.srcHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.ngayHen">Ngay Hen</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.ngayHen | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idSoCongChung">Id So Cong Chung</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idSoCongChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.soCongChung">So Cong Chung</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.soCongChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.congChungVien">Cong Chung Vien</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.congChungVien }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.ngayKyHd">Ngay Ky Hd</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.ngayKyHd | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.nguoiRutTrich">Nguoi Rut Trich</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.nguoiRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.soTienRutTrich">So Tien Rut Trich</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.soTienRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.ngayRutTrich">Ngay Rut Trich</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.ngayRutTrich | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.hdThuCong">Hd Thu Cong</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.hdThuCong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.trangThaiRutTrich">Trang Thai Rut Trich</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.trangThaiRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.chuKyNgoaiTruSo">Chu Ky Ngoai Tru So</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.chuKyNgoaiTruSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.strSearch">Str Search</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.strSearch }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.idHdSdHb">Id Hd Sd Hb</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.idHdSdHb }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.srcDmMaster">Src Dm Master</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.srcDmMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hdTcMaster.repRefUnique">Rep Ref Unique</span></dt>
+          <dd>
+            <span>{{ hdTcMaster()!.repRefUnique }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/hd-tc-master', hdTcMaster()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

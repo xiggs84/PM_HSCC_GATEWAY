@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "tinhTrangTaiSan": {
+      "home": {
+        "title": "Tinh Trang Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tinh Trang Tai San",
+        "createOrEditLabel": "Create or edit a Tinh Trang Tai San",
+        "notFound": "No Tinh Trang Tai Sans found"
+      },
+      "created": "A new Tinh Trang Tai San is created with identifier {{ param }}",
+      "updated": "A Tinh Trang Tai San is updated with identifier {{ param }}",
+      "deleted": "A Tinh Trang Tai San is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tinh Trang Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Tinh Trang Tai San"
+      },
+      "id": "ID",
+      "idTinhTrang": "Id Tinh Trang",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "taiSan": "Tai San"
+    }
+  }
+}

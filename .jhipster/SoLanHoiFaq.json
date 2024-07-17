@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240717023313"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idCauHoi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idCanBo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "SoLanHoiFaq",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

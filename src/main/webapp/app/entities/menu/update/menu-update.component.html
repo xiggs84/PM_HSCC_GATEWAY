@@ -1,0 +1,83 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-menu-heading" data-cy="MenuCreateUpdateHeading" jhiTranslate="gatewayApp.menu.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật Menu
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.menu.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idMenu" jhiTranslate="gatewayApp.menu.idMenu">Id Menu</label>
+          <input type="number" class="form-control" name="idMenu" id="field_idMenu" data-cy="idMenu" formControlName="idMenu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenMenu" jhiTranslate="gatewayApp.menu.tenMenu">Ten Menu</label>
+          <input type="text" class="form-control" name="tenMenu" id="field_tenMenu" data-cy="tenMenu" formControlName="tenMenu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idMenuCha" jhiTranslate="gatewayApp.menu.idMenuCha">Id Menu Cha</label>
+          <input type="number" class="form-control" name="idMenuCha" id="field_idMenuCha" data-cy="idMenuCha" formControlName="idMenuCha" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_path" jhiTranslate="gatewayApp.menu.path">Path</label>
+          <input type="text" class="form-control" name="path" id="field_path" data-cy="path" formControlName="path" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_icon" jhiTranslate="gatewayApp.menu.icon">Icon</label>
+          <input type="text" class="form-control" name="icon" id="field_icon" data-cy="icon" formControlName="icon" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_stt" jhiTranslate="gatewayApp.menu.stt">Stt</label>
+          <input type="number" class="form-control" name="stt" id="field_stt" data-cy="stt" formControlName="stt" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.menu.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiMenu" jhiTranslate="gatewayApp.menu.idLoaiMenu">Id Loai Menu</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idLoaiMenu"
+            id="field_idLoaiMenu"
+            data-cy="idLoaiMenu"
+            formControlName="idLoaiMenu"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+{
+  "gatewayApp": {
+    "taiSan": {
+      "home": {
+        "title": "Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tai San",
+        "createOrEditLabel": "Create or edit a Tai San",
+        "notFound": "No Tai Sans found"
+      },
+      "created": "A new Tai San is created with identifier {{ param }}",
+      "updated": "A Tai San is updated with identifier {{ param }}",
+      "deleted": "A Tai San is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Tai San"
+      },
+      "id": "ID",
+      "idTaiSan": "Id Tai San",
+      "tenTaiSan": "Ten Tai San",
+      "trangThai": "Trang Thai",
+      "thongTinTs": "Thong Tin Ts",
+      "ghiChu": "Ghi Chu",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDuongSu": "Id Duong Su",
+      "idTsGoc": "Id Ts Goc",
+      "maTaiSan": "Ma Tai San",
+      "idLoaiNganChan": "Id Loai Ngan Chan",
+      "ngayBdNganChan": "Ngay Bd Ngan Chan",
+      "ngayKtNganChan": "Ngay Kt Ngan Chan",
+      "idMaster": "Id Master",
+      "strSearch": "Str Search",
+      "idDonVi": "Id Don Vi",
+      "soHsCv": "So Hs Cv",
+      "soCc": "So Cc",
+      "soVaoSo": "So Vao So",
+      "moTa": "Mo Ta",
+      "loaiNganChan": "Loai Ngan Chan",
+      "syncStatus": "Sync Status",
+      "idTsGoc": "Id Ts Goc",
+      "idLoaiTs": "Id Loai Ts",
+      "idTinhTrang": "Id Tinh Trang",
+      "taiSanDuongSu": "Tai San Duong Su",
+      "taiSan": "Tai San"
+    }
+  }
+}

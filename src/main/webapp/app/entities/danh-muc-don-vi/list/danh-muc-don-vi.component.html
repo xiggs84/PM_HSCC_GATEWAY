@@ -1,0 +1,346 @@
+<div>
+  <h2 id="page-heading" data-cy="DanhMucDonViHeading">
+    <span jhiTranslate="gatewayApp.danhMucDonVi.home.title">Danh Muc Don Vis</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucDonVi.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-danh-muc-don-vi"
+        [routerLink]="['/danh-muc-don-vi/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucDonVi.home.createLabel">Thêm mới một Danh Muc Don Vi</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (danhMucDonVis?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.danhMucDonVi.home.notFound">No Danh Muc Don Vis found</span>
+    </div>
+  }
+
+  @if (danhMucDonVis && danhMucDonVis.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.tenDonVi">Ten Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diaChi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.diaChi">Dia Chi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiDaiDien">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.nguoiDaiDien">Nguoi Dai Dien</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soDienThoai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.soDienThoai">So Dien Thoai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonViQl">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idDonViQl">Id Don Vi Ql</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="loaiDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.loaiDonVi">Loai Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayKhaiBao">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.ngayKhaiBao">Ngay Khai Bao</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soNha">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.soNha">So Nha</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="maSoThue">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.maSoThue">Ma So Thue</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idCapQl">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idCapQl">Id Cap Ql</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="loaiNhiemVu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.loaiNhiemVu">Loai Nhiem Vu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="hoaDonDt">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.hoaDonDt">Hoa Don Dt</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="maDonViIgate">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.maDonViIgate">Ma Don Vi Igate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="maCoQuanIgate">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.maCoQuanIgate">Ma Co Quan Igate</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="capDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.capDonVi">Cap Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="kySo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.kySo">Ky So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="qrScan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.qrScan">Qr Scan</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="verifyIdCard">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.verifyIdCard">Verify Id Card</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isVerifyFace">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.isVerifyFace">Is Verify Face</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isElastic">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.isElastic">Is Elastic</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="apikeyCccd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.apikeyCccd">Apikey Cccd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="apikeyFace">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.apikeyFace">Apikey Face</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="verifyCodeCccd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.verifyCodeCccd">Verify Code Cccd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="usernameElastic">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.usernameElastic">Username Elastic</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="passwordElastic">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.passwordElastic">Password Elastic</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTinh.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idTinh">Id Tinh</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHuyen.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idHuyen">Id Huyen</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idPhuongXa.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idPhuongXa">Id Phuong Xa</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiDv.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucDonVi.idLoaiDv">Id Loai Dv</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (danhMucDonVi of danhMucDonVis; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/danh-muc-don-vi', danhMucDonVi.id, 'view']">{{ danhMucDonVi.id }}</a>
+              </td>
+              <td>{{ danhMucDonVi.idDonVi }}</td>
+              <td>{{ danhMucDonVi.tenDonVi }}</td>
+              <td>{{ danhMucDonVi.diaChi }}</td>
+              <td>{{ danhMucDonVi.nguoiDaiDien }}</td>
+              <td>{{ danhMucDonVi.soDienThoai }}</td>
+              <td>{{ danhMucDonVi.idDonViQl }}</td>
+              <td>{{ danhMucDonVi.loaiDonVi }}</td>
+              <td>{{ danhMucDonVi.ngayKhaiBao | formatMediumDate }}</td>
+              <td>{{ danhMucDonVi.trangThai }}</td>
+              <td>{{ danhMucDonVi.soNha }}</td>
+              <td>{{ danhMucDonVi.maSoThue }}</td>
+              <td>{{ danhMucDonVi.idCapQl }}</td>
+              <td>{{ danhMucDonVi.loaiNhiemVu }}</td>
+              <td>{{ danhMucDonVi.hoaDonDt }}</td>
+              <td>{{ danhMucDonVi.maDonViIgate }}</td>
+              <td>{{ danhMucDonVi.maCoQuanIgate }}</td>
+              <td>{{ danhMucDonVi.capDonVi }}</td>
+              <td>{{ danhMucDonVi.kySo }}</td>
+              <td>{{ danhMucDonVi.qrScan }}</td>
+              <td>{{ danhMucDonVi.verifyIdCard }}</td>
+              <td>{{ danhMucDonVi.isVerifyFace }}</td>
+              <td>{{ danhMucDonVi.isElastic }}</td>
+              <td>{{ danhMucDonVi.apikeyCccd }}</td>
+              <td>{{ danhMucDonVi.apikeyFace }}</td>
+              <td>{{ danhMucDonVi.verifyCodeCccd }}</td>
+              <td>{{ danhMucDonVi.usernameElastic }}</td>
+              <td>{{ danhMucDonVi.passwordElastic }}</td>
+              <td>
+                @if (danhMucDonVi.idTinh) {
+                  <div>
+                    <a [routerLink]="['/danh-muc-tinh', danhMucDonVi.idTinh.id, 'view']">{{ danhMucDonVi.idTinh.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (danhMucDonVi.idHuyen) {
+                  <div>
+                    <a [routerLink]="['/danh-muc-huyen', danhMucDonVi.idHuyen.id, 'view']">{{ danhMucDonVi.idHuyen.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (danhMucDonVi.idPhuongXa) {
+                  <div>
+                    <a [routerLink]="['/danh-muc-xa', danhMucDonVi.idPhuongXa.id, 'view']">{{ danhMucDonVi.idPhuongXa.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (danhMucDonVi.idLoaiDv) {
+                  <div>
+                    <a [routerLink]="['/danh-muc-loai-don-vi', danhMucDonVi.idLoaiDv.id, 'view']">{{ danhMucDonVi.idLoaiDv.id }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/danh-muc-don-vi', danhMucDonVi.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/danh-muc-don-vi', danhMucDonVi.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(danhMucDonVi)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

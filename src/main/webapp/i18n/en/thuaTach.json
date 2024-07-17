@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "thuaTach": {
+      "home": {
+        "title": "Thua Taches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Thua Tach",
+        "createOrEditLabel": "Create or edit a Thua Tach",
+        "notFound": "No Thua Taches found"
+      },
+      "created": "A new Thua Tach is created with identifier {{ param }}",
+      "updated": "A Thua Tach is updated with identifier {{ param }}",
+      "deleted": "A Thua Tach is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Thua Tach {{ id }}?"
+      },
+      "detail": {
+        "title": "Thua Tach"
+      },
+      "id": "ID",
+      "idThuaTach": "Id Thua Tach",
+      "idTaiSan": "Id Tai San",
+      "thongTinThuaTach": "Thong Tin Thua Tach",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "annotations": {
+    "changelogDate": "20240717020613"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idCanBo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenCanBo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "namSinh",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soDienThoai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soCmnd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tenDangNhap",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matKhau",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "clientId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientSecret",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "usernameKyso",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "passwordKyso",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucCanBo",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

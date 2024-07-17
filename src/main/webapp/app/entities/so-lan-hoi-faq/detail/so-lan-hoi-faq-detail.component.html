@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (soLanHoiFaq()) {
+      <div>
+        <h2 data-cy="soLanHoiFaqDetailsHeading"><span jhiTranslate="gatewayApp.soLanHoiFaq.detail.title">So Lan Hoi Faq</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ soLanHoiFaq()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soLanHoiFaq.idCauHoi">Id Cau Hoi</span></dt>
+          <dd>
+            <span>{{ soLanHoiFaq()!.idCauHoi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soLanHoiFaq.idCanBo">Id Can Bo</span></dt>
+          <dd>
+            <span>{{ soLanHoiFaq()!.idCanBo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soLanHoiFaq.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ soLanHoiFaq()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/so-lan-hoi-faq', soLanHoiFaq()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (logThaoTac()) {
+      <div>
+        <h2 data-cy="logThaoTacDetailsHeading"><span jhiTranslate="gatewayApp.logThaoTac.detail.title">Log Thao Tac</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.idLog">Id Log</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.idLog }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.tenBang">Ten Bang</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.tenBang }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.idKhoa">Id Khoa</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.idKhoa }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logThaoTac.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ logThaoTac()!.nguoiThaoTac }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/log-thao-tac', logThaoTac()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

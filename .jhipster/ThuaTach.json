@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717032013"
+  },
+  "applications": ["gateway", "TaiSan"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idThuaTach",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idTaiSan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinThuaTach",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "ThuaTach",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

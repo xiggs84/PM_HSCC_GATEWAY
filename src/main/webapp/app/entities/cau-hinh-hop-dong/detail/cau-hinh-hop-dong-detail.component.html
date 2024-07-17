@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cauHinhHopDong()) {
+      <div>
+        <h2 data-cy="cauHinhHopDongDetailsHeading"><span jhiTranslate="gatewayApp.cauHinhHopDong.detail.title">Cau Hinh Hop Dong</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.idLoaiHopDong">Id Loai Hop Dong</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.idLoaiHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.chieuDai">Chieu Dai</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.chieuDai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.tienTo">Tien To</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.tienTo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.giaTri">Gia Tri</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.giaTri }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.hienThi">Hien Thi</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.hienThi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhHopDong.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ cauHinhHopDong()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cau-hinh-hop-dong', cauHinhHopDong()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

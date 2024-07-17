@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucTuVietTat()) {
+      <div>
+        <h2 data-cy="danhMucTuVietTatDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhMucTuVietTat.detail.title">Danh Muc Tu Viet Tat</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.idVietTat">Id Viet Tat</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.idVietTat }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.tuVietTat">Tu Viet Tat</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.tuVietTat }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.ngayThaoTac | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucTuVietTat.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ danhMucTuVietTat()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-tu-viet-tat', danhMucTuVietTat()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

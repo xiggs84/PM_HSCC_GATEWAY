@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "logHoaDonDienTu": {
+      "home": {
+        "title": "Log Hoa Don Dien Tus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Hoa Don Dien Tu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Hoa Don Dien Tu",
+        "notFound": "No Log Hoa Don Dien Tus found"
+      },
+      "created": "Một Log Hoa Don Dien Tu mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Hoa Don Dien Tu cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Hoa Don Dien Tu đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Hoa Don Dien Tu {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Hoa Don Dien Tu"
+      },
+      "id": "ID",
+      "idDonVi": "Id Don Vi",
+      "idHopDong": "Id Hop Dong",
+      "fKey": "F Key",
+      "ketQua": "Ket Qua",
+      "trangThai": "Trang Thai",
+      "ngayPhatHanh": "Ngay Phat Hanh"
+    }
+  }
+}

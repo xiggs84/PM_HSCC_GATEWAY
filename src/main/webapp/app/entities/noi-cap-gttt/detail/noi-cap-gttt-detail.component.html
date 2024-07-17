@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (noiCapGttt()) {
+      <div>
+        <h2 data-cy="noiCapGtttDetailsHeading"><span jhiTranslate="gatewayApp.noiCapGttt.detail.title">Noi Cap Gttt</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ noiCapGttt()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.noiCapGttt.idNoiCap">Id Noi Cap</span></dt>
+          <dd>
+            <span>{{ noiCapGttt()!.idNoiCap }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.noiCapGttt.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ noiCapGttt()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.noiCapGttt.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ noiCapGttt()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.noiCapGttt.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ noiCapGttt()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/noi-cap-gttt', noiCapGttt()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

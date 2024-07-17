@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucDauSoCmnd": {
+      "home": {
+        "title": "Danh Muc Dau So Cmnds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Dau So Cmnd",
+        "createOrEditLabel": "Create or edit a Danh Muc Dau So Cmnd",
+        "notFound": "No Danh Muc Dau So Cmnds found"
+      },
+      "created": "A new Danh Muc Dau So Cmnd is created with identifier {{ param }}",
+      "updated": "A Danh Muc Dau So Cmnd is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Dau So Cmnd is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Dau So Cmnd {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Dau So Cmnd"
+      },
+      "id": "ID",
+      "idDauSo": "Id Dau So",
+      "dauSo": "Dau So",
+      "tinhThanh": "Tinh Thanh",
+      "idLoai": "Id Loai"
+    }
+  }
+}

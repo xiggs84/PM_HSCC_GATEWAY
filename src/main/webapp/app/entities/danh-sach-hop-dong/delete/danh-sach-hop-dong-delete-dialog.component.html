@@ -1,0 +1,28 @@
+@if (danhSachHopDong) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(danhSachHopDong.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="danhSachHopDongDeleteDialogHeading" jhiTranslate="entity.delete.title">Xác nhận hành động xóa</h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p
+        id="jhi-delete-danhSachHopDong-heading"
+        jhiTranslate="gatewayApp.danhSachHopDong.delete.question"
+        [translateValues]="{ id: danhSachHopDong.id }"
+      >
+        Bạn có chắc là muốn xóa Danh Sach Hop Dong {{ danhSachHopDong.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+      </button>
+
+      <button id="jhi-confirm-delete-danhSachHopDong" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Xóa</span>
+      </button>
+    </div>
+  </form>
+}

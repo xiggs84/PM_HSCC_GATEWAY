@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (taisanSaiQsddDgc()) {
+      <div>
+        <h2 data-cy="taisanSaiQsddDgcDetailsHeading">
+          <span jhiTranslate="gatewayApp.taisanSaiQsddDgc.detail.title">Taisan Sai Qsdd Dgc</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ taisanSaiQsddDgc()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taisanSaiQsddDgc.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ taisanSaiQsddDgc()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taisanSaiQsddDgc.noiCapQsdd">Noi Cap Qsdd</span></dt>
+          <dd>
+            <span>{{ taisanSaiQsddDgc()!.noiCapQsdd }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/taisan-sai-qsdd-dgc', taisanSaiQsddDgc()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

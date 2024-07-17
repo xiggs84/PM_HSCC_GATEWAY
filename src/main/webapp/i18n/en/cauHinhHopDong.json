@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "cauHinhHopDong": {
+      "home": {
+        "title": "Cau Hinh Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cau Hinh Hop Dong",
+        "createOrEditLabel": "Create or edit a Cau Hinh Hop Dong",
+        "notFound": "No Cau Hinh Hop Dongs found"
+      },
+      "created": "A new Cau Hinh Hop Dong is created with identifier {{ param }}",
+      "updated": "A Cau Hinh Hop Dong is updated with identifier {{ param }}",
+      "deleted": "A Cau Hinh Hop Dong is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cau Hinh Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Hop Dong"
+      },
+      "id": "ID",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idDonVi": "Id Don Vi",
+      "chieuDai": "Chieu Dai",
+      "tienTo": "Tien To",
+      "giaTri": "Gia Tri",
+      "hienThi": "Hien Thi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

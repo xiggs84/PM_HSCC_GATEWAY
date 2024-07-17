@@ -1,0 +1,41 @@
+{
+  "gatewayApp": {
+    "duongSuTrungCmnd": {
+      "home": {
+        "title": "Duong Su Trung Cmnds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Duong Su Trung Cmnd",
+        "createOrEditLabel": "Create or edit a Duong Su Trung Cmnd",
+        "notFound": "No Duong Su Trung Cmnds found"
+      },
+      "created": "A new Duong Su Trung Cmnd is created with identifier {{ param }}",
+      "updated": "A Duong Su Trung Cmnd is updated with identifier {{ param }}",
+      "deleted": "A Duong Su Trung Cmnd is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Duong Su Trung Cmnd {{ id }}?"
+      },
+      "detail": {
+        "title": "Duong Su Trung Cmnd"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "tenDuongSu": "Ten Duong Su",
+      "idLoaiDs": "Id Loai Ds",
+      "diaChi": "Dia Chi",
+      "trangThai": "Trang Thai",
+      "thongTinDs": "Thong Tin Ds",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDsGoc": "Id Ds Goc",
+      "idTinhTrang": "Id Tinh Trang",
+      "idMaster": "Id Master",
+      "idDonVi": "Id Don Vi",
+      "strSearch": "Str Search",
+      "soGiayTo": "So Giay To",
+      "idDuongSuMin": "Id Duong Su Min",
+      "idMasterMin": "Id Master Min",
+      "idDuongSuMax": "Id Duong Su Max",
+      "idMasterMax": "Id Master Max"
+    }
+  }
+}

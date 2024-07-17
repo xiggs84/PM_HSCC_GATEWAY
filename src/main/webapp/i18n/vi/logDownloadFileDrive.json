@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "logDownloadFileDrive": {
+      "home": {
+        "title": "Log Download File Drives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Download File Drive",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Download File Drive",
+        "notFound": "No Log Download File Drives found"
+      },
+      "created": "Một Log Download File Drive mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Download File Drive cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Download File Drive đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Download File Drive {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Download File Drive"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "noiDung": "Noi Dung",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "key": "Key"
+    }
+  }
+}

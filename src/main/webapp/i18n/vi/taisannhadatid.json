@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "taisannhadatid": {
+      "home": {
+        "title": "Taisannhadatids",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Taisannhadatid",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Taisannhadatid",
+        "notFound": "No Taisannhadatids found"
+      },
+      "created": "Một Taisannhadatid mới được tạo với định danh {{ param }}",
+      "updated": "Một Taisannhadatid cập nhật với định danh {{ param }}",
+      "deleted": "Một Taisannhadatid đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Taisannhadatid {{ id }}?"
+      },
+      "detail": {
+        "title": "Taisannhadatid"
+      },
+      "id": "ID",
+      "idTaiSan": "Id Tai San",
+      "thongTinTs": "Thong Tin Ts"
+    }
+  }
+}

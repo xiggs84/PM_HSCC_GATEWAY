@@ -1,0 +1,252 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danh-muc-loai-hop-dong-heading"
+        data-cy="DanhMucLoaiHopDongCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhMucLoaiHopDong.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danh Muc Loai Hop Dong
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhMucLoaiHopDong.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiHd" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idLoaiHd">Id Loai Hd</label>
+          <input type="number" class="form-control" name="idLoaiHd" id="field_idLoaiHd" data-cy="idLoaiHd" formControlName="idLoaiHd" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dienGiai" jhiTranslate="gatewayApp.danhMucLoaiHopDong.dienGiai">Dien Giai</label>
+          <input type="text" class="form-control" name="dienGiai" id="field_dienGiai" data-cy="dienGiai" formControlName="dienGiai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idVaiTro1" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idVaiTro1">Id Vai Tro 1</label>
+          <input type="number" class="form-control" name="idVaiTro1" id="field_idVaiTro1" data-cy="idVaiTro1" formControlName="idVaiTro1" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idVaiTro2" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idVaiTro2">Id Vai Tro 2</label>
+          <input type="number" class="form-control" name="idVaiTro2" id="field_idVaiTro2" data-cy="idVaiTro2" formControlName="idVaiTro2" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fileHopDong" jhiTranslate="gatewayApp.danhMucLoaiHopDong.fileHopDong">File Hop Dong</label>
+          <input
+            type="text"
+            class="form-control"
+            name="fileHopDong"
+            id="field_fileHopDong"
+            data-cy="fileHopDong"
+            formControlName="fileHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcHopDong" jhiTranslate="gatewayApp.danhMucLoaiHopDong.srcHopDong">Src Hop Dong</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcHopDong"
+            id="field_srcHopDong"
+            data-cy="srcHopDong"
+            formControlName="srcHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dieuKhoan" jhiTranslate="gatewayApp.danhMucLoaiHopDong.dieuKhoan">Dieu Khoan</label>
+          <input type="text" class="form-control" name="dieuKhoan" id="field_dieuKhoan" data-cy="dieuKhoan" formControlName="dieuKhoan" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhMucLoaiHopDong.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.danhMucLoaiHopDong.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.danhMucLoaiHopDong.nguoiThaoTac"
+            >Nguoi Thao Tac</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcLoiChung" jhiTranslate="gatewayApp.danhMucLoaiHopDong.srcLoiChung">Src Loi Chung</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcLoiChung"
+            id="field_srcLoiChung"
+            data-cy="srcLoiChung"
+            formControlName="srcLoiChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idNhom" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idNhom">Id Nhom</label>
+          <input type="number" class="form-control" name="idNhom" id="field_idNhom" data-cy="idNhom" formControlName="idNhom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fileLoiChung" jhiTranslate="gatewayApp.danhMucLoaiHopDong.fileLoiChung"
+            >File Loi Chung</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="fileLoiChung"
+            id="field_fileLoiChung"
+            data-cy="fileLoiChung"
+            formControlName="fileLoiChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_chuyenTaiSan" jhiTranslate="gatewayApp.danhMucLoaiHopDong.chuyenTaiSan"
+            >Chuyen Tai San</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="chuyenTaiSan"
+            id="field_chuyenTaiSan"
+            data-cy="chuyenTaiSan"
+            formControlName="chuyenTaiSan"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiSuaDoi" jhiTranslate="gatewayApp.danhMucLoaiHopDong.loaiSuaDoi">Loai Sua Doi</label>
+          <input
+            type="number"
+            class="form-control"
+            name="loaiSuaDoi"
+            id="field_loaiSuaDoi"
+            data-cy="loaiSuaDoi"
+            formControlName="loaiSuaDoi"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiHuyBo" jhiTranslate="gatewayApp.danhMucLoaiHopDong.loaiHuyBo">Loai Huy Bo</label>
+          <input type="number" class="form-control" name="loaiHuyBo" id="field_loaiHuyBo" data-cy="loaiHuyBo" formControlName="loaiHuyBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThaiDuyet" jhiTranslate="gatewayApp.danhMucLoaiHopDong.trangThaiDuyet"
+            >Trang Thai Duyet</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="trangThaiDuyet"
+            id="field_trangThaiDuyet"
+            data-cy="trangThaiDuyet"
+            formControlName="trangThaiDuyet"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idPhanLoaiHopDong" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idPhanLoaiHopDong"
+            >Id Phan Loai Hop Dong</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="idPhanLoaiHopDong"
+            id="field_idPhanLoaiHopDong"
+            data-cy="idPhanLoaiHopDong"
+            formControlName="idPhanLoaiHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcCv" jhiTranslate="gatewayApp.danhMucLoaiHopDong.srcCv">Src Cv</label>
+          <input type="text" class="form-control" name="srcCv" id="field_srcCv" data-cy="srcCv" formControlName="srcCv" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcTb" jhiTranslate="gatewayApp.danhMucLoaiHopDong.srcTb">Src Tb</label>
+          <input type="text" class="form-control" name="srcTb" id="field_srcTb" data-cy="srcTb" formControlName="srcTb" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcTtpc" jhiTranslate="gatewayApp.danhMucLoaiHopDong.srcTtpc">Src Ttpc</label>
+          <input type="text" class="form-control" name="srcTtpc" id="field_srcTtpc" data-cy="srcTtpc" formControlName="srcTtpc" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dgTen" jhiTranslate="gatewayApp.danhMucLoaiHopDong.dgTen">Dg Ten</label>
+          <input type="text" class="form-control" name="dgTen" id="field_dgTen" data-cy="dgTen" formControlName="dgTen" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nhomTen" jhiTranslate="gatewayApp.danhMucLoaiHopDong.nhomTen">Nhom Ten</label>
+          <input type="number" class="form-control" name="nhomTen" id="field_nhomTen" data-cy="nhomTen" formControlName="nhomTen" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idVaiTro3" jhiTranslate="gatewayApp.danhMucLoaiHopDong.idVaiTro3">Id Vai Tro 3</label>
+          <input type="number" class="form-control" name="idVaiTro3" id="field_idVaiTro3" data-cy="idVaiTro3" formControlName="idVaiTro3" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

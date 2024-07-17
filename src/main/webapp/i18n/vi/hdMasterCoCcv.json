@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "hdMasterCoCcv": {
+      "home": {
+        "title": "Hd Master Co Ccvs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Hd Master Co Ccv",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Hd Master Co Ccv",
+        "notFound": "No Hd Master Co Ccvs found"
+      },
+      "created": "Một Hd Master Co Ccv mới được tạo với định danh {{ param }}",
+      "updated": "Một Hd Master Co Ccv cập nhật với định danh {{ param }}",
+      "deleted": "Một Hd Master Co Ccv đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Hd Master Co Ccv {{ id }}?"
+      },
+      "detail": {
+        "title": "Hd Master Co Ccv"
+      },
+      "id": "ID",
+      "repRefUnique": "Rep Ref Unique",
+      "persCode": "Pers Code",
+      "ldUnique": "Ld Unique",
+      "tenCanBo": "Ten Can Bo",
+      "idCanBo": "Id Can Bo"
+    }
+  }
+}

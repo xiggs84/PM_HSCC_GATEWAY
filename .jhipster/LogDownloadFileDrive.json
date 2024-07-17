@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031313"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLog",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "noiDung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "key",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "LogDownloadFileDrive",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

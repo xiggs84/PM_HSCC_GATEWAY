@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "cauHinhHopDong": {
+      "home": {
+        "title": "Cau Hinh Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Cau Hinh Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Cau Hinh Hop Dong",
+        "notFound": "No Cau Hinh Hop Dongs found"
+      },
+      "created": "Một Cau Hinh Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Cau Hinh Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Cau Hinh Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Cau Hinh Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Hop Dong"
+      },
+      "id": "ID",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idDonVi": "Id Don Vi",
+      "chieuDai": "Chieu Dai",
+      "tienTo": "Tien To",
+      "giaTri": "Gia Tri",
+      "hienThi": "Hien Thi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

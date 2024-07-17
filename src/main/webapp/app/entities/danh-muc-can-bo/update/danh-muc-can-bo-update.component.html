@@ -1,0 +1,157 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danh-muc-can-bo-heading"
+        data-cy="DanhMucCanBoCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhMucCanBo.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danh Muc Can Bo
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhMucCanBo.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCanBo" jhiTranslate="gatewayApp.danhMucCanBo.idCanBo">Id Can Bo</label>
+          <input type="number" class="form-control" name="idCanBo" id="field_idCanBo" data-cy="idCanBo" formControlName="idCanBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenCanBo" jhiTranslate="gatewayApp.danhMucCanBo.tenCanBo">Ten Can Bo</label>
+          <input type="text" class="form-control" name="tenCanBo" id="field_tenCanBo" data-cy="tenCanBo" formControlName="tenCanBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_diaChi" jhiTranslate="gatewayApp.danhMucCanBo.diaChi">Dia Chi</label>
+          <input type="text" class="form-control" name="diaChi" id="field_diaChi" data-cy="diaChi" formControlName="diaChi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_namSinh" jhiTranslate="gatewayApp.danhMucCanBo.namSinh">Nam Sinh</label>
+          <div class="input-group">
+            <input
+              id="field_namSinh"
+              data-cy="namSinh"
+              type="text"
+              class="form-control"
+              name="namSinh"
+              ngbDatepicker
+              #namSinhDp="ngbDatepicker"
+              formControlName="namSinh"
+            />
+            <button type="button" class="btn btn-secondary" (click)="namSinhDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_email" jhiTranslate="gatewayApp.danhMucCanBo.email">Email</label>
+          <input type="text" class="form-control" name="email" id="field_email" data-cy="email" formControlName="email" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soDienThoai" jhiTranslate="gatewayApp.danhMucCanBo.soDienThoai">So Dien Thoai</label>
+          <input
+            type="text"
+            class="form-control"
+            name="soDienThoai"
+            id="field_soDienThoai"
+            data-cy="soDienThoai"
+            formControlName="soDienThoai"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soCmnd" jhiTranslate="gatewayApp.danhMucCanBo.soCmnd">So Cmnd</label>
+          <input type="text" class="form-control" name="soCmnd" id="field_soCmnd" data-cy="soCmnd" formControlName="soCmnd" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenDangNhap" jhiTranslate="gatewayApp.danhMucCanBo.tenDangNhap">Ten Dang Nhap</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tenDangNhap"
+            id="field_tenDangNhap"
+            data-cy="tenDangNhap"
+            formControlName="tenDangNhap"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_matKhau" jhiTranslate="gatewayApp.danhMucCanBo.matKhau">Mat Khau</label>
+          <input type="text" class="form-control" name="matKhau" id="field_matKhau" data-cy="matKhau" formControlName="matKhau" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhMucCanBo.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_clientId" jhiTranslate="gatewayApp.danhMucCanBo.clientId">Client Id</label>
+          <input type="text" class="form-control" name="clientId" id="field_clientId" data-cy="clientId" formControlName="clientId" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_clientSecret" jhiTranslate="gatewayApp.danhMucCanBo.clientSecret">Client Secret</label>
+          <input
+            type="text"
+            class="form-control"
+            name="clientSecret"
+            id="field_clientSecret"
+            data-cy="clientSecret"
+            formControlName="clientSecret"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_usernameKyso" jhiTranslate="gatewayApp.danhMucCanBo.usernameKyso">Username Kyso</label>
+          <input
+            type="text"
+            class="form-control"
+            name="usernameKyso"
+            id="field_usernameKyso"
+            data-cy="usernameKyso"
+            formControlName="usernameKyso"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_passwordKyso" jhiTranslate="gatewayApp.danhMucCanBo.passwordKyso">Password Kyso</label>
+          <input
+            type="text"
+            class="form-control"
+            name="passwordKyso"
+            id="field_passwordKyso"
+            data-cy="passwordKyso"
+            formControlName="passwordKyso"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

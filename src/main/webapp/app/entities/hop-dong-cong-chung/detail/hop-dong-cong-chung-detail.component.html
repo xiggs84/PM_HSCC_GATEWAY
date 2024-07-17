@@ -1,0 +1,224 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (hopDongCongChung()) {
+      <div>
+        <h2 data-cy="hopDongCongChungDetailsHeading">
+          <span jhiTranslate="gatewayApp.hopDongCongChung.detail.title">Hop Dong Cong Chung</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idHopDong">Id Hop Dong</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayLapHd">Ngay Lap Hd</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayLapHd | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.nguoiLapHd">Nguoi Lap Hd</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.nguoiLapHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.thongTinDuongSu">Thong Tin Duong Su</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.thongTinDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.thongTinTaiSan">Thong Tin Tai San</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.thongTinTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.thongTinVanBan">Thong Tin Van Ban</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.thongTinVanBan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idLoaiHd">Id Loai Hd</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idLoaiHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.dieuKhoanHd">Dieu Khoan Hd</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.dieuKhoanHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idHdGoc">Id Hd Goc</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idHdGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.thongTinChuyenNhuong">Thong Tin Chuyen Nhuong</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.thongTinChuyenNhuong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.maHopDong">Ma Hop Dong</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.maHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.srcHopDong">Src Hop Dong</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.srcHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayHen">Ngay Hen</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayHen | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.soCongChung">So Cong Chung</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.soCongChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.congChungVien">Cong Chung Vien</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.congChungVien }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayKyHd">Ngay Ky Hd</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayKyHd | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.nguoiRutTrich">Nguoi Rut Trich</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.nguoiRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.soTienRutTrich">So Tien Rut Trich</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.soTienRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayRutTrich">Ngay Rut Trich</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayRutTrich | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.hdThuCong">Hd Thu Cong</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.hdThuCong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.trangThaiRutTrich">Trang Thai Rut Trich</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.trangThaiRutTrich }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.chuKyNgoaiTruSo">Chu Ky Ngoai Tru So</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.chuKyNgoaiTruSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.strSearch">Str Search</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.strSearch }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idHdSdHb">Id Hd Sd Hb</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.idHdSdHb }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.srcDmMaster">Src Dm Master</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.srcDmMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.repRefUnique">Rep Ref Unique</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.repRefUnique }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayText">Ngay Text</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayText }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayNum">Ngay Num</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayNum }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayThaoTacRutTrich">Ngay Thao Tac Rut Trich</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayThaoTacRutTrich | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.thuLaoCongChung">Thu Lao Cong Chung</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.thuLaoCongChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.quyenLaiSt">Quyen Lai St</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.quyenLaiSt }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.soLaiSt">So Lai St</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.soLaiSt }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.quyenLaiTl">Quyen Lai Tl</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.quyenLaiTl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.soLaiTl">So Lai Tl</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.soLaiTl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.srcKySoPdf">Src Ky So Pdf</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.srcKySoPdf }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.srcKySoPdfSigned">Src Ky So Pdf Signed</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.srcKySoPdfSigned }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.syncStatus">Sync Status</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.syncStatus }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.ngayRutTrichText">Ngay Rut Trich Text</span></dt>
+          <dd>
+            <span>{{ hopDongCongChung()!.ngayRutTrichText }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idLoaiHD">Id Loai HD</span></dt>
+          <dd>
+            @if (hopDongCongChung()!.idLoaiHD) {
+              <div>
+                <a [routerLink]="['/danh-muc-loai-hop-dong', hopDongCongChung()!.idLoaiHD?.id, 'view']">{{
+                  hopDongCongChung()!.idLoaiHD?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.hopDongCongChung.idSoCongChung">Id So Cong Chung</span></dt>
+          <dd>
+            @if (hopDongCongChung()!.idSoCongChung) {
+              <div>
+                <a [routerLink]="['/so-cong-chung', hopDongCongChung()!.idSoCongChung?.id, 'view']">{{
+                  hopDongCongChung()!.idSoCongChung?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/hop-dong-cong-chung', hopDongCongChung()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

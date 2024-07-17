@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucFileUploadKyso()) {
+      <div>
+        <h2 data-cy="danhMucFileUploadKysoDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.detail.title">Danh Muc File Upload Kyso</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idFile">Id File</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.idFile }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.tenFile">Ten File</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.tenFile }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileUrl">File Url</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.fileUrl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileSignedUrl">File Signed Url</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.fileSignedUrl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idCanBo">Id Can Bo</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.idCanBo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.ngayThaoTac | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucFileUploadKyso.filePdfUrl">File Pdf Url</span></dt>
+          <dd>
+            <span>{{ danhMucFileUploadKyso()!.filePdfUrl }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-file-upload-kyso', danhMucFileUploadKyso()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

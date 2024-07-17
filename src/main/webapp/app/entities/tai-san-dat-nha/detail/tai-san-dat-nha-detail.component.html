@@ -1,0 +1,122 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (taiSanDatNha()) {
+      <div>
+        <h2 data-cy="taiSanDatNhaDetailsHeading"><span jhiTranslate="gatewayApp.taiSanDatNha.detail.title">Tai San Dat Nha</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idTaiSan">Id Tai San</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.tenTaiSan">Ten Tai San</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.tenTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.thongTinTs">Thong Tin Ts</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.thongTinTs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idLoaiTs">Id Loai Ts</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idLoaiTs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.ghiChu">Ghi Chu</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.ghiChu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idTsGoc">Id Ts Goc</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idTsGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.maTaiSan">Ma Tai San</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.maTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idTinhTrang">Id Tinh Trang</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idTinhTrang }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idLoaiNganChan">Id Loai Ngan Chan</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idLoaiNganChan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.ngayBdNganChan">Ngay Bd Ngan Chan</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.ngayBdNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.ngayKtNganChan">Ngay Kt Ngan Chan</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.ngayKtNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.strSearch">Str Search</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.strSearch }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.soHsCv">So Hs Cv</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.soHsCv }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.soCc">So Cc</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.soCc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.soVaoSo">So Vao So</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.soVaoSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.moTa">Mo Ta</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.moTa }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDatNha.loaiNganChan">Loai Ngan Chan</span></dt>
+          <dd>
+            <span>{{ taiSanDatNha()!.loaiNganChan }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/tai-san-dat-nha', taiSanDatNha()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

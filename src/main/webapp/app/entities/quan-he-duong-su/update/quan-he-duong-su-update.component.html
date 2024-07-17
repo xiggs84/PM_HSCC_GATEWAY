@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-quan-he-duong-su-heading"
+        data-cy="QuanHeDuongSuCreateUpdateHeading"
+        jhiTranslate="gatewayApp.quanHeDuongSu.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Quan He Duong Su
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.quanHeDuongSu.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDuongSu" jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSu">Id Duong Su</label>
+          <input type="number" class="form-control" name="idDuongSu" id="field_idDuongSu" data-cy="idDuongSu" formControlName="idDuongSu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDuongSuQh" jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSuQh">Id Duong Su Qh</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idDuongSuQh"
+            id="field_idDuongSuQh"
+            data-cy="idDuongSuQh"
+            formControlName="idDuongSuQh"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idQuanHe" jhiTranslate="gatewayApp.quanHeDuongSu.idQuanHe">Id Quan He</label>
+          <input type="number" class="form-control" name="idQuanHe" id="field_idQuanHe" data-cy="idQuanHe" formControlName="idQuanHe" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinQuanHe" jhiTranslate="gatewayApp.quanHeDuongSu.thongTinQuanHe"
+            >Thong Tin Quan He</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinQuanHe"
+            id="field_thongTinQuanHe"
+            data-cy="thongTinQuanHe"
+            formControlName="thongTinQuanHe"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.quanHeDuongSu.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

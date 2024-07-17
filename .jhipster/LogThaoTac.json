@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021513"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLog",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tenBang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idKhoa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "LogThaoTac",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

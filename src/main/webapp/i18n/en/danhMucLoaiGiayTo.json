@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiGiayTo": {
+      "home": {
+        "title": "Danh Muc Loai Giay Tos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Loai Giay To",
+        "createOrEditLabel": "Create or edit a Danh Muc Loai Giay To",
+        "notFound": "No Danh Muc Loai Giay Tos found"
+      },
+      "created": "A new Danh Muc Loai Giay To is created with identifier {{ param }}",
+      "updated": "A Danh Muc Loai Giay To is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Loai Giay To is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Loai Giay To {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Giay To"
+      },
+      "id": "ID",
+      "idLoaiGiayTo": "Id Loai Giay To",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

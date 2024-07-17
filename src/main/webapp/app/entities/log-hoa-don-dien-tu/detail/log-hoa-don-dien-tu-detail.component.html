@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (logHoaDonDienTu()) {
+      <div>
+        <h2 data-cy="logHoaDonDienTuDetailsHeading">
+          <span jhiTranslate="gatewayApp.logHoaDonDienTu.detail.title">Log Hoa Don Dien Tu</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.idHopDong">Id Hop Dong</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.idHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.fKey">F Key</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.fKey }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.ketQua">Ket Qua</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.ketQua }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logHoaDonDienTu.ngayPhatHanh">Ngay Phat Hanh</span></dt>
+          <dd>
+            <span>{{ logHoaDonDienTu()!.ngayPhatHanh | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/log-hoa-don-dien-tu', logHoaDonDienTu()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

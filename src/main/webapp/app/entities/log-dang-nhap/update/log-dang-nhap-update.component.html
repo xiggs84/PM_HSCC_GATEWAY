@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-log-dang-nhap-heading"
+        data-cy="LogDangNhapCreateUpdateHeading"
+        jhiTranslate="gatewayApp.logDangNhap.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Log Dang Nhap
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.logDangNhap.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayDangNhap" jhiTranslate="gatewayApp.logDangNhap.ngayDangNhap">Ngay Dang Nhap</label>
+          <div class="input-group">
+            <input
+              id="field_ngayDangNhap"
+              data-cy="ngayDangNhap"
+              type="text"
+              class="form-control"
+              name="ngayDangNhap"
+              ngbDatepicker
+              #ngayDangNhapDp="ngbDatepicker"
+              formControlName="ngayDangNhap"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayDangNhapDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ipAddress" jhiTranslate="gatewayApp.logDangNhap.ipAddress">Ip Address</label>
+          <input type="text" class="form-control" name="ipAddress" id="field_ipAddress" data-cy="ipAddress" formControlName="ipAddress" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCanBo" jhiTranslate="gatewayApp.logDangNhap.idCanBo">Id Can Bo</label>
+          <input type="number" class="form-control" name="idCanBo" id="field_idCanBo" data-cy="idCanBo" formControlName="idCanBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenDangNhap" jhiTranslate="gatewayApp.logDangNhap.tenDangNhap">Ten Dang Nhap</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tenDangNhap"
+            id="field_tenDangNhap"
+            data-cy="tenDangNhap"
+            formControlName="tenDangNhap"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

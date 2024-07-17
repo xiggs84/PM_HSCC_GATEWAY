@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20240717024213"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDuongSu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDuongSuQh",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "QuanHeMaster",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

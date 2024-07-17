@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (users()) {
+      <div>
+        <h2 data-cy="usersDetailsHeading"><span jhiTranslate="gatewayApp.users.detail.title">Users</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="gatewayApp.users.id">Id</span></dt>
+          <dd>
+            <span>{{ users()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.name">Name</span></dt>
+          <dd>
+            <span>{{ users()!.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.email">Email</span></dt>
+          <dd>
+            <span>{{ users()!.email }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.password">Password</span></dt>
+          <dd>
+            <span>{{ users()!.password }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.rememberToken">Remember Token</span></dt>
+          <dd>
+            <span>{{ users()!.rememberToken }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.createdAt">Created At</span></dt>
+          <dd>
+            <span>{{ users()!.createdAt | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.updatedAt">Updated At</span></dt>
+          <dd>
+            <span>{{ users()!.updatedAt | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.users.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ users()!.idDonVi }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/users', users()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

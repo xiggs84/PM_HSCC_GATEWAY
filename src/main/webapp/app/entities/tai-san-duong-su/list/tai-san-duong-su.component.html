@@ -1,0 +1,139 @@
+<div>
+  <h2 id="page-heading" data-cy="TaiSanDuongSuHeading">
+    <span jhiTranslate="gatewayApp.taiSanDuongSu.home.title">Tai San Duong Sus</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.taiSanDuongSu.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-tai-san-duong-su"
+        [routerLink]="['/tai-san-duong-su/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.taiSanDuongSu.home.createLabel">Thêm mới một Tai San Duong Su</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (taiSanDuongSus?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.taiSanDuongSu.home.notFound">No Tai San Duong Sus found</span>
+    </div>
+  }
+
+  @if (taiSanDuongSus && taiSanDuongSus.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.idDuongSu">Id Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.idLoaiHopDong">Id Loai Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idChungThuc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.idChungThuc">Id Chung Thuc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTaiSan.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDuongSu.idTaiSan">Id Tai San</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (taiSanDuongSu of taiSanDuongSus; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/tai-san-duong-su', taiSanDuongSu.id, 'view']">{{ taiSanDuongSu.id }}</a>
+              </td>
+              <td>{{ taiSanDuongSu.trangThai }}</td>
+              <td>{{ taiSanDuongSu.idDuongSu }}</td>
+              <td>{{ taiSanDuongSu.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ taiSanDuongSu.idLoaiHopDong }}</td>
+              <td>{{ taiSanDuongSu.idChungThuc }}</td>
+              <td>
+                @if (taiSanDuongSu.idTaiSan) {
+                  <div>
+                    <a [routerLink]="['/tai-san', taiSanDuongSu.idTaiSan.id, 'view']">{{ taiSanDuongSu.idTaiSan.id }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/tai-san-duong-su', taiSanDuongSu.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/tai-san-duong-su', taiSanDuongSu.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(taiSanDuongSu)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

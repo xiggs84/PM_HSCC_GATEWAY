@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiVanBan": {
+      "home": {
+        "title": "Danh Muc Loai Van Bans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Loai Van Ban",
+        "createOrEditLabel": "Create or edit a Danh Muc Loai Van Ban",
+        "notFound": "No Danh Muc Loai Van Bans found"
+      },
+      "created": "A new Danh Muc Loai Van Ban is created with identifier {{ param }}",
+      "updated": "A Danh Muc Loai Van Ban is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Loai Van Ban is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Loai Van Ban {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Van Ban"
+      },
+      "id": "ID",
+      "idLoaiVb": "Id Loai Vb",
+      "dienGiai": "Dien Giai",
+      "idLoaiHopDong": "Id Loai Hop Dong"
+    }
+  }
+}

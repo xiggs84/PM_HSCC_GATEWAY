@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucDichVu": {
+      "home": {
+        "title": "Danh Muc Dich Vus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Dich Vu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Dich Vu",
+        "notFound": "No Danh Muc Dich Vus found"
+      },
+      "created": "Một Danh Muc Dich Vu mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Dich Vu cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Dich Vu đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Dich Vu {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Dich Vu"
+      },
+      "id": "ID",
+      "dienGiai": "Dien Giai",
+      "donViTinh": "Don Vi Tinh",
+      "donGia": "Don Gia",
+      "idDichVu": "Id Dich Vu"
+    }
+  }
+}

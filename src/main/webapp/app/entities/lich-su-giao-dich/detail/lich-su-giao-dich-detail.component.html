@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (lichSuGiaoDich()) {
+      <div>
+        <h2 data-cy="lichSuGiaoDichDetailsHeading"><span jhiTranslate="gatewayApp.lichSuGiaoDich.detail.title">Lich Su Giao Dich</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.idTaiSan">Id Tai San</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.idTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.idHopDong">Id Hop Dong</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.idHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.idLoaiHopDong">Id Loai Hop Dong</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.idLoaiHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.lichSuGiaoDich.idChungThuc">Id Chung Thuc</span></dt>
+          <dd>
+            <span>{{ lichSuGiaoDich()!.idChungThuc }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/lich-su-giao-dich', lichSuGiaoDich()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

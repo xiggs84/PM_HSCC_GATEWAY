@@ -1,0 +1,56 @@
+{
+  "annotations": {
+    "changelogDate": "20240717022913"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "apiUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "account",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accPass",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mauSo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "kyHieu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "CauHinhHoaDonDienTu",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,56 @@
+{
+  "gatewayApp": {
+    "thongTinChungHopDong": {
+      "home": {
+        "title": "Thong Tin Chung Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Thong Tin Chung Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Thong Tin Chung Hop Dong",
+        "notFound": "No Thong Tin Chung Hop Dongs found"
+      },
+      "created": "Một Thong Tin Chung Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Thong Tin Chung Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Thong Tin Chung Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Thong Tin Chung Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Thong Tin Chung Hop Dong"
+      },
+      "id": "ID",
+      "ngayLapHd": "Ngay Lap Hd",
+      "nguoiLapHd": "Nguoi Lap Hd",
+      "thongTinVanBan": "Thong Tin Van Ban",
+      "trangThai": "Trang Thai",
+      "idLoaiHd": "Id Loai Hd",
+      "dieuKhoanHd": "Dieu Khoan Hd",
+      "idDonVi": "Id Don Vi",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idHdGoc": "Id Hd Goc",
+      "maHopDong": "Ma Hop Dong",
+      "srcHopDong": "Src Hop Dong",
+      "ngayHen": "Ngay Hen",
+      "soCongChung": "So Cong Chung",
+      "congChungVien": "Cong Chung Vien",
+      "ngayKyHd": "Ngay Ky Hd",
+      "nguoiRutTrich": "Nguoi Rut Trich",
+      "soTienRutTrich": "So Tien Rut Trich",
+      "ngayRutTrich": "Ngay Rut Trich",
+      "hdThuCong": "Hd Thu Cong",
+      "trangThaiRutTrich": "Trang Thai Rut Trich",
+      "chuKyNgoaiTruSo": "Chu Ky Ngoai Tru So",
+      "strSearch": "Str Search",
+      "idMaster": "Id Master",
+      "idHdSdHb": "Id Hd Sd Hb",
+      "srcDmMaster": "Src Dm Master",
+      "repRefUnique": "Rep Ref Unique",
+      "ngayText": "Ngay Text",
+      "thongTinChung": "Thong Tin Chung",
+      "thongTinChungClob": "Thong Tin Chung Clob",
+      "idHopDong": "Id Hop Dong",
+      "idLoaiHD": "Id Loai HD",
+      "idSoCongChung": "Id So Cong Chung"
+    }
+  }
+}

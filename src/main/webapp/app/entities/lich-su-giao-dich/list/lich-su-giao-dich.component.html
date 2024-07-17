@@ -1,0 +1,142 @@
+<div>
+  <h2 id="page-heading" data-cy="LichSuGiaoDichHeading">
+    <span jhiTranslate="gatewayApp.lichSuGiaoDich.home.title">Lich Su Giao Diches</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.lichSuGiaoDich.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-lich-su-giao-dich"
+        [routerLink]="['/lich-su-giao-dich/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.lichSuGiaoDich.home.createLabel">Thêm mới một Lich Su Giao Dich</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (lichSuGiaoDiches?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.lichSuGiaoDich.home.notFound">No Lich Su Giao Diches found</span>
+    </div>
+  }
+
+  @if (lichSuGiaoDiches && lichSuGiaoDiches.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTaiSan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.idTaiSan">Id Tai San</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.idDuongSu">Id Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.idHopDong">Id Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.idLoaiHopDong">Id Loai Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idChungThuc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.lichSuGiaoDich.idChungThuc">Id Chung Thuc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (lichSuGiaoDich of lichSuGiaoDiches; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/lich-su-giao-dich', lichSuGiaoDich.id, 'view']">{{ lichSuGiaoDich.id }}</a>
+              </td>
+              <td>{{ lichSuGiaoDich.idTaiSan }}</td>
+              <td>{{ lichSuGiaoDich.idDuongSu }}</td>
+              <td>{{ lichSuGiaoDich.trangThai }}</td>
+              <td>{{ lichSuGiaoDich.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ lichSuGiaoDich.idHopDong }}</td>
+              <td>{{ lichSuGiaoDich.idLoaiHopDong }}</td>
+              <td>{{ lichSuGiaoDich.idChungThuc }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/lich-su-giao-dich', lichSuGiaoDich.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/lich-su-giao-dich', lichSuGiaoDich.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(lichSuGiaoDich)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

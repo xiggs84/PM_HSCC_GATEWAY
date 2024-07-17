@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "fileidDrive": {
+      "home": {
+        "title": "Fileid Drives",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Fileid Drive",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Fileid Drive",
+        "notFound": "No Fileid Drives found"
+      },
+      "created": "Một Fileid Drive mới được tạo với định danh {{ param }}",
+      "updated": "Một Fileid Drive cập nhật với định danh {{ param }}",
+      "deleted": "Một Fileid Drive đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Fileid Drive {{ id }}?"
+      },
+      "detail": {
+        "title": "Fileid Drive"
+      },
+      "id": "ID",
+      "fileId": "File Id",
+      "trangThai": "Trang Thai",
+      "idHopDong": "Id Hop Dong"
+    }
+  }
+}

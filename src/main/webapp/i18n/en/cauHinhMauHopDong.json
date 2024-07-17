@@ -1,0 +1,48 @@
+{
+  "gatewayApp": {
+    "cauHinhMauHopDong": {
+      "home": {
+        "title": "Cau Hinh Mau Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cau Hinh Mau Hop Dong",
+        "createOrEditLabel": "Create or edit a Cau Hinh Mau Hop Dong",
+        "notFound": "No Cau Hinh Mau Hop Dongs found"
+      },
+      "created": "A new Cau Hinh Mau Hop Dong is created with identifier {{ param }}",
+      "updated": "A Cau Hinh Mau Hop Dong is updated with identifier {{ param }}",
+      "deleted": "A Cau Hinh Mau Hop Dong is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cau Hinh Mau Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Mau Hop Dong"
+      },
+      "id": "ID",
+      "idLoaiHd": "Id Loai Hd",
+      "dienGiai": "Dien Giai",
+      "idVaiTro1": "Id Vai Tro 1",
+      "idVaiTro2": "Id Vai Tro 2",
+      "fileHopDong": "File Hop Dong",
+      "srcHopDong": "Src Hop Dong",
+      "dieuKhoan": "Dieu Khoan",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "srcLoiChung": "Src Loi Chung",
+      "idNhom": "Id Nhom",
+      "fileLoiChung": "File Loi Chung",
+      "chuyenTaiSan": "Chuyen Tai San",
+      "loaiSuaDoi": "Loai Sua Doi",
+      "loaiHuyBo": "Loai Huy Bo",
+      "trangThaiDuyet": "Trang Thai Duyet",
+      "idPhanLoaiHopDong": "Id Phan Loai Hop Dong",
+      "srcCv": "Src Cv",
+      "srcTb": "Src Tb",
+      "srcTtpc": "Src Ttpc",
+      "idVaiTro3": "Id Vai Tro 3",
+      "idLoaiHD": "Id Loai HD",
+      "idPhanLoaiHD": "Id Phan Loai HD"
+    }
+  }
+}

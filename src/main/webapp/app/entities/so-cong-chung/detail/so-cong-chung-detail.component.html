@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (soCongChung()) {
+      <div>
+        <h2 data-cy="soCongChungDetailsHeading"><span jhiTranslate="gatewayApp.soCongChung.detail.title">So Cong Chung</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.idSo">Id So</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.idSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.tenSo">Ten So</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.tenSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.giaTri">Gia Tri</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.giaTri }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.soCongChung.idLoaiSo">Id Loai So</span></dt>
+          <dd>
+            <span>{{ soCongChung()!.idLoaiSo }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/so-cong-chung', soCongChung()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

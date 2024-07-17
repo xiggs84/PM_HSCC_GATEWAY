@@ -1,0 +1,38 @@
+{
+  "gatewayApp": {
+    "chiTietNganChan": {
+      "home": {
+        "title": "Chi Tiet Ngan Chans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Chi Tiet Ngan Chan",
+        "createOrEditLabel": "Create or edit a Chi Tiet Ngan Chan",
+        "notFound": "No Chi Tiet Ngan Chans found"
+      },
+      "created": "A new Chi Tiet Ngan Chan is created with identifier {{ param }}",
+      "updated": "A Chi Tiet Ngan Chan is updated with identifier {{ param }}",
+      "deleted": "A Chi Tiet Ngan Chan is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Chi Tiet Ngan Chan {{ id }}?"
+      },
+      "detail": {
+        "title": "Chi Tiet Ngan Chan"
+      },
+      "id": "ID",
+      "stt": "Stt",
+      "idDoiTuong": "Id Doi Tuong",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "loaiDoiTuong": "Loai Doi Tuong",
+      "soHsCv": "So Hs Cv",
+      "soCc": "So Cc",
+      "soVaoSo": "So Vao So",
+      "moTa": "Mo Ta",
+      "ngayNganChan": "Ngay Ngan Chan",
+      "ngayBdNganChan": "Ngay Bd Ngan Chan",
+      "ngayKtNganChan": "Ngay Kt Ngan Chan",
+      "trangThai": "Trang Thai",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "loaiNganChan": "Loai Ngan Chan",
+      "ngayCongVan": "Ngay Cong Van"
+    }
+  }
+}

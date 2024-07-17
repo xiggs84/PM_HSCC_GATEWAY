@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "canBoQuyen": {
+      "home": {
+        "title": "Can Bo Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Can Bo Quyen",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Can Bo Quyen",
+        "notFound": "No Can Bo Quyens found"
+      },
+      "created": "Một Can Bo Quyen mới được tạo với định danh {{ param }}",
+      "updated": "Một Can Bo Quyen cập nhật với định danh {{ param }}",
+      "deleted": "Một Can Bo Quyen đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Can Bo Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Can Bo Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "idDonVi": "Id Don Vi"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "tinhTrangDuongSu": {
+      "home": {
+        "title": "Tinh Trang Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tinh Trang Duong Su",
+        "createOrEditLabel": "Create or edit a Tinh Trang Duong Su",
+        "notFound": "No Tinh Trang Duong Sus found"
+      },
+      "created": "A new Tinh Trang Duong Su is created with identifier {{ param }}",
+      "updated": "A Tinh Trang Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Tinh Trang Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tinh Trang Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Tinh Trang Duong Su"
+      },
+      "id": "ID",
+      "idTinhTrang": "Id Tinh Trang",
+      "dienGiai": "Dien Giai",
+      "idLoaiDs": "Id Loai Ds"
+    }
+  }
+}

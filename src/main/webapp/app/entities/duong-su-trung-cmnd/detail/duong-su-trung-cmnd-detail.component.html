@@ -1,0 +1,104 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (duongSuTrungCmnd()) {
+      <div>
+        <h2 data-cy="duongSuTrungCmndDetailsHeading">
+          <span jhiTranslate="gatewayApp.duongSuTrungCmnd.detail.title">Duong Su Trung Cmnd</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.tenDuongSu">Ten Duong Su</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.tenDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idLoaiDs">Id Loai Ds</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idLoaiDs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.diaChi">Dia Chi</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.diaChi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.thongTinDs">Thong Tin Ds</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.thongTinDs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDsGoc">Id Ds Goc</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idDsGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idTinhTrang">Id Tinh Trang</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idTinhTrang }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMaster">Id Master</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idMaster }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.strSearch">Str Search</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.strSearch }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.soGiayTo">So Giay To</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.soGiayTo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSuMin">Id Duong Su Min</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idDuongSuMin }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMasterMin">Id Master Min</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idMasterMin }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSuMax">Id Duong Su Max</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idDuongSuMax }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMasterMax">Id Master Max</span></dt>
+          <dd>
+            <span>{{ duongSuTrungCmnd()!.idMasterMax }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/duong-su-trung-cmnd', duongSuTrungCmnd()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

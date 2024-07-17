@@ -1,0 +1,230 @@
+<div>
+  <h2 id="page-heading" data-cy="DuongSuTrungCmndHeading">
+    <span jhiTranslate="gatewayApp.duongSuTrungCmnd.home.title">Duong Su Trung Cmnds</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.duongSuTrungCmnd.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-duong-su-trung-cmnd"
+        [routerLink]="['/duong-su-trung-cmnd/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.duongSuTrungCmnd.home.createLabel">Thêm mới một Duong Su Trung Cmnd</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (duongSuTrungCmnds?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.duongSuTrungCmnd.home.notFound">No Duong Su Trung Cmnds found</span>
+    </div>
+  }
+
+  @if (duongSuTrungCmnds && duongSuTrungCmnds.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSu">Id Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.tenDuongSu">Ten Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiDs">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idLoaiDs">Id Loai Ds</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="diaChi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.diaChi">Dia Chi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinDs">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.thongTinDs">Thong Tin Ds</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDsGoc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDsGoc">Id Ds Goc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTinhTrang">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idTinhTrang">Id Tinh Trang</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idMaster">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMaster">Id Master</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="strSearch">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.strSearch">Str Search</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soGiayTo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.soGiayTo">So Giay To</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSuMin">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSuMin">Id Duong Su Min</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idMasterMin">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMasterMin">Id Master Min</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSuMax">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idDuongSuMax">Id Duong Su Max</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idMasterMax">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.duongSuTrungCmnd.idMasterMax">Id Master Max</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (duongSuTrungCmnd of duongSuTrungCmnds; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/duong-su-trung-cmnd', duongSuTrungCmnd.id, 'view']">{{ duongSuTrungCmnd.id }}</a>
+              </td>
+              <td>{{ duongSuTrungCmnd.idDuongSu }}</td>
+              <td>{{ duongSuTrungCmnd.tenDuongSu }}</td>
+              <td>{{ duongSuTrungCmnd.idLoaiDs }}</td>
+              <td>{{ duongSuTrungCmnd.diaChi }}</td>
+              <td>{{ duongSuTrungCmnd.trangThai }}</td>
+              <td>{{ duongSuTrungCmnd.thongTinDs }}</td>
+              <td>{{ duongSuTrungCmnd.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ duongSuTrungCmnd.nguoiThaoTac }}</td>
+              <td>{{ duongSuTrungCmnd.idDsGoc }}</td>
+              <td>{{ duongSuTrungCmnd.idTinhTrang }}</td>
+              <td>{{ duongSuTrungCmnd.idMaster }}</td>
+              <td>{{ duongSuTrungCmnd.idDonVi }}</td>
+              <td>{{ duongSuTrungCmnd.strSearch }}</td>
+              <td>{{ duongSuTrungCmnd.soGiayTo }}</td>
+              <td>{{ duongSuTrungCmnd.idDuongSuMin }}</td>
+              <td>{{ duongSuTrungCmnd.idMasterMin }}</td>
+              <td>{{ duongSuTrungCmnd.idDuongSuMax }}</td>
+              <td>{{ duongSuTrungCmnd.idMasterMax }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/duong-su-trung-cmnd', duongSuTrungCmnd.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/duong-su-trung-cmnd', duongSuTrungCmnd.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(duongSuTrungCmnd)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

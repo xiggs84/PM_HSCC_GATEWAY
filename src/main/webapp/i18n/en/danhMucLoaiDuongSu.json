@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiDuongSu": {
+      "home": {
+        "title": "Danh Muc Loai Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Loai Duong Su",
+        "createOrEditLabel": "Create or edit a Danh Muc Loai Duong Su",
+        "notFound": "No Danh Muc Loai Duong Sus found"
+      },
+      "created": "A new Danh Muc Loai Duong Su is created with identifier {{ param }}",
+      "updated": "A Danh Muc Loai Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Loai Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Loai Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Duong Su"
+      },
+      "id": "ID",
+      "idLoaiDs": "Id Loai Ds",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "strSearch": "Str Search",
+      "duongSu": "Duong Su"
+    }
+  }
+}

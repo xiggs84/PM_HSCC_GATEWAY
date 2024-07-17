@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240717024013"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idMaster",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soCongChung",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soTienRutTrich",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HdccCoTien",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

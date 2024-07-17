@@ -1,0 +1,113 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danh-muc-file-upload-kyso-heading"
+        data-cy="DanhMucFileUploadKysoCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhMucFileUploadKyso.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danh Muc File Upload Kyso
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhMucFileUploadKyso.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idFile" jhiTranslate="gatewayApp.danhMucFileUploadKyso.idFile">Id File</label>
+          <input type="number" class="form-control" name="idFile" id="field_idFile" data-cy="idFile" formControlName="idFile" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenFile" jhiTranslate="gatewayApp.danhMucFileUploadKyso.tenFile">Ten File</label>
+          <input type="text" class="form-control" name="tenFile" id="field_tenFile" data-cy="tenFile" formControlName="tenFile" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fileUrl" jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileUrl">File Url</label>
+          <input type="text" class="form-control" name="fileUrl" id="field_fileUrl" data-cy="fileUrl" formControlName="fileUrl" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_fileSignedUrl" jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileSignedUrl"
+            >File Signed Url</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="fileSignedUrl"
+            id="field_fileSignedUrl"
+            data-cy="fileSignedUrl"
+            formControlName="fileSignedUrl"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCanBo" jhiTranslate="gatewayApp.danhMucFileUploadKyso.idCanBo">Id Can Bo</label>
+          <input type="number" class="form-control" name="idCanBo" id="field_idCanBo" data-cy="idCanBo" formControlName="idCanBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.danhMucFileUploadKyso.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.danhMucFileUploadKyso.ngayThaoTac"
+            >Ngay Thao Tac</label
+          >
+          <div class="d-flex">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="datetime-local"
+              class="form-control"
+              name="ngayThaoTac"
+              formControlName="ngayThaoTac"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhMucFileUploadKyso.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_filePdfUrl" jhiTranslate="gatewayApp.danhMucFileUploadKyso.filePdfUrl">File Pdf Url</label>
+          <input
+            type="text"
+            class="form-control"
+            name="filePdfUrl"
+            id="field_filePdfUrl"
+            data-cy="filePdfUrl"
+            formControlName="filePdfUrl"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-van-ban-heading" data-cy="VanBanCreateUpdateHeading" jhiTranslate="gatewayApp.vanBan.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật Van Ban
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.vanBan.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idVanBan" jhiTranslate="gatewayApp.vanBan.idVanBan">Id Van Ban</label>
+          <input type="number" class="form-control" name="idVanBan" id="field_idVanBan" data-cy="idVanBan" formControlName="idVanBan" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dienGiai" jhiTranslate="gatewayApp.vanBan.dienGiai">Dien Giai</label>
+          <input type="text" class="form-control" name="dienGiai" id="field_dienGiai" data-cy="dienGiai" formControlName="dienGiai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenFile" jhiTranslate="gatewayApp.vanBan.tenFile">Ten File</label>
+          <input type="text" class="form-control" name="tenFile" id="field_tenFile" data-cy="tenFile" formControlName="tenFile" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcFile" jhiTranslate="gatewayApp.vanBan.srcFile">Src File</label>
+          <input type="text" class="form-control" name="srcFile" id="field_srcFile" data-cy="srcFile" formControlName="srcFile" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiVb" jhiTranslate="gatewayApp.vanBan.idLoaiVb">Id Loai Vb</label>
+          <input type="number" class="form-control" name="idLoaiVb" id="field_idLoaiVb" data-cy="idLoaiVb" formControlName="idLoaiVb" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.vanBan.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.vanBan.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.vanBan.nguoiThaoTac">Nguoi Thao Tac</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.vanBan.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idVbGoc" jhiTranslate="gatewayApp.vanBan.idVbGoc">Id Vb Goc</label>
+          <input type="number" class="form-control" name="idVbGoc" id="field_idVbGoc" data-cy="idVbGoc" formControlName="idVbGoc" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

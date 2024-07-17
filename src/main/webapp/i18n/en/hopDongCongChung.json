@@ -1,0 +1,70 @@
+{
+  "gatewayApp": {
+    "hopDongCongChung": {
+      "home": {
+        "title": "Hop Dong Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Hop Dong Cong Chung",
+        "createOrEditLabel": "Create or edit a Hop Dong Cong Chung",
+        "notFound": "No Hop Dong Cong Chungs found"
+      },
+      "created": "A new Hop Dong Cong Chung is created with identifier {{ param }}",
+      "updated": "A Hop Dong Cong Chung is updated with identifier {{ param }}",
+      "deleted": "A Hop Dong Cong Chung is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Hop Dong Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "Hop Dong Cong Chung"
+      },
+      "id": "ID",
+      "idHopDong": "Id Hop Dong",
+      "ngayLapHd": "Ngay Lap Hd",
+      "nguoiLapHd": "Nguoi Lap Hd",
+      "thongTinDuongSu": "Thong Tin Duong Su",
+      "thongTinTaiSan": "Thong Tin Tai San",
+      "thongTinVanBan": "Thong Tin Van Ban",
+      "trangThai": "Trang Thai",
+      "idLoaiHd": "Id Loai Hd",
+      "dieuKhoanHd": "Dieu Khoan Hd",
+      "idDonVi": "Id Don Vi",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idHdGoc": "Id Hd Goc",
+      "thongTinChuyenNhuong": "Thong Tin Chuyen Nhuong",
+      "maHopDong": "Ma Hop Dong",
+      "srcHopDong": "Src Hop Dong",
+      "ngayHen": "Ngay Hen",
+      "soCongChung": "So Cong Chung",
+      "congChungVien": "Cong Chung Vien",
+      "ngayKyHd": "Ngay Ky Hd",
+      "nguoiRutTrich": "Nguoi Rut Trich",
+      "soTienRutTrich": "So Tien Rut Trich",
+      "ngayRutTrich": "Ngay Rut Trich",
+      "hdThuCong": "Hd Thu Cong",
+      "trangThaiRutTrich": "Trang Thai Rut Trich",
+      "chuKyNgoaiTruSo": "Chu Ky Ngoai Tru So",
+      "strSearch": "Str Search",
+      "idMaster": "Id Master",
+      "idHdSdHb": "Id Hd Sd Hb",
+      "srcDmMaster": "Src Dm Master",
+      "repRefUnique": "Rep Ref Unique",
+      "ngayText": "Ngay Text",
+      "ngayNum": "Ngay Num",
+      "ngayThaoTacRutTrich": "Ngay Thao Tac Rut Trich",
+      "thuLaoCongChung": "Thu Lao Cong Chung",
+      "quyenLaiSt": "Quyen Lai St",
+      "soLaiSt": "So Lai St",
+      "quyenLaiTl": "Quyen Lai Tl",
+      "soLaiTl": "So Lai Tl",
+      "srcKySoPdf": "Src Ky So Pdf",
+      "srcKySoPdfSigned": "Src Ky So Pdf Signed",
+      "syncStatus": "Sync Status",
+      "ngayRutTrichText": "Ngay Rut Trich Text",
+      "danhSachHopDong": "Danh Sach Hop Dong",
+      "thongTinChungHopDong": "Thong Tin Chung Hop Dong",
+      "idLoaiHD": "Id Loai HD",
+      "idSoCongChung": "Id So Cong Chung"
+    }
+  }
+}

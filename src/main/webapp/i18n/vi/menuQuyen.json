@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "menuQuyen": {
+      "home": {
+        "title": "Menu Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Menu Quyen",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Menu Quyen",
+        "notFound": "No Menu Quyens found"
+      },
+      "created": "Một Menu Quyen mới được tạo với định danh {{ param }}",
+      "updated": "Một Menu Quyen cập nhật với định danh {{ param }}",
+      "deleted": "Một Menu Quyen đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Menu Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "idDonVi": "Id Don Vi",
+      "listMenu": "List Menu"
+    }
+  }
+}

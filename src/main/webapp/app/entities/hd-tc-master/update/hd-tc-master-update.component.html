@@ -1,0 +1,387 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-hd-tc-master-heading" data-cy="HdTcMasterCreateUpdateHeading" jhiTranslate="gatewayApp.hdTcMaster.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật Hd Tc Master
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.hdTcMaster.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idHopDong" jhiTranslate="gatewayApp.hdTcMaster.idHopDong">Id Hop Dong</label>
+          <input type="number" class="form-control" name="idHopDong" id="field_idHopDong" data-cy="idHopDong" formControlName="idHopDong" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayLapHd" jhiTranslate="gatewayApp.hdTcMaster.ngayLapHd">Ngay Lap Hd</label>
+          <div class="input-group">
+            <input
+              id="field_ngayLapHd"
+              data-cy="ngayLapHd"
+              type="text"
+              class="form-control"
+              name="ngayLapHd"
+              ngbDatepicker
+              #ngayLapHdDp="ngbDatepicker"
+              formControlName="ngayLapHd"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayLapHdDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiLapHd" jhiTranslate="gatewayApp.hdTcMaster.nguoiLapHd">Nguoi Lap Hd</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiLapHd"
+            id="field_nguoiLapHd"
+            data-cy="nguoiLapHd"
+            formControlName="nguoiLapHd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinDuongSu" jhiTranslate="gatewayApp.hdTcMaster.thongTinDuongSu"
+            >Thong Tin Duong Su</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinDuongSu"
+            id="field_thongTinDuongSu"
+            data-cy="thongTinDuongSu"
+            formControlName="thongTinDuongSu"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinTaiSan" jhiTranslate="gatewayApp.hdTcMaster.thongTinTaiSan">Thong Tin Tai San</label>
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinTaiSan"
+            id="field_thongTinTaiSan"
+            data-cy="thongTinTaiSan"
+            formControlName="thongTinTaiSan"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinVanBan" jhiTranslate="gatewayApp.hdTcMaster.thongTinVanBan">Thong Tin Van Ban</label>
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinVanBan"
+            id="field_thongTinVanBan"
+            data-cy="thongTinVanBan"
+            formControlName="thongTinVanBan"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.hdTcMaster.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiHd" jhiTranslate="gatewayApp.hdTcMaster.idLoaiHd">Id Loai Hd</label>
+          <input type="number" class="form-control" name="idLoaiHd" id="field_idLoaiHd" data-cy="idLoaiHd" formControlName="idLoaiHd" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dieuKhoanHd" jhiTranslate="gatewayApp.hdTcMaster.dieuKhoanHd">Dieu Khoan Hd</label>
+          <input
+            type="text"
+            class="form-control"
+            name="dieuKhoanHd"
+            id="field_dieuKhoanHd"
+            data-cy="dieuKhoanHd"
+            formControlName="dieuKhoanHd"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.hdTcMaster.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.hdTcMaster.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.hdTcMaster.nguoiThaoTac">Nguoi Thao Tac</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idHdGoc" jhiTranslate="gatewayApp.hdTcMaster.idHdGoc">Id Hd Goc</label>
+          <input type="number" class="form-control" name="idHdGoc" id="field_idHdGoc" data-cy="idHdGoc" formControlName="idHdGoc" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinChuyenNhuong" jhiTranslate="gatewayApp.hdTcMaster.thongTinChuyenNhuong"
+            >Thong Tin Chuyen Nhuong</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinChuyenNhuong"
+            id="field_thongTinChuyenNhuong"
+            data-cy="thongTinChuyenNhuong"
+            formControlName="thongTinChuyenNhuong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maHopDong" jhiTranslate="gatewayApp.hdTcMaster.maHopDong">Ma Hop Dong</label>
+          <input type="text" class="form-control" name="maHopDong" id="field_maHopDong" data-cy="maHopDong" formControlName="maHopDong" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcHopDong" jhiTranslate="gatewayApp.hdTcMaster.srcHopDong">Src Hop Dong</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcHopDong"
+            id="field_srcHopDong"
+            data-cy="srcHopDong"
+            formControlName="srcHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayHen" jhiTranslate="gatewayApp.hdTcMaster.ngayHen">Ngay Hen</label>
+          <div class="input-group">
+            <input
+              id="field_ngayHen"
+              data-cy="ngayHen"
+              type="text"
+              class="form-control"
+              name="ngayHen"
+              ngbDatepicker
+              #ngayHenDp="ngbDatepicker"
+              formControlName="ngayHen"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayHenDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSoCongChung" jhiTranslate="gatewayApp.hdTcMaster.idSoCongChung">Id So Cong Chung</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idSoCongChung"
+            id="field_idSoCongChung"
+            data-cy="idSoCongChung"
+            formControlName="idSoCongChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soCongChung" jhiTranslate="gatewayApp.hdTcMaster.soCongChung">So Cong Chung</label>
+          <input
+            type="text"
+            class="form-control"
+            name="soCongChung"
+            id="field_soCongChung"
+            data-cy="soCongChung"
+            formControlName="soCongChung"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_congChungVien" jhiTranslate="gatewayApp.hdTcMaster.congChungVien">Cong Chung Vien</label>
+          <input
+            type="number"
+            class="form-control"
+            name="congChungVien"
+            id="field_congChungVien"
+            data-cy="congChungVien"
+            formControlName="congChungVien"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayKyHd" jhiTranslate="gatewayApp.hdTcMaster.ngayKyHd">Ngay Ky Hd</label>
+          <div class="input-group">
+            <input
+              id="field_ngayKyHd"
+              data-cy="ngayKyHd"
+              type="text"
+              class="form-control"
+              name="ngayKyHd"
+              ngbDatepicker
+              #ngayKyHdDp="ngbDatepicker"
+              formControlName="ngayKyHd"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayKyHdDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiRutTrich" jhiTranslate="gatewayApp.hdTcMaster.nguoiRutTrich">Nguoi Rut Trich</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiRutTrich"
+            id="field_nguoiRutTrich"
+            data-cy="nguoiRutTrich"
+            formControlName="nguoiRutTrich"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soTienRutTrich" jhiTranslate="gatewayApp.hdTcMaster.soTienRutTrich">So Tien Rut Trich</label>
+          <input
+            type="number"
+            class="form-control"
+            name="soTienRutTrich"
+            id="field_soTienRutTrich"
+            data-cy="soTienRutTrich"
+            formControlName="soTienRutTrich"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayRutTrich" jhiTranslate="gatewayApp.hdTcMaster.ngayRutTrich">Ngay Rut Trich</label>
+          <div class="input-group">
+            <input
+              id="field_ngayRutTrich"
+              data-cy="ngayRutTrich"
+              type="text"
+              class="form-control"
+              name="ngayRutTrich"
+              ngbDatepicker
+              #ngayRutTrichDp="ngbDatepicker"
+              formControlName="ngayRutTrich"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayRutTrichDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_hdThuCong" jhiTranslate="gatewayApp.hdTcMaster.hdThuCong">Hd Thu Cong</label>
+          <input type="number" class="form-control" name="hdThuCong" id="field_hdThuCong" data-cy="hdThuCong" formControlName="hdThuCong" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThaiRutTrich" jhiTranslate="gatewayApp.hdTcMaster.trangThaiRutTrich"
+            >Trang Thai Rut Trich</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="trangThaiRutTrich"
+            id="field_trangThaiRutTrich"
+            data-cy="trangThaiRutTrich"
+            formControlName="trangThaiRutTrich"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_chuKyNgoaiTruSo" jhiTranslate="gatewayApp.hdTcMaster.chuKyNgoaiTruSo"
+            >Chu Ky Ngoai Tru So</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="chuKyNgoaiTruSo"
+            id="field_chuKyNgoaiTruSo"
+            data-cy="chuKyNgoaiTruSo"
+            formControlName="chuKyNgoaiTruSo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_strSearch" jhiTranslate="gatewayApp.hdTcMaster.strSearch">Str Search</label>
+          <input type="text" class="form-control" name="strSearch" id="field_strSearch" data-cy="strSearch" formControlName="strSearch" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idMaster" jhiTranslate="gatewayApp.hdTcMaster.idMaster">Id Master</label>
+          <input type="number" class="form-control" name="idMaster" id="field_idMaster" data-cy="idMaster" formControlName="idMaster" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idHdSdHb" jhiTranslate="gatewayApp.hdTcMaster.idHdSdHb">Id Hd Sd Hb</label>
+          <input type="number" class="form-control" name="idHdSdHb" id="field_idHdSdHb" data-cy="idHdSdHb" formControlName="idHdSdHb" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_srcDmMaster" jhiTranslate="gatewayApp.hdTcMaster.srcDmMaster">Src Dm Master</label>
+          <input
+            type="text"
+            class="form-control"
+            name="srcDmMaster"
+            id="field_srcDmMaster"
+            data-cy="srcDmMaster"
+            formControlName="srcDmMaster"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_repRefUnique" jhiTranslate="gatewayApp.hdTcMaster.repRefUnique">Rep Ref Unique</label>
+          <input
+            type="number"
+            class="form-control"
+            name="repRefUnique"
+            id="field_repRefUnique"
+            data-cy="repRefUnique"
+            formControlName="repRefUnique"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucNgonNgu": {
+      "home": {
+        "title": "Danh Muc Ngon Ngus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Ngon Ngu",
+        "createOrEditLabel": "Create or edit a Danh Muc Ngon Ngu",
+        "notFound": "No Danh Muc Ngon Ngus found"
+      },
+      "created": "A new Danh Muc Ngon Ngu is created with identifier {{ param }}",
+      "updated": "A Danh Muc Ngon Ngu is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Ngon Ngu is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Ngon Ngu {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Ngon Ngu"
+      },
+      "id": "ID",
+      "idNgonNgu": "Id Ngon Ngu",
+      "dienGiai": "Dien Giai",
+      "vietTat": "Viet Tat"
+    }
+  }
+}

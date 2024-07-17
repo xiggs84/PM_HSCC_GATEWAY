@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucKeyDanhTuFaq": {
+      "home": {
+        "title": "Danh Muc Key Danh Tu Faqs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Key Danh Tu Faq",
+        "createOrEditLabel": "Create or edit a Danh Muc Key Danh Tu Faq",
+        "notFound": "No Danh Muc Key Danh Tu Faqs found"
+      },
+      "created": "A new Danh Muc Key Danh Tu Faq is created with identifier {{ param }}",
+      "updated": "A Danh Muc Key Danh Tu Faq is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Key Danh Tu Faq is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Key Danh Tu Faq {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Key Danh Tu Faq"
+      },
+      "id": "ID",
+      "idCauHoi": "Id Cau Hoi",
+      "keyDanhTu": "Key Danh Tu"
+    }
+  }
+}

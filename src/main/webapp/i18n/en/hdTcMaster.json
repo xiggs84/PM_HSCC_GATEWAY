@@ -1,0 +1,55 @@
+{
+  "gatewayApp": {
+    "hdTcMaster": {
+      "home": {
+        "title": "Hd Tc Masters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Hd Tc Master",
+        "createOrEditLabel": "Create or edit a Hd Tc Master",
+        "notFound": "No Hd Tc Masters found"
+      },
+      "created": "A new Hd Tc Master is created with identifier {{ param }}",
+      "updated": "A Hd Tc Master is updated with identifier {{ param }}",
+      "deleted": "A Hd Tc Master is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Hd Tc Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Hd Tc Master"
+      },
+      "id": "ID",
+      "idHopDong": "Id Hop Dong",
+      "ngayLapHd": "Ngay Lap Hd",
+      "nguoiLapHd": "Nguoi Lap Hd",
+      "thongTinDuongSu": "Thong Tin Duong Su",
+      "thongTinTaiSan": "Thong Tin Tai San",
+      "thongTinVanBan": "Thong Tin Van Ban",
+      "trangThai": "Trang Thai",
+      "idLoaiHd": "Id Loai Hd",
+      "dieuKhoanHd": "Dieu Khoan Hd",
+      "idDonVi": "Id Don Vi",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idHdGoc": "Id Hd Goc",
+      "thongTinChuyenNhuong": "Thong Tin Chuyen Nhuong",
+      "maHopDong": "Ma Hop Dong",
+      "srcHopDong": "Src Hop Dong",
+      "ngayHen": "Ngay Hen",
+      "idSoCongChung": "Id So Cong Chung",
+      "soCongChung": "So Cong Chung",
+      "congChungVien": "Cong Chung Vien",
+      "ngayKyHd": "Ngay Ky Hd",
+      "nguoiRutTrich": "Nguoi Rut Trich",
+      "soTienRutTrich": "So Tien Rut Trich",
+      "ngayRutTrich": "Ngay Rut Trich",
+      "hdThuCong": "Hd Thu Cong",
+      "trangThaiRutTrich": "Trang Thai Rut Trich",
+      "chuKyNgoaiTruSo": "Chu Ky Ngoai Tru So",
+      "strSearch": "Str Search",
+      "idMaster": "Id Master",
+      "idHdSdHb": "Id Hd Sd Hb",
+      "srcDmMaster": "Src Dm Master",
+      "repRefUnique": "Rep Ref Unique"
+    }
+  }
+}

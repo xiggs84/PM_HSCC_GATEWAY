@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucDauSoCmnd()) {
+      <div>
+        <h2 data-cy="danhMucDauSoCmndDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhMucDauSoCmnd.detail.title">Danh Muc Dau So Cmnd</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucDauSoCmnd()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDauSoCmnd.idDauSo">Id Dau So</span></dt>
+          <dd>
+            <span>{{ danhMucDauSoCmnd()!.idDauSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDauSoCmnd.dauSo">Dau So</span></dt>
+          <dd>
+            <span>{{ danhMucDauSoCmnd()!.dauSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDauSoCmnd.tinhThanh">Tinh Thanh</span></dt>
+          <dd>
+            <span>{{ danhMucDauSoCmnd()!.tinhThanh }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDauSoCmnd.idLoai">Id Loai</span></dt>
+          <dd>
+            <span>{{ danhMucDauSoCmnd()!.idLoai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-dau-so-cmnd', danhMucDauSoCmnd()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

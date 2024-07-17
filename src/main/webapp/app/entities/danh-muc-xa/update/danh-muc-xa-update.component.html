@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-danh-muc-xa-heading" data-cy="DanhMucXaCreateUpdateHeading" jhiTranslate="gatewayApp.danhMucXa.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật Danh Muc Xa
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhMucXa.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maXa" jhiTranslate="gatewayApp.danhMucXa.maXa">Ma Xa</label>
+          <input type="number" class="form-control" name="maXa" id="field_maXa" data-cy="maXa" formControlName="maXa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenXa" jhiTranslate="gatewayApp.danhMucXa.tenXa">Ten Xa</label>
+          <input type="text" class="form-control" name="tenXa" id="field_tenXa" data-cy="tenXa" formControlName="tenXa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.danhMucXa.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_maHuyen" jhiTranslate="gatewayApp.danhMucXa.maHuyen">Ma Huyen</label>
+          <select
+            class="form-control"
+            id="field_maHuyen"
+            data-cy="maHuyen"
+            name="maHuyen"
+            formControlName="maHuyen"
+            [compareWith]="compareDanhMucHuyen"
+          >
+            <option [ngValue]="null"></option>
+            @for (danhMucHuyenOption of danhMucHuyensSharedCollection; track $index) {
+              <option [ngValue]="danhMucHuyenOption">{{ danhMucHuyenOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (vanBan()) {
+      <div>
+        <h2 data-cy="vanBanDetailsHeading"><span jhiTranslate="gatewayApp.vanBan.detail.title">Van Ban</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ vanBan()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.idVanBan">Id Van Ban</span></dt>
+          <dd>
+            <span>{{ vanBan()!.idVanBan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ vanBan()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.tenFile">Ten File</span></dt>
+          <dd>
+            <span>{{ vanBan()!.tenFile }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.srcFile">Src File</span></dt>
+          <dd>
+            <span>{{ vanBan()!.srcFile }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.idLoaiVb">Id Loai Vb</span></dt>
+          <dd>
+            <span>{{ vanBan()!.idLoaiVb }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ vanBan()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ vanBan()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ vanBan()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ vanBan()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.vanBan.idVbGoc">Id Vb Goc</span></dt>
+          <dd>
+            <span>{{ vanBan()!.idVbGoc }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/van-ban', vanBan()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

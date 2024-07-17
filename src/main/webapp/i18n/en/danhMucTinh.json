@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "danhMucTinh": {
+      "home": {
+        "title": "Danh Muc Tinhs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Tinh",
+        "createOrEditLabel": "Create or edit a Danh Muc Tinh",
+        "notFound": "No Danh Muc Tinhs found"
+      },
+      "created": "A new Danh Muc Tinh is created with identifier {{ param }}",
+      "updated": "A Danh Muc Tinh is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Tinh is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Tinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Tinh"
+      },
+      "id": "ID",
+      "maTinh": "Ma Tinh",
+      "tenTinh": "Ten Tinh",
+      "trangThai": "Trang Thai",
+      "danhMucHuyen": "Danh Muc Huyen",
+      "danhMucDonVi": "Danh Muc Don Vi"
+    }
+  }
+}

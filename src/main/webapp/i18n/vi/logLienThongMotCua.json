@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "logLienThongMotCua": {
+      "home": {
+        "title": "Log Lien Thong Mot Cuas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Lien Thong Mot Cua",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Lien Thong Mot Cua",
+        "notFound": "No Log Lien Thong Mot Cuas found"
+      },
+      "created": "Một Log Lien Thong Mot Cua mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Lien Thong Mot Cua cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Lien Thong Mot Cua đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Lien Thong Mot Cua {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Lien Thong Mot Cua"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "idChungThuc": "Id Chung Thuc",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "noiDung": "Noi Dung"
+    }
+  }
+}

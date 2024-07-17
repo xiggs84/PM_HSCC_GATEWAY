@@ -1,0 +1,158 @@
+<div>
+  <h2 id="page-heading" data-cy="DanhMucFileUploadKysoHeading">
+    <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.home.title">Danh Muc File Upload Kysos</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-danh-muc-file-upload-kyso"
+        [routerLink]="['/danh-muc-file-upload-kyso/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.home.createLabel">Thêm mới một Danh Muc File Upload Kyso</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (danhMucFileUploadKysos?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.home.notFound">No Danh Muc File Upload Kysos found</span>
+    </div>
+  }
+
+  @if (danhMucFileUploadKysos && danhMucFileUploadKysos.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idFile">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idFile">Id File</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenFile">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.tenFile">Ten File</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="fileUrl">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileUrl">File Url</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="fileSignedUrl">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.fileSignedUrl">File Signed Url</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idCanBo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idCanBo">Id Can Bo</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="filePdfUrl">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFileUploadKyso.filePdfUrl">File Pdf Url</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (danhMucFileUploadKyso of danhMucFileUploadKysos; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/danh-muc-file-upload-kyso', danhMucFileUploadKyso.id, 'view']">{{ danhMucFileUploadKyso.id }}</a>
+              </td>
+              <td>{{ danhMucFileUploadKyso.idFile }}</td>
+              <td>{{ danhMucFileUploadKyso.tenFile }}</td>
+              <td>{{ danhMucFileUploadKyso.fileUrl }}</td>
+              <td>{{ danhMucFileUploadKyso.fileSignedUrl }}</td>
+              <td>{{ danhMucFileUploadKyso.idCanBo }}</td>
+              <td>{{ danhMucFileUploadKyso.idDonVi }}</td>
+              <td>{{ danhMucFileUploadKyso.ngayThaoTac | formatMediumDatetime }}</td>
+              <td>{{ danhMucFileUploadKyso.trangThai }}</td>
+              <td>{{ danhMucFileUploadKyso.filePdfUrl }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/danh-muc-file-upload-kyso', danhMucFileUploadKyso.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/danh-muc-file-upload-kyso', danhMucFileUploadKyso.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(danhMucFileUploadKyso)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,156 @@
+{
+  "annotations": {
+    "changelogDate": "20240717020713"
+  },
+  "applications": ["gateway", "CanBo"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenDonVi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nguoiDaiDien",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soDienThoai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonViQl",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayKhaiBao",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soNha",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maSoThue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idCapQl",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiNhiemVu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "hoaDonDt",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maDonViIgate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maCoQuanIgate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "capDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "kySo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "qrScan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "verifyIdCard",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isVerifyFace",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isElastic",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "apikeyCccd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apikeyFace",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "verifyCodeCccd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "usernameElastic",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "passwordElastic",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucDonVi",
+  "relationships": [
+    {
+      "otherEntityName": "canBoQuyen",
+      "otherEntityRelationshipName": "idDonVi",
+      "relationshipName": "canBoQuyen",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "danhMucTinh",
+      "relationshipName": "idTinh",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "danhMucHuyen",
+      "relationshipName": "idHuyen",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "danhMucXa",
+      "relationshipName": "idPhuongXa",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "danhMucLoaiDonVi",
+      "relationshipName": "idLoaiDv",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

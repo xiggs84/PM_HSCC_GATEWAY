@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (logSearchDsTs()) {
+      <div>
+        <h2 data-cy="logSearchDsTsDetailsHeading"><span jhiTranslate="gatewayApp.logSearchDsTs.detail.title">Log Search Ds Ts</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.idLog">Id Log</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.idLog }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.noiDung">Noi Dung</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.noiDung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.slKq">Sl Kq</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.slKq }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logSearchDsTs.kqSearch">Kq Search</span></dt>
+          <dd>
+            <span>{{ logSearchDsTs()!.kqSearch }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/log-search-ds-ts', logSearchDsTs()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "gatewayApp": {
+    "duongSu": {
+      "home": {
+        "title": "Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Duong Su",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Duong Su",
+        "notFound": "No Duong Sus found"
+      },
+      "created": "Một Duong Su mới được tạo với định danh {{ param }}",
+      "updated": "Một Duong Su cập nhật với định danh {{ param }}",
+      "deleted": "Một Duong Su đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Duong Su"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "tenDuongSu": "Ten Duong Su",
+      "diaChi": "Dia Chi",
+      "trangThai": "Trang Thai",
+      "thongTinDs": "Thong Tin Ds",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDsGoc": "Id Ds Goc",
+      "idMaster": "Id Master",
+      "idDonVi": "Id Don Vi",
+      "strSearch": "Str Search",
+      "soGiayTo": "So Giay To",
+      "idLoaiNganChan": "Id Loai Ngan Chan",
+      "syncStatus": "Sync Status",
+      "idTinhTrang": "Id Tinh Trang",
+      "idLoaiDs": "Id Loai Ds"
+    }
+  }
+}

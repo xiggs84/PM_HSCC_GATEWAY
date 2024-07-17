@@ -1,0 +1,56 @@
+{
+  "annotations": {
+    "changelogDate": "20240717025013"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idVanBan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tenFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idLoaiVb",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idVbGoc",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "VanBan",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

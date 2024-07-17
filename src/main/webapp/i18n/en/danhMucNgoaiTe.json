@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucNgoaiTe": {
+      "home": {
+        "title": "Danh Muc Ngoai Tes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Ngoai Te",
+        "createOrEditLabel": "Create or edit a Danh Muc Ngoai Te",
+        "notFound": "No Danh Muc Ngoai Tes found"
+      },
+      "created": "A new Danh Muc Ngoai Te is created with identifier {{ param }}",
+      "updated": "A Danh Muc Ngoai Te is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Ngoai Te is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Ngoai Te {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Ngoai Te"
+      },
+      "id": "ID",
+      "idLoai": "Id Loai",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

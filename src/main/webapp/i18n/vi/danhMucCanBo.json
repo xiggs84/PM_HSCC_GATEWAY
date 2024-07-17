@@ -1,0 +1,37 @@
+{
+  "gatewayApp": {
+    "danhMucCanBo": {
+      "home": {
+        "title": "Danh Muc Can Bos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Can Bo",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Can Bo",
+        "notFound": "No Danh Muc Can Bos found"
+      },
+      "created": "Một Danh Muc Can Bo mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Can Bo cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Can Bo đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Can Bo {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Can Bo"
+      },
+      "id": "ID",
+      "idCanBo": "Id Can Bo",
+      "tenCanBo": "Ten Can Bo",
+      "diaChi": "Dia Chi",
+      "namSinh": "Nam Sinh",
+      "email": "Email",
+      "soDienThoai": "So Dien Thoai",
+      "soCmnd": "So Cmnd",
+      "tenDangNhap": "Ten Dang Nhap",
+      "matKhau": "Mat Khau",
+      "trangThai": "Trang Thai",
+      "clientId": "Client Id",
+      "clientSecret": "Client Secret",
+      "usernameKyso": "Username Kyso",
+      "passwordKyso": "Password Kyso"
+    }
+  }
+}

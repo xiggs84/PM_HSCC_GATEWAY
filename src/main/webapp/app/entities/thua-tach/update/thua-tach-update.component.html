@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-thua-tach-heading" data-cy="ThuaTachCreateUpdateHeading" jhiTranslate="gatewayApp.thuaTach.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật Thua Tach
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.thuaTach.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idThuaTach" jhiTranslate="gatewayApp.thuaTach.idThuaTach">Id Thua Tach</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idThuaTach"
+            id="field_idThuaTach"
+            data-cy="idThuaTach"
+            formControlName="idThuaTach"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idTaiSan" jhiTranslate="gatewayApp.thuaTach.idTaiSan">Id Tai San</label>
+          <input type="number" class="form-control" name="idTaiSan" id="field_idTaiSan" data-cy="idTaiSan" formControlName="idTaiSan" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_thongTinThuaTach" jhiTranslate="gatewayApp.thuaTach.thongTinThuaTach"
+            >Thong Tin Thua Tach</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="thongTinThuaTach"
+            id="field_thongTinThuaTach"
+            data-cy="thongTinThuaTach"
+            formControlName="thongTinThuaTach"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.thuaTach.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

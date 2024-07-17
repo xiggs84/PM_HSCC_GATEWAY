@@ -1,0 +1,126 @@
+<div>
+  <h2 id="page-heading" data-cy="LogThaoTacHeading">
+    <span jhiTranslate="gatewayApp.logThaoTac.home.title">Log Thao Tacs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.logThaoTac.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-log-thao-tac"
+        [routerLink]="['/log-thao-tac/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.logThaoTac.home.createLabel">Thêm mới một Log Thao Tac</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (logThaoTacs?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.logThaoTac.home.notFound">No Log Thao Tacs found</span>
+    </div>
+  }
+
+  @if (logThaoTacs && logThaoTacs.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLog">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.idLog">Id Log</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dienGiai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.dienGiai">Dien Giai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenBang">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.tenBang">Ten Bang</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idKhoa">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.idKhoa">Id Khoa</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logThaoTac.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (logThaoTac of logThaoTacs; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/log-thao-tac', logThaoTac.id, 'view']">{{ logThaoTac.id }}</a>
+              </td>
+              <td>{{ logThaoTac.idLog }}</td>
+              <td>{{ logThaoTac.dienGiai }}</td>
+              <td>{{ logThaoTac.tenBang }}</td>
+              <td>{{ logThaoTac.idKhoa }}</td>
+              <td>{{ logThaoTac.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ logThaoTac.nguoiThaoTac }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/log-thao-tac', logThaoTac.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/log-thao-tac', logThaoTac.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(logThaoTac)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

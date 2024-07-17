@@ -1,0 +1,46 @@
+{
+  "gatewayApp": {
+    "taiSanDatNha": {
+      "home": {
+        "title": "Tai San Dat Nhas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Tai San Dat Nha",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tai San Dat Nha",
+        "notFound": "No Tai San Dat Nhas found"
+      },
+      "created": "Một Tai San Dat Nha mới được tạo với định danh {{ param }}",
+      "updated": "Một Tai San Dat Nha cập nhật với định danh {{ param }}",
+      "deleted": "Một Tai San Dat Nha đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tai San Dat Nha {{ id }}?"
+      },
+      "detail": {
+        "title": "Tai San Dat Nha"
+      },
+      "id": "ID",
+      "idTaiSan": "Id Tai San",
+      "tenTaiSan": "Ten Tai San",
+      "trangThai": "Trang Thai",
+      "thongTinTs": "Thong Tin Ts",
+      "idLoaiTs": "Id Loai Ts",
+      "ghiChu": "Ghi Chu",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDuongSu": "Id Duong Su",
+      "idTsGoc": "Id Ts Goc",
+      "maTaiSan": "Ma Tai San",
+      "idTinhTrang": "Id Tinh Trang",
+      "idLoaiNganChan": "Id Loai Ngan Chan",
+      "ngayBdNganChan": "Ngay Bd Ngan Chan",
+      "ngayKtNganChan": "Ngay Kt Ngan Chan",
+      "idMaster": "Id Master",
+      "strSearch": "Str Search",
+      "idDonVi": "Id Don Vi",
+      "soHsCv": "So Hs Cv",
+      "soCc": "So Cc",
+      "soVaoSo": "So Vao So",
+      "moTa": "Mo Ta",
+      "loaiNganChan": "Loai Ngan Chan"
+    }
+  }
+}

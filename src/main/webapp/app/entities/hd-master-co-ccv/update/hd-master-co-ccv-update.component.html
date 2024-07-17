@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-hd-master-co-ccv-heading"
+        data-cy="HdMasterCoCcvCreateUpdateHeading"
+        jhiTranslate="gatewayApp.hdMasterCoCcv.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Hd Master Co Ccv
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.hdMasterCoCcv.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_repRefUnique" jhiTranslate="gatewayApp.hdMasterCoCcv.repRefUnique">Rep Ref Unique</label>
+          <input
+            type="number"
+            class="form-control"
+            name="repRefUnique"
+            id="field_repRefUnique"
+            data-cy="repRefUnique"
+            formControlName="repRefUnique"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_persCode" jhiTranslate="gatewayApp.hdMasterCoCcv.persCode">Pers Code</label>
+          <input type="number" class="form-control" name="persCode" id="field_persCode" data-cy="persCode" formControlName="persCode" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ldUnique" jhiTranslate="gatewayApp.hdMasterCoCcv.ldUnique">Ld Unique</label>
+          <input type="number" class="form-control" name="ldUnique" id="field_ldUnique" data-cy="ldUnique" formControlName="ldUnique" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenCanBo" jhiTranslate="gatewayApp.hdMasterCoCcv.tenCanBo">Ten Can Bo</label>
+          <input type="text" class="form-control" name="tenCanBo" id="field_tenCanBo" data-cy="tenCanBo" formControlName="tenCanBo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCanBo" jhiTranslate="gatewayApp.hdMasterCoCcv.idCanBo">Id Can Bo</label>
+          <input type="number" class="form-control" name="idCanBo" id="field_idCanBo" data-cy="idCanBo" formControlName="idCanBo" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiSoCongChung": {
+      "home": {
+        "title": "Danh Muc Loai So Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Loai So Cong Chung",
+        "createOrEditLabel": "Create or edit a Danh Muc Loai So Cong Chung",
+        "notFound": "No Danh Muc Loai So Cong Chungs found"
+      },
+      "created": "A new Danh Muc Loai So Cong Chung is created with identifier {{ param }}",
+      "updated": "A Danh Muc Loai So Cong Chung is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Loai So Cong Chung is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Loai So Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai So Cong Chung"
+      },
+      "id": "ID",
+      "idLoai": "Id Loai",
+      "tenLoai": "Ten Loai",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

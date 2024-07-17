@@ -1,0 +1,110 @@
+<div>
+  <h2 id="page-heading" data-cy="LogDangNhapHeading">
+    <span jhiTranslate="gatewayApp.logDangNhap.home.title">Log Dang Nhaps</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.logDangNhap.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-log-dang-nhap"
+        [routerLink]="['/log-dang-nhap/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.logDangNhap.home.createLabel">Thêm mới một Log Dang Nhap</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (logDangNhaps?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.logDangNhap.home.notFound">No Log Dang Nhaps found</span>
+    </div>
+  }
+
+  @if (logDangNhaps && logDangNhaps.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayDangNhap">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDangNhap.ngayDangNhap">Ngay Dang Nhap</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ipAddress">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDangNhap.ipAddress">Ip Address</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idCanBo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDangNhap.idCanBo">Id Can Bo</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenDangNhap">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDangNhap.tenDangNhap">Ten Dang Nhap</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (logDangNhap of logDangNhaps; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/log-dang-nhap', logDangNhap.id, 'view']">{{ logDangNhap.id }}</a>
+              </td>
+              <td>{{ logDangNhap.ngayDangNhap | formatMediumDate }}</td>
+              <td>{{ logDangNhap.ipAddress }}</td>
+              <td>{{ logDangNhap.idCanBo }}</td>
+              <td>{{ logDangNhap.tenDangNhap }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/log-dang-nhap', logDangNhap.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/log-dang-nhap', logDangNhap.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(logDangNhap)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

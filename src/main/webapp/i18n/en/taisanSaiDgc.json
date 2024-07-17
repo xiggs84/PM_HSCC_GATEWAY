@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "taisanSaiDgc": {
+      "home": {
+        "title": "Taisan Sai Dgcs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Taisan Sai Dgc",
+        "createOrEditLabel": "Create or edit a Taisan Sai Dgc",
+        "notFound": "No Taisan Sai Dgcs found"
+      },
+      "created": "A new Taisan Sai Dgc is created with identifier {{ param }}",
+      "updated": "A Taisan Sai Dgc is updated with identifier {{ param }}",
+      "deleted": "A Taisan Sai Dgc is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Taisan Sai Dgc {{ id }}?"
+      },
+      "detail": {
+        "title": "Taisan Sai Dgc"
+      },
+      "id": "ID",
+      "idMaster": "Id Master",
+      "thongTinTs": "Thong Tin Ts",
+      "thongTinTsDung": "Thong Tin Ts Dung"
+    }
+  }
+}

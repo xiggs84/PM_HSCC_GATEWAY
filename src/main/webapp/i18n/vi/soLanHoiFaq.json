@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "soLanHoiFaq": {
+      "home": {
+        "title": "So Lan Hoi Faqs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một So Lan Hoi Faq",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật So Lan Hoi Faq",
+        "notFound": "No So Lan Hoi Faqs found"
+      },
+      "created": "Một So Lan Hoi Faq mới được tạo với định danh {{ param }}",
+      "updated": "Một So Lan Hoi Faq cập nhật với định danh {{ param }}",
+      "deleted": "Một So Lan Hoi Faq đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa So Lan Hoi Faq {{ id }}?"
+      },
+      "detail": {
+        "title": "So Lan Hoi Faq"
+      },
+      "id": "ID",
+      "idCauHoi": "Id Cau Hoi",
+      "idCanBo": "Id Can Bo",
+      "ngayThaoTac": "Ngay Thao Tac"
+    }
+  }
+}

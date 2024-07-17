@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "soLanHoiFaq": {
+      "home": {
+        "title": "So Lan Hoi Faqs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new So Lan Hoi Faq",
+        "createOrEditLabel": "Create or edit a So Lan Hoi Faq",
+        "notFound": "No So Lan Hoi Faqs found"
+      },
+      "created": "A new So Lan Hoi Faq is created with identifier {{ param }}",
+      "updated": "A So Lan Hoi Faq is updated with identifier {{ param }}",
+      "deleted": "A So Lan Hoi Faq is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete So Lan Hoi Faq {{ id }}?"
+      },
+      "detail": {
+        "title": "So Lan Hoi Faq"
+      },
+      "id": "ID",
+      "idCauHoi": "Id Cau Hoi",
+      "idCanBo": "Id Can Bo",
+      "ngayThaoTac": "Ngay Thao Tac"
+    }
+  }
+}

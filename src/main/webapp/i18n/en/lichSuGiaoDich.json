@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "lichSuGiaoDich": {
+      "home": {
+        "title": "Lich Su Giao Diches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Lich Su Giao Dich",
+        "createOrEditLabel": "Create or edit a Lich Su Giao Dich",
+        "notFound": "No Lich Su Giao Diches found"
+      },
+      "created": "A new Lich Su Giao Dich is created with identifier {{ param }}",
+      "updated": "A Lich Su Giao Dich is updated with identifier {{ param }}",
+      "deleted": "A Lich Su Giao Dich is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Lich Su Giao Dich {{ id }}?"
+      },
+      "detail": {
+        "title": "Lich Su Giao Dich"
+      },
+      "id": "ID",
+      "idTaiSan": "Id Tai San",
+      "idDuongSu": "Id Duong Su",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "idHopDong": "Id Hop Dong",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idChungThuc": "Id Chung Thuc"
+    }
+  }
+}

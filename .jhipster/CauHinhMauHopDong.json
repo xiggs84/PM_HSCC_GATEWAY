@@ -1,0 +1,121 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031113"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLoaiHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idVaiTro1",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idVaiTro2",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "fileHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dieuKhoan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srcLoiChung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idNhom",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "fileLoiChung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "chuyenTaiSan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiSuaDoi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiHuyBo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThaiDuyet",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idPhanLoaiHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srcCv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcTb",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcTtpc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idVaiTro3",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "CauHinhMauHopDong",
+  "relationships": [
+    {
+      "otherEntityName": "danhMucLoaiHopDong",
+      "relationshipName": "idLoaiHD",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "phanLoaiHopDong",
+      "relationshipName": "idPhanLoaiHD",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

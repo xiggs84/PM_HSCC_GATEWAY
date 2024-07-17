@@ -1,0 +1,142 @@
+<div>
+  <h2 id="page-heading" data-cy="SoCongChungHeading">
+    <span jhiTranslate="gatewayApp.soCongChung.home.title">So Cong Chungs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.soCongChung.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-so-cong-chung"
+        [routerLink]="['/so-cong-chung/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.soCongChung.home.createLabel">Thêm mới một So Cong Chung</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (soCongChungs?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.soCongChung.home.notFound">No So Cong Chungs found</span>
+    </div>
+  }
+
+  @if (soCongChungs && soCongChungs.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.idSo">Id So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenSo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.tenSo">Ten So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="giaTri">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.giaTri">Gia Tri</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiSo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.soCongChung.idLoaiSo">Id Loai So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (soCongChung of soCongChungs; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/so-cong-chung', soCongChung.id, 'view']">{{ soCongChung.id }}</a>
+              </td>
+              <td>{{ soCongChung.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ soCongChung.idSo }}</td>
+              <td>{{ soCongChung.idDonVi }}</td>
+              <td>{{ soCongChung.tenSo }}</td>
+              <td>{{ soCongChung.giaTri }}</td>
+              <td>{{ soCongChung.nguoiThaoTac }}</td>
+              <td>{{ soCongChung.trangThai }}</td>
+              <td>{{ soCongChung.idLoaiSo }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/so-cong-chung', soCongChung.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/so-cong-chung', soCongChung.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(soCongChung)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

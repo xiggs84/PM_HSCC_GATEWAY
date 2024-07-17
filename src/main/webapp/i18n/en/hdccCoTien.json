@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "hdccCoTien": {
+      "home": {
+        "title": "Hdcc Co Tiens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Hdcc Co Tien",
+        "createOrEditLabel": "Create or edit a Hdcc Co Tien",
+        "notFound": "No Hdcc Co Tiens found"
+      },
+      "created": "A new Hdcc Co Tien is created with identifier {{ param }}",
+      "updated": "A Hdcc Co Tien is updated with identifier {{ param }}",
+      "deleted": "A Hdcc Co Tien is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Hdcc Co Tien {{ id }}?"
+      },
+      "detail": {
+        "title": "Hdcc Co Tien"
+      },
+      "id": "ID",
+      "idMaster": "Id Master",
+      "soCongChung": "So Cong Chung",
+      "soTienRutTrich": "So Tien Rut Trich"
+    }
+  }
+}

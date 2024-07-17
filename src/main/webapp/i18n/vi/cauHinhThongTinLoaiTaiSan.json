@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "cauHinhThongTinLoaiTaiSan": {
+      "home": {
+        "title": "Cau Hinh Thong Tin Loai Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Cau Hinh Thong Tin Loai Tai San",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Cau Hinh Thong Tin Loai Tai San",
+        "notFound": "No Cau Hinh Thong Tin Loai Tai Sans found"
+      },
+      "created": "Một Cau Hinh Thong Tin Loai Tai San mới được tạo với định danh {{ param }}",
+      "updated": "Một Cau Hinh Thong Tin Loai Tai San cập nhật với định danh {{ param }}",
+      "deleted": "Một Cau Hinh Thong Tin Loai Tai San đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Cau Hinh Thong Tin Loai Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Thong Tin Loai Tai San"
+      },
+      "id": "ID",
+      "idCauHinh": "Id Cau Hinh",
+      "noiDung": "Noi Dung",
+      "javascript": "Javascript",
+      "css": "Css",
+      "idLoaiTs": "Id Loai Ts",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai",
+      "xml": "Xml"
+    }
+  }
+}

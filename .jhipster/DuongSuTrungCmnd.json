@@ -1,0 +1,88 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031413"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDuongSu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenDuongSu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idLoaiDs",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinDs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDsGoc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idTinhTrang",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idMaster",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soGiayTo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDuongSuMin",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idMasterMin",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDuongSuMax",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idMasterMax",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DuongSuTrungCmnd",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

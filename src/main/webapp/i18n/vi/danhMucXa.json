@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "danhMucXa": {
+      "home": {
+        "title": "Danh Muc Xas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Xa",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Xa",
+        "notFound": "No Danh Muc Xas found"
+      },
+      "created": "Một Danh Muc Xa mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Xa cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Xa đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Xa {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Xa"
+      },
+      "id": "ID",
+      "maXa": "Ma Xa",
+      "tenXa": "Ten Xa",
+      "trangThai": "Trang Thai",
+      "danhMucDonVi": "Danh Muc Don Vi",
+      "maHuyen": "Ma Huyen"
+    }
+  }
+}

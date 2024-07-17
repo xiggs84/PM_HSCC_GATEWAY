@@ -1,0 +1,217 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-chi-tiet-ngan-chan-heading"
+        data-cy="ChiTietNganChanCreateUpdateHeading"
+        jhiTranslate="gatewayApp.chiTietNganChan.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Chi Tiet Ngan Chan
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.chiTietNganChan.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_stt" jhiTranslate="gatewayApp.chiTietNganChan.stt">Stt</label>
+          <input type="number" class="form-control" name="stt" id="field_stt" data-cy="stt" formControlName="stt" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDoiTuong" jhiTranslate="gatewayApp.chiTietNganChan.idDoiTuong">Id Doi Tuong</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idDoiTuong"
+            id="field_idDoiTuong"
+            data-cy="idDoiTuong"
+            formControlName="idDoiTuong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.chiTietNganChan.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiDoiTuong" jhiTranslate="gatewayApp.chiTietNganChan.loaiDoiTuong">Loai Doi Tuong</label>
+          <input
+            type="number"
+            class="form-control"
+            name="loaiDoiTuong"
+            id="field_loaiDoiTuong"
+            data-cy="loaiDoiTuong"
+            formControlName="loaiDoiTuong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soHsCv" jhiTranslate="gatewayApp.chiTietNganChan.soHsCv">So Hs Cv</label>
+          <input type="text" class="form-control" name="soHsCv" id="field_soHsCv" data-cy="soHsCv" formControlName="soHsCv" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soCc" jhiTranslate="gatewayApp.chiTietNganChan.soCc">So Cc</label>
+          <input type="text" class="form-control" name="soCc" id="field_soCc" data-cy="soCc" formControlName="soCc" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soVaoSo" jhiTranslate="gatewayApp.chiTietNganChan.soVaoSo">So Vao So</label>
+          <input type="text" class="form-control" name="soVaoSo" id="field_soVaoSo" data-cy="soVaoSo" formControlName="soVaoSo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_moTa" jhiTranslate="gatewayApp.chiTietNganChan.moTa">Mo Ta</label>
+          <input type="text" class="form-control" name="moTa" id="field_moTa" data-cy="moTa" formControlName="moTa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayNganChan" jhiTranslate="gatewayApp.chiTietNganChan.ngayNganChan">Ngay Ngan Chan</label>
+          <div class="input-group">
+            <input
+              id="field_ngayNganChan"
+              data-cy="ngayNganChan"
+              type="text"
+              class="form-control"
+              name="ngayNganChan"
+              ngbDatepicker
+              #ngayNganChanDp="ngbDatepicker"
+              formControlName="ngayNganChan"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayNganChanDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayBdNganChan" jhiTranslate="gatewayApp.chiTietNganChan.ngayBdNganChan"
+            >Ngay Bd Ngan Chan</label
+          >
+          <div class="input-group">
+            <input
+              id="field_ngayBdNganChan"
+              data-cy="ngayBdNganChan"
+              type="text"
+              class="form-control"
+              name="ngayBdNganChan"
+              ngbDatepicker
+              #ngayBdNganChanDp="ngbDatepicker"
+              formControlName="ngayBdNganChan"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayBdNganChanDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayKtNganChan" jhiTranslate="gatewayApp.chiTietNganChan.ngayKtNganChan"
+            >Ngay Kt Ngan Chan</label
+          >
+          <div class="input-group">
+            <input
+              id="field_ngayKtNganChan"
+              data-cy="ngayKtNganChan"
+              type="text"
+              class="form-control"
+              name="ngayKtNganChan"
+              ngbDatepicker
+              #ngayKtNganChanDp="ngbDatepicker"
+              formControlName="ngayKtNganChan"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayKtNganChanDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.chiTietNganChan.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.chiTietNganChan.nguoiThaoTac">Nguoi Thao Tac</label>
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiNganChan" jhiTranslate="gatewayApp.chiTietNganChan.loaiNganChan">Loai Ngan Chan</label>
+          <input
+            type="number"
+            class="form-control"
+            name="loaiNganChan"
+            id="field_loaiNganChan"
+            data-cy="loaiNganChan"
+            formControlName="loaiNganChan"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayCongVan" jhiTranslate="gatewayApp.chiTietNganChan.ngayCongVan">Ngay Cong Van</label>
+          <div class="input-group">
+            <input
+              id="field_ngayCongVan"
+              data-cy="ngayCongVan"
+              type="text"
+              class="form-control"
+              name="ngayCongVan"
+              ngbDatepicker
+              #ngayCongVanDp="ngbDatepicker"
+              formControlName="ngayCongVan"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayCongVanDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

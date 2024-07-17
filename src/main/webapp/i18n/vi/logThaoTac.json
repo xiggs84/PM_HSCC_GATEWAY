@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "logThaoTac": {
+      "home": {
+        "title": "Log Thao Tacs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Thao Tac",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Thao Tac",
+        "notFound": "No Log Thao Tacs found"
+      },
+      "created": "Một Log Thao Tac mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Thao Tac cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Thao Tac đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Thao Tac {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Thao Tac"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "dienGiai": "Dien Giai",
+      "tenBang": "Ten Bang",
+      "idKhoa": "Id Khoa",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac"
+    }
+  }
+}

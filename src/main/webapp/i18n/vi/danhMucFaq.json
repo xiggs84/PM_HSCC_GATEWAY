@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucFaq": {
+      "home": {
+        "title": "Danh Muc Faqs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Faq",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Faq",
+        "notFound": "No Danh Muc Faqs found"
+      },
+      "created": "Một Danh Muc Faq mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Faq cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Faq đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Faq {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Faq"
+      },
+      "id": "ID",
+      "idCauHoi": "Id Cau Hoi",
+      "noiDung": "Noi Dung",
+      "cauTraLoi": "Cau Tra Loi",
+      "loai": "Loai"
+    }
+  }
+}

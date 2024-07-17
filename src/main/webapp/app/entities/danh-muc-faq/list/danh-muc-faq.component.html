@@ -1,0 +1,110 @@
+<div>
+  <h2 id="page-heading" data-cy="DanhMucFaqHeading">
+    <span jhiTranslate="gatewayApp.danhMucFaq.home.title">Danh Muc Faqs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucFaq.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-danh-muc-faq"
+        [routerLink]="['/danh-muc-faq/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucFaq.home.createLabel">Thêm mới một Danh Muc Faq</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (danhMucFaqs?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.danhMucFaq.home.notFound">No Danh Muc Faqs found</span>
+    </div>
+  }
+
+  @if (danhMucFaqs && danhMucFaqs.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idCauHoi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFaq.idCauHoi">Id Cau Hoi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="noiDung">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFaq.noiDung">Noi Dung</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cauTraLoi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFaq.cauTraLoi">Cau Tra Loi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="loai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucFaq.loai">Loai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (danhMucFaq of danhMucFaqs; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/danh-muc-faq', danhMucFaq.id, 'view']">{{ danhMucFaq.id }}</a>
+              </td>
+              <td>{{ danhMucFaq.idCauHoi }}</td>
+              <td>{{ danhMucFaq.noiDung }}</td>
+              <td>{{ danhMucFaq.cauTraLoi }}</td>
+              <td>{{ danhMucFaq.loai }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/danh-muc-faq', danhMucFaq.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/danh-muc-faq', danhMucFaq.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(danhMucFaq)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "dmNoiCapGpdkx": {
+      "home": {
+        "title": "Dm Noi Cap Gpdkxes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Dm Noi Cap Gpdkx",
+        "createOrEditLabel": "Create or edit a Dm Noi Cap Gpdkx",
+        "notFound": "No Dm Noi Cap Gpdkxes found"
+      },
+      "created": "A new Dm Noi Cap Gpdkx is created with identifier {{ param }}",
+      "updated": "A Dm Noi Cap Gpdkx is updated with identifier {{ param }}",
+      "deleted": "A Dm Noi Cap Gpdkx is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Dm Noi Cap Gpdkx {{ id }}?"
+      },
+      "detail": {
+        "title": "Dm Noi Cap Gpdkx"
+      },
+      "id": "ID",
+      "idNoiCap": "Id Noi Cap",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

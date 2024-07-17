@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "hdMasterTcCoCcv": {
+      "home": {
+        "title": "Hd Master Tc Co Ccvs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Hd Master Tc Co Ccv",
+        "createOrEditLabel": "Create or edit a Hd Master Tc Co Ccv",
+        "notFound": "No Hd Master Tc Co Ccvs found"
+      },
+      "created": "A new Hd Master Tc Co Ccv is created with identifier {{ param }}",
+      "updated": "A Hd Master Tc Co Ccv is updated with identifier {{ param }}",
+      "deleted": "A Hd Master Tc Co Ccv is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Hd Master Tc Co Ccv {{ id }}?"
+      },
+      "detail": {
+        "title": "Hd Master Tc Co Ccv"
+      },
+      "id": "ID",
+      "repRefUnique": "Rep Ref Unique",
+      "persCode": "Pers Code",
+      "tenCanBo": "Ten Can Bo",
+      "idCanBo": "Id Can Bo"
+    }
+  }
+}

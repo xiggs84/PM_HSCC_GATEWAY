@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucTheHtml": {
+      "home": {
+        "title": "Danh Muc The Htmls",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc The Html",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc The Html",
+        "notFound": "No Danh Muc The Htmls found"
+      },
+      "created": "Một Danh Muc The Html mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc The Html cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc The Html đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc The Html {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc The Html"
+      },
+      "id": "ID",
+      "idType": "Id Type",
+      "type": "Type",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

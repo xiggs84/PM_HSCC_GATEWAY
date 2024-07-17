@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (logDownloadFileDrive()) {
+      <div>
+        <h2 data-cy="logDownloadFileDriveDetailsHeading">
+          <span jhiTranslate="gatewayApp.logDownloadFileDrive.detail.title">Log Download File Drive</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ logDownloadFileDrive()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDownloadFileDrive.idLog">Id Log</span></dt>
+          <dd>
+            <span>{{ logDownloadFileDrive()!.idLog }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDownloadFileDrive.noiDung">Noi Dung</span></dt>
+          <dd>
+            <span>{{ logDownloadFileDrive()!.noiDung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDownloadFileDrive.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ logDownloadFileDrive()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDownloadFileDrive.key">Key</span></dt>
+          <dd>
+            <span>{{ logDownloadFileDrive()!.key }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/log-download-file-drive', logDownloadFileDrive()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

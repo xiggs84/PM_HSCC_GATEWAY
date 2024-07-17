@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucQuocGia": {
+      "home": {
+        "title": "Danh Muc Quoc Gias",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Quoc Gia",
+        "createOrEditLabel": "Create or edit a Danh Muc Quoc Gia",
+        "notFound": "No Danh Muc Quoc Gias found"
+      },
+      "created": "A new Danh Muc Quoc Gia is created with identifier {{ param }}",
+      "updated": "A Danh Muc Quoc Gia is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Quoc Gia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Quoc Gia {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Quoc Gia"
+      },
+      "id": "ID",
+      "idQuocGia": "Id Quoc Gia",
+      "tenQuocGia": "Ten Quoc Gia",
+      "tenTiengAnh": "Ten Tieng Anh"
+    }
+  }
+}

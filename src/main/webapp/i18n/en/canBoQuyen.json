@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "canBoQuyen": {
+      "home": {
+        "title": "Can Bo Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Can Bo Quyen",
+        "createOrEditLabel": "Create or edit a Can Bo Quyen",
+        "notFound": "No Can Bo Quyens found"
+      },
+      "created": "A new Can Bo Quyen is created with identifier {{ param }}",
+      "updated": "A Can Bo Quyen is updated with identifier {{ param }}",
+      "deleted": "A Can Bo Quyen is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Can Bo Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Can Bo Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "idDonVi": "Id Don Vi"
+    }
+  }
+}

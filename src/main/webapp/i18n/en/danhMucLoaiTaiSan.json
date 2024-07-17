@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiTaiSan": {
+      "home": {
+        "title": "Danh Muc Loai Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Loai Tai San",
+        "createOrEditLabel": "Create or edit a Danh Muc Loai Tai San",
+        "notFound": "No Danh Muc Loai Tai Sans found"
+      },
+      "created": "A new Danh Muc Loai Tai San is created with identifier {{ param }}",
+      "updated": "A Danh Muc Loai Tai San is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Loai Tai San is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Loai Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Tai San"
+      },
+      "id": "ID",
+      "idLoaiTs": "Id Loai Ts",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "searchStr": "Search Str",
+      "taiSan": "Tai San",
+      "danhSachTaiSan": "Danh Sach Tai San"
+    }
+  }
+}

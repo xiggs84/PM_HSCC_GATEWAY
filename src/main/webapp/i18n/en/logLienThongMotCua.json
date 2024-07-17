@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "logLienThongMotCua": {
+      "home": {
+        "title": "Log Lien Thong Mot Cuas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Log Lien Thong Mot Cua",
+        "createOrEditLabel": "Create or edit a Log Lien Thong Mot Cua",
+        "notFound": "No Log Lien Thong Mot Cuas found"
+      },
+      "created": "A new Log Lien Thong Mot Cua is created with identifier {{ param }}",
+      "updated": "A Log Lien Thong Mot Cua is updated with identifier {{ param }}",
+      "deleted": "A Log Lien Thong Mot Cua is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Log Lien Thong Mot Cua {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Lien Thong Mot Cua"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "idChungThuc": "Id Chung Thuc",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "noiDung": "Noi Dung"
+    }
+  }
+}

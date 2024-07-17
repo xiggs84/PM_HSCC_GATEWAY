@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "users": {
+      "home": {
+        "title": "Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Users",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Users",
+        "notFound": "No Users found"
+      },
+      "created": "Một Users mới được tạo với định danh {{ param }}",
+      "updated": "Một Users cập nhật với định danh {{ param }}",
+      "deleted": "Một Users đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Users {{ id }}?"
+      },
+      "detail": {
+        "title": "Users"
+      },
+      "id": "Id",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "rememberToken": "Remember Token",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "idDonVi": "Id Don Vi"
+    }
+  }
+}

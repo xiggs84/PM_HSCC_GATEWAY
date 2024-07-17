@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "thuaTach": {
+      "home": {
+        "title": "Thua Taches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Thua Tach",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Thua Tach",
+        "notFound": "No Thua Taches found"
+      },
+      "created": "Một Thua Tach mới được tạo với định danh {{ param }}",
+      "updated": "Một Thua Tach cập nhật với định danh {{ param }}",
+      "deleted": "Một Thua Tach đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Thua Tach {{ id }}?"
+      },
+      "detail": {
+        "title": "Thua Tach"
+      },
+      "id": "ID",
+      "idThuaTach": "Id Thua Tach",
+      "idTaiSan": "Id Tai San",
+      "thongTinThuaTach": "Thong Tin Thua Tach",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

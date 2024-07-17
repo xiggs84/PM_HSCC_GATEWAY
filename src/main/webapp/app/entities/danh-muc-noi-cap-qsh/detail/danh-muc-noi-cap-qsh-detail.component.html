@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucNoiCapQsh()) {
+      <div>
+        <h2 data-cy="danhMucNoiCapQshDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhMucNoiCapQsh.detail.title">Danh Muc Noi Cap Qsh</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucNoiCapQsh()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucNoiCapQsh.idNoiCap">Id Noi Cap</span></dt>
+          <dd>
+            <span>{{ danhMucNoiCapQsh()!.idNoiCap }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucNoiCapQsh.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ danhMucNoiCapQsh()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucNoiCapQsh.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucNoiCapQsh()!.idDonVi }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-noi-cap-qsh', danhMucNoiCapQsh()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

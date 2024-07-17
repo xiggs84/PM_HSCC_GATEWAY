@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucNoiCapQsh": {
+      "home": {
+        "title": "Danh Muc Noi Cap Qshes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Noi Cap Qsh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Noi Cap Qsh",
+        "notFound": "No Danh Muc Noi Cap Qshes found"
+      },
+      "created": "Một Danh Muc Noi Cap Qsh mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Noi Cap Qsh cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Noi Cap Qsh đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Noi Cap Qsh {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Noi Cap Qsh"
+      },
+      "id": "ID",
+      "idNoiCap": "Id Noi Cap",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi"
+    }
+  }
+}

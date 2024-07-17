@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiDuongSu": {
+      "home": {
+        "title": "Danh Muc Loai Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Loai Duong Su",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Loai Duong Su",
+        "notFound": "No Danh Muc Loai Duong Sus found"
+      },
+      "created": "Một Danh Muc Loai Duong Su mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Loai Duong Su cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Loai Duong Su đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Loai Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Duong Su"
+      },
+      "id": "ID",
+      "idLoaiDs": "Id Loai Ds",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "strSearch": "Str Search",
+      "duongSu": "Duong Su"
+    }
+  }
+}

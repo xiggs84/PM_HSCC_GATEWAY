@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucDichVu": {
+      "home": {
+        "title": "Danh Muc Dich Vus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Dich Vu",
+        "createOrEditLabel": "Create or edit a Danh Muc Dich Vu",
+        "notFound": "No Danh Muc Dich Vus found"
+      },
+      "created": "A new Danh Muc Dich Vu is created with identifier {{ param }}",
+      "updated": "A Danh Muc Dich Vu is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Dich Vu is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Dich Vu {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Dich Vu"
+      },
+      "id": "ID",
+      "dienGiai": "Dien Giai",
+      "donViTinh": "Don Vi Tinh",
+      "donGia": "Don Gia",
+      "idDichVu": "Id Dich Vu"
+    }
+  }
+}

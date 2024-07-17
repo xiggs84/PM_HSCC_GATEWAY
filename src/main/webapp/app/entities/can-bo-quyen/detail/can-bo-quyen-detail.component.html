@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (canBoQuyen()) {
+      <div>
+        <h2 data-cy="canBoQuyenDetailsHeading"><span jhiTranslate="gatewayApp.canBoQuyen.detail.title">Can Bo Quyen</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ canBoQuyen()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.canBoQuyen.idQuyen">Id Quyen</span></dt>
+          <dd>
+            <span>{{ canBoQuyen()!.idQuyen }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.canBoQuyen.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            @if (canBoQuyen()!.idDonVi) {
+              <div>
+                <a [routerLink]="['/danh-muc-don-vi', canBoQuyen()!.idDonVi?.id, 'view']">{{ canBoQuyen()!.idDonVi?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/can-bo-quyen', canBoQuyen()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

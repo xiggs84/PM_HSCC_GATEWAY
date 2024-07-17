@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucVaiTro": {
+      "home": {
+        "title": "Danh Muc Vai Tros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Vai Tro",
+        "createOrEditLabel": "Create or edit a Danh Muc Vai Tro",
+        "notFound": "No Danh Muc Vai Tros found"
+      },
+      "created": "A new Danh Muc Vai Tro is created with identifier {{ param }}",
+      "updated": "A Danh Muc Vai Tro is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Vai Tro is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Vai Tro {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Vai Tro"
+      },
+      "id": "ID",
+      "idVaiTro": "Id Vai Tro",
+      "dienGiai": "Dien Giai",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idLoaiVaiTro": "Id Loai Vai Tro"
+    }
+  }
+}

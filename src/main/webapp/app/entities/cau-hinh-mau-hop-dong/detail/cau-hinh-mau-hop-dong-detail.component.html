@@ -1,0 +1,144 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cauHinhMauHopDong()) {
+      <div>
+        <h2 data-cy="cauHinhMauHopDongDetailsHeading">
+          <span jhiTranslate="gatewayApp.cauHinhMauHopDong.detail.title">Cau Hinh Mau Hop Dong</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idLoaiHd">Id Loai Hd</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idLoaiHd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idVaiTro1">Id Vai Tro 1</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idVaiTro1 }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idVaiTro2">Id Vai Tro 2</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idVaiTro2 }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.fileHopDong">File Hop Dong</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.fileHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.srcHopDong">Src Hop Dong</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.srcHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.dieuKhoan">Dieu Khoan</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.dieuKhoan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.srcLoiChung">Src Loi Chung</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.srcLoiChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idNhom">Id Nhom</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idNhom }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.fileLoiChung">File Loi Chung</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.fileLoiChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.chuyenTaiSan">Chuyen Tai San</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.chuyenTaiSan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.loaiSuaDoi">Loai Sua Doi</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.loaiSuaDoi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.loaiHuyBo">Loai Huy Bo</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.loaiHuyBo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.trangThaiDuyet">Trang Thai Duyet</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.trangThaiDuyet }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idPhanLoaiHopDong">Id Phan Loai Hop Dong</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idPhanLoaiHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.srcCv">Src Cv</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.srcCv }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.srcTb">Src Tb</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.srcTb }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.srcTtpc">Src Ttpc</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.srcTtpc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idVaiTro3">Id Vai Tro 3</span></dt>
+          <dd>
+            <span>{{ cauHinhMauHopDong()!.idVaiTro3 }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idLoaiHD">Id Loai HD</span></dt>
+          <dd>
+            @if (cauHinhMauHopDong()!.idLoaiHD) {
+              <div>
+                <a [routerLink]="['/danh-muc-loai-hop-dong', cauHinhMauHopDong()!.idLoaiHD?.id, 'view']">{{
+                  cauHinhMauHopDong()!.idLoaiHD?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhMauHopDong.idPhanLoaiHD">Id Phan Loai HD</span></dt>
+          <dd>
+            @if (cauHinhMauHopDong()!.idPhanLoaiHD) {
+              <div>
+                <a [routerLink]="['/phan-loai-hop-dong', cauHinhMauHopDong()!.idPhanLoaiHD?.id, 'view']">{{
+                  cauHinhMauHopDong()!.idPhanLoaiHD?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cau-hinh-mau-hop-dong', cauHinhMauHopDong()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

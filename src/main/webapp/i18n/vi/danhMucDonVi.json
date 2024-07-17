@@ -1,0 +1,55 @@
+{
+  "gatewayApp": {
+    "danhMucDonVi": {
+      "home": {
+        "title": "Danh Muc Don Vis",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Don Vi",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Don Vi",
+        "notFound": "No Danh Muc Don Vis found"
+      },
+      "created": "Một Danh Muc Don Vi mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Don Vi cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Don Vi đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Don Vi {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Don Vi"
+      },
+      "id": "ID",
+      "idDonVi": "Id Don Vi",
+      "tenDonVi": "Ten Don Vi",
+      "diaChi": "Dia Chi",
+      "nguoiDaiDien": "Nguoi Dai Dien",
+      "soDienThoai": "So Dien Thoai",
+      "idDonViQl": "Id Don Vi Ql",
+      "loaiDonVi": "Loai Don Vi",
+      "ngayKhaiBao": "Ngay Khai Bao",
+      "trangThai": "Trang Thai",
+      "soNha": "So Nha",
+      "maSoThue": "Ma So Thue",
+      "idCapQl": "Id Cap Ql",
+      "loaiNhiemVu": "Loai Nhiem Vu",
+      "hoaDonDt": "Hoa Don Dt",
+      "maDonViIgate": "Ma Don Vi Igate",
+      "maCoQuanIgate": "Ma Co Quan Igate",
+      "capDonVi": "Cap Don Vi",
+      "kySo": "Ky So",
+      "qrScan": "Qr Scan",
+      "verifyIdCard": "Verify Id Card",
+      "isVerifyFace": "Is Verify Face",
+      "isElastic": "Is Elastic",
+      "apikeyCccd": "Apikey Cccd",
+      "apikeyFace": "Apikey Face",
+      "verifyCodeCccd": "Verify Code Cccd",
+      "usernameElastic": "Username Elastic",
+      "passwordElastic": "Password Elastic",
+      "canBoQuyen": "Can Bo Quyen",
+      "idTinh": "Id Tinh",
+      "idHuyen": "Id Huyen",
+      "idPhuongXa": "Id Phuong Xa",
+      "idLoaiDv": "Id Loai Dv"
+    }
+  }
+}

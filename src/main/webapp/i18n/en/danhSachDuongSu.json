@@ -1,0 +1,37 @@
+{
+  "gatewayApp": {
+    "danhSachDuongSu": {
+      "home": {
+        "title": "Danh Sach Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Sach Duong Su",
+        "createOrEditLabel": "Create or edit a Danh Sach Duong Su",
+        "notFound": "No Danh Sach Duong Sus found"
+      },
+      "created": "A new Danh Sach Duong Su is created with identifier {{ param }}",
+      "updated": "A Danh Sach Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Danh Sach Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Sach Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Sach Duong Su"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "tenDuongSu": "Ten Duong Su",
+      "idLoaiDs": "Id Loai Ds",
+      "diaChi": "Dia Chi",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDsGoc": "Id Ds Goc",
+      "idTinhTrang": "Id Tinh Trang",
+      "idMaster": "Id Master",
+      "idDonVi": "Id Don Vi",
+      "strSearch": "Str Search",
+      "soGiayTo": "So Giay To",
+      "idLoaiNganChan": "Id Loai Ngan Chan"
+    }
+  }
+}

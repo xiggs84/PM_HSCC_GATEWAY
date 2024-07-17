@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "soHuuTheo": {
+      "home": {
+        "title": "So Huu Theos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một So Huu Theo",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật So Huu Theo",
+        "notFound": "No So Huu Theos found"
+      },
+      "created": "Một So Huu Theo mới được tạo với định danh {{ param }}",
+      "updated": "Một So Huu Theo cập nhật với định danh {{ param }}",
+      "deleted": "Một So Huu Theo đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa So Huu Theo {{ id }}?"
+      },
+      "detail": {
+        "title": "So Huu Theo"
+      },
+      "id": "ID",
+      "idSoHuu": "Id So Huu",
+      "dienGiai": "Dien Giai",
+      "tenGcn": "Ten Gcn"
+    }
+  }
+}

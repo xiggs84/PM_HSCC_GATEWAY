@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiVanBan": {
+      "home": {
+        "title": "Danh Muc Loai Van Bans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Loai Van Ban",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Loai Van Ban",
+        "notFound": "No Danh Muc Loai Van Bans found"
+      },
+      "created": "Một Danh Muc Loai Van Ban mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Loai Van Ban cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Loai Van Ban đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Loai Van Ban {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Van Ban"
+      },
+      "id": "ID",
+      "idLoaiVb": "Id Loai Vb",
+      "dienGiai": "Dien Giai",
+      "idLoaiHopDong": "Id Loai Hop Dong"
+    }
+  }
+}

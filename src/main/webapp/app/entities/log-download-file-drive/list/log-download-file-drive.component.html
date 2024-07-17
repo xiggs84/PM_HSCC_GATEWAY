@@ -1,0 +1,118 @@
+<div>
+  <h2 id="page-heading" data-cy="LogDownloadFileDriveHeading">
+    <span jhiTranslate="gatewayApp.logDownloadFileDrive.home.title">Log Download File Drives</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.logDownloadFileDrive.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-log-download-file-drive"
+        [routerLink]="['/log-download-file-drive/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.logDownloadFileDrive.home.createLabel">Thêm mới một Log Download File Drive</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (logDownloadFileDrives?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.logDownloadFileDrive.home.notFound">No Log Download File Drives found</span>
+    </div>
+  }
+
+  @if (logDownloadFileDrives && logDownloadFileDrives.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLog">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDownloadFileDrive.idLog">Id Log</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="noiDung">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDownloadFileDrive.noiDung">Noi Dung</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDownloadFileDrive.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="key">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.logDownloadFileDrive.key">Key</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (logDownloadFileDrive of logDownloadFileDrives; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/log-download-file-drive', logDownloadFileDrive.id, 'view']">{{ logDownloadFileDrive.id }}</a>
+              </td>
+              <td>{{ logDownloadFileDrive.idLog }}</td>
+              <td>{{ logDownloadFileDrive.noiDung }}</td>
+              <td>{{ logDownloadFileDrive.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ logDownloadFileDrive.key }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/log-download-file-drive', logDownloadFileDrive.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/log-download-file-drive', logDownloadFileDrive.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(logDownloadFileDrive)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

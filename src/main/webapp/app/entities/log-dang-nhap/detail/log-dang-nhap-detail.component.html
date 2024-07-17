@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (logDangNhap()) {
+      <div>
+        <h2 data-cy="logDangNhapDetailsHeading"><span jhiTranslate="gatewayApp.logDangNhap.detail.title">Log Dang Nhap</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ logDangNhap()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDangNhap.ngayDangNhap">Ngay Dang Nhap</span></dt>
+          <dd>
+            <span>{{ logDangNhap()!.ngayDangNhap | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDangNhap.ipAddress">Ip Address</span></dt>
+          <dd>
+            <span>{{ logDangNhap()!.ipAddress }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDangNhap.idCanBo">Id Can Bo</span></dt>
+          <dd>
+            <span>{{ logDangNhap()!.idCanBo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.logDangNhap.tenDangNhap">Ten Dang Nhap</span></dt>
+          <dd>
+            <span>{{ logDangNhap()!.tenDangNhap }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/log-dang-nhap', logDangNhap()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

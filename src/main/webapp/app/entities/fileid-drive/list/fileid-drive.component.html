@@ -1,0 +1,102 @@
+<div>
+  <h2 id="page-heading" data-cy="FileidDriveHeading">
+    <span jhiTranslate="gatewayApp.fileidDrive.home.title">Fileid Drives</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.fileidDrive.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-fileid-drive"
+        [routerLink]="['/fileid-drive/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.fileidDrive.home.createLabel">Thêm mới một Fileid Drive</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (fileidDrives?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.fileidDrive.home.notFound">No Fileid Drives found</span>
+    </div>
+  }
+
+  @if (fileidDrives && fileidDrives.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="fileId">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.fileidDrive.fileId">File Id</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.fileidDrive.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.fileidDrive.idHopDong">Id Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (fileidDrive of fileidDrives; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/fileid-drive', fileidDrive.id, 'view']">{{ fileidDrive.id }}</a>
+              </td>
+              <td>{{ fileidDrive.fileId }}</td>
+              <td>{{ fileidDrive.trangThai }}</td>
+              <td>{{ fileidDrive.idHopDong }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/fileid-drive', fileidDrive.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/fileid-drive', fileidDrive.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(fileidDrive)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "soHuuTheo": {
+      "home": {
+        "title": "So Huu Theos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new So Huu Theo",
+        "createOrEditLabel": "Create or edit a So Huu Theo",
+        "notFound": "No So Huu Theos found"
+      },
+      "created": "A new So Huu Theo is created with identifier {{ param }}",
+      "updated": "A So Huu Theo is updated with identifier {{ param }}",
+      "deleted": "A So Huu Theo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete So Huu Theo {{ id }}?"
+      },
+      "detail": {
+        "title": "So Huu Theo"
+      },
+      "id": "ID",
+      "idSoHuu": "Id So Huu",
+      "dienGiai": "Dien Giai",
+      "tenGcn": "Ten Gcn"
+    }
+  }
+}

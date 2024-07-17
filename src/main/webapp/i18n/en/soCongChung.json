@@ -1,0 +1,34 @@
+{
+  "gatewayApp": {
+    "soCongChung": {
+      "home": {
+        "title": "So Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new So Cong Chung",
+        "createOrEditLabel": "Create or edit a So Cong Chung",
+        "notFound": "No So Cong Chungs found"
+      },
+      "created": "A new So Cong Chung is created with identifier {{ param }}",
+      "updated": "A So Cong Chung is updated with identifier {{ param }}",
+      "deleted": "A So Cong Chung is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete So Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "So Cong Chung"
+      },
+      "id": "ID",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "idSo": "Id So",
+      "idDonVi": "Id Don Vi",
+      "tenSo": "Ten So",
+      "giaTri": "Gia Tri",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "trangThai": "Trang Thai",
+      "idLoaiSo": "Id Loai So",
+      "hopDongCongChung": "Hop Dong Cong Chung",
+      "thongTinChungHopDong": "Thong Tin Chung Hop Dong",
+      "danhSachHopDong": "Danh Sach Hop Dong"
+    }
+  }
+}

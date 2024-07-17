@@ -1,0 +1,126 @@
+<div>
+  <h2 id="page-heading" data-cy="QuanHeDuongSuHeading">
+    <span jhiTranslate="gatewayApp.quanHeDuongSu.home.title">Quan He Duong Sus</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.quanHeDuongSu.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-quan-he-duong-su"
+        [routerLink]="['/quan-he-duong-su/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.quanHeDuongSu.home.createLabel">Thêm mới một Quan He Duong Su</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (quanHeDuongSus?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.quanHeDuongSu.home.notFound">No Quan He Duong Sus found</span>
+    </div>
+  }
+
+  @if (quanHeDuongSus && quanHeDuongSus.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSu">Id Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSuQh">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSuQh">Id Duong Su Qh</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idQuanHe">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.quanHeDuongSu.idQuanHe">Id Quan He</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinQuanHe">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.quanHeDuongSu.thongTinQuanHe">Thong Tin Quan He</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.quanHeDuongSu.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (quanHeDuongSu of quanHeDuongSus; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/quan-he-duong-su', quanHeDuongSu.id, 'view']">{{ quanHeDuongSu.id }}</a>
+              </td>
+              <td>{{ quanHeDuongSu.idDuongSu }}</td>
+              <td>{{ quanHeDuongSu.idDuongSuQh }}</td>
+              <td>{{ quanHeDuongSu.idQuanHe }}</td>
+              <td>{{ quanHeDuongSu.thongTinQuanHe }}</td>
+              <td>{{ quanHeDuongSu.trangThai }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/quan-he-duong-su', quanHeDuongSu.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/quan-he-duong-su', quanHeDuongSu.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(quanHeDuongSu)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

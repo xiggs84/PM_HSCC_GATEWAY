@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucNgoaiTe": {
+      "home": {
+        "title": "Danh Muc Ngoai Tes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Ngoai Te",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Ngoai Te",
+        "notFound": "No Danh Muc Ngoai Tes found"
+      },
+      "created": "Một Danh Muc Ngoai Te mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Ngoai Te cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Ngoai Te đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Ngoai Te {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Ngoai Te"
+      },
+      "id": "ID",
+      "idLoai": "Id Loai",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

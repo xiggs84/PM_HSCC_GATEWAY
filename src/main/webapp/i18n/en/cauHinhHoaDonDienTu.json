@@ -1,0 +1,33 @@
+{
+  "gatewayApp": {
+    "cauHinhHoaDonDienTu": {
+      "home": {
+        "title": "Cau Hinh Hoa Don Dien Tus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cau Hinh Hoa Don Dien Tu",
+        "createOrEditLabel": "Create or edit a Cau Hinh Hoa Don Dien Tu",
+        "notFound": "No Cau Hinh Hoa Don Dien Tus found"
+      },
+      "created": "A new Cau Hinh Hoa Don Dien Tu is created with identifier {{ param }}",
+      "updated": "A Cau Hinh Hoa Don Dien Tu is updated with identifier {{ param }}",
+      "deleted": "A Cau Hinh Hoa Don Dien Tu is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cau Hinh Hoa Don Dien Tu {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Hoa Don Dien Tu"
+      },
+      "id": "ID",
+      "idDonVi": "Id Don Vi",
+      "apiUrl": "Api Url",
+      "account": "Account",
+      "accPass": "Acc Pass",
+      "username": "Username",
+      "password": "Password",
+      "mauSo": "Mau So",
+      "kyHieu": "Ky Hieu",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "ngayThaoTac": "Ngay Thao Tac"
+    }
+  }
+}

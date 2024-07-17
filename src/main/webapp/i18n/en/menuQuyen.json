@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "menuQuyen": {
+      "home": {
+        "title": "Menu Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Menu Quyen",
+        "createOrEditLabel": "Create or edit a Menu Quyen",
+        "notFound": "No Menu Quyens found"
+      },
+      "created": "A new Menu Quyen is created with identifier {{ param }}",
+      "updated": "A Menu Quyen is updated with identifier {{ param }}",
+      "deleted": "A Menu Quyen is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Menu Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "idDonVi": "Id Don Vi",
+      "listMenu": "List Menu"
+    }
+  }
+}

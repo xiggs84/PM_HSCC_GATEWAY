@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (dmNoiCapGpdkx()) {
+      <div>
+        <h2 data-cy="dmNoiCapGpdkxDetailsHeading"><span jhiTranslate="gatewayApp.dmNoiCapGpdkx.detail.title">Dm Noi Cap Gpdkx</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ dmNoiCapGpdkx()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.dmNoiCapGpdkx.idNoiCap">Id Noi Cap</span></dt>
+          <dd>
+            <span>{{ dmNoiCapGpdkx()!.idNoiCap }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.dmNoiCapGpdkx.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ dmNoiCapGpdkx()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.dmNoiCapGpdkx.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ dmNoiCapGpdkx()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.dmNoiCapGpdkx.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ dmNoiCapGpdkx()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/dm-noi-cap-gpdkx', dmNoiCapGpdkx()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

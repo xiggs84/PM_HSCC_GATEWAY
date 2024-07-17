@@ -1,0 +1,52 @@
+{
+  "annotations": {
+    "changelogDate": "20240717032513"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDoiTuong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayNganChan",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "soHsCv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soCc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soVaoSo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "moTa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDoituongGoc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiNganChan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "loaiDoiTuong",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhsachDsNganchanTmp",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "danhMucTuVietTat": {
+      "home": {
+        "title": "Danh Muc Tu Viet Tats",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Tu Viet Tat",
+        "createOrEditLabel": "Create or edit a Danh Muc Tu Viet Tat",
+        "notFound": "No Danh Muc Tu Viet Tats found"
+      },
+      "created": "A new Danh Muc Tu Viet Tat is created with identifier {{ param }}",
+      "updated": "A Danh Muc Tu Viet Tat is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Tu Viet Tat is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Tu Viet Tat {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Tu Viet Tat"
+      },
+      "id": "ID",
+      "idVietTat": "Id Viet Tat",
+      "tuVietTat": "Tu Viet Tat",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

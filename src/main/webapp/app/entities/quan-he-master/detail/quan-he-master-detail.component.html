@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (quanHeMaster()) {
+      <div>
+        <h2 data-cy="quanHeMasterDetailsHeading"><span jhiTranslate="gatewayApp.quanHeMaster.detail.title">Quan He Master</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ quanHeMaster()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeMaster.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ quanHeMaster()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeMaster.idDuongSuQh">Id Duong Su Qh</span></dt>
+          <dd>
+            <span>{{ quanHeMaster()!.idDuongSuQh }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/quan-he-master', quanHeMaster()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

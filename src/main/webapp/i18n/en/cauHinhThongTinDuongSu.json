@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "cauHinhThongTinDuongSu": {
+      "home": {
+        "title": "Cau Hinh Thong Tin Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cau Hinh Thong Tin Duong Su",
+        "createOrEditLabel": "Create or edit a Cau Hinh Thong Tin Duong Su",
+        "notFound": "No Cau Hinh Thong Tin Duong Sus found"
+      },
+      "created": "A new Cau Hinh Thong Tin Duong Su is created with identifier {{ param }}",
+      "updated": "A Cau Hinh Thong Tin Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Cau Hinh Thong Tin Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cau Hinh Thong Tin Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Thong Tin Duong Su"
+      },
+      "id": "ID",
+      "idCauHinh": "Id Cau Hinh",
+      "noiDung": "Noi Dung",
+      "javascript": "Javascript",
+      "css": "Css",
+      "idLoaiDs": "Id Loai Ds",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

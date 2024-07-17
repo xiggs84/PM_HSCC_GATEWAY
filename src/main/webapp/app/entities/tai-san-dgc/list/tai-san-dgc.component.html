@@ -1,0 +1,254 @@
+<div>
+  <h2 id="page-heading" data-cy="TaiSanDgcHeading">
+    <span jhiTranslate="gatewayApp.taiSanDgc.home.title">Tai San Dgcs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.taiSanDgc.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-tai-san-dgc"
+        [routerLink]="['/tai-san-dgc/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.taiSanDgc.home.createLabel">Thêm mới một Tai San Dgc</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (taiSanDgcs?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.taiSanDgc.home.notFound">No Tai San Dgcs found</span>
+    </div>
+  }
+
+  @if (taiSanDgcs && taiSanDgcs.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTaiSan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idTaiSan">Id Tai San</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tenTaiSan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.tenTaiSan">Ten Tai San</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinTs">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.thongTinTs">Thong Tin Ts</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiTs">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idLoaiTs">Id Loai Ts</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ghiChu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.ghiChu">Ghi Chu</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDuongSu">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idDuongSu">Id Duong Su</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTsGoc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idTsGoc">Id Ts Goc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="maTaiSan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.maTaiSan">Ma Tai San</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idTinhTrang">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idTinhTrang">Id Tinh Trang</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiNganChan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idLoaiNganChan">Id Loai Ngan Chan</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayBdNganChan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.ngayBdNganChan">Ngay Bd Ngan Chan</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayKtNganChan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.ngayKtNganChan">Ngay Kt Ngan Chan</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idMaster">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idMaster">Id Master</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="strSearch">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.strSearch">Str Search</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soHsCv">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.soHsCv">So Hs Cv</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soCc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.soCc">So Cc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soVaoSo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.soVaoSo">So Vao So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="moTa">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.taiSanDgc.moTa">Mo Ta</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (taiSanDgc of taiSanDgcs; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/tai-san-dgc', taiSanDgc.id, 'view']">{{ taiSanDgc.id }}</a>
+              </td>
+              <td>{{ taiSanDgc.idTaiSan }}</td>
+              <td>{{ taiSanDgc.tenTaiSan }}</td>
+              <td>{{ taiSanDgc.trangThai }}</td>
+              <td>{{ taiSanDgc.thongTinTs }}</td>
+              <td>{{ taiSanDgc.idLoaiTs }}</td>
+              <td>{{ taiSanDgc.ghiChu }}</td>
+              <td>{{ taiSanDgc.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ taiSanDgc.nguoiThaoTac }}</td>
+              <td>{{ taiSanDgc.idDuongSu }}</td>
+              <td>{{ taiSanDgc.idTsGoc }}</td>
+              <td>{{ taiSanDgc.maTaiSan }}</td>
+              <td>{{ taiSanDgc.idTinhTrang }}</td>
+              <td>{{ taiSanDgc.idLoaiNganChan }}</td>
+              <td>{{ taiSanDgc.ngayBdNganChan | formatMediumDate }}</td>
+              <td>{{ taiSanDgc.ngayKtNganChan | formatMediumDate }}</td>
+              <td>{{ taiSanDgc.idMaster }}</td>
+              <td>{{ taiSanDgc.strSearch }}</td>
+              <td>{{ taiSanDgc.idDonVi }}</td>
+              <td>{{ taiSanDgc.soHsCv }}</td>
+              <td>{{ taiSanDgc.soCc }}</td>
+              <td>{{ taiSanDgc.soVaoSo }}</td>
+              <td>{{ taiSanDgc.moTa }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/tai-san-dgc', taiSanDgc.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a [routerLink]="['/tai-san-dgc', taiSanDgc.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(taiSanDgc)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

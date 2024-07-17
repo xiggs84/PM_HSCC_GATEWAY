@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "noiCapGttt": {
+      "home": {
+        "title": "Noi Cap Gttts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Noi Cap Gttt",
+        "createOrEditLabel": "Create or edit a Noi Cap Gttt",
+        "notFound": "No Noi Cap Gttts found"
+      },
+      "created": "A new Noi Cap Gttt is created with identifier {{ param }}",
+      "updated": "A Noi Cap Gttt is updated with identifier {{ param }}",
+      "deleted": "A Noi Cap Gttt is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Noi Cap Gttt {{ id }}?"
+      },
+      "detail": {
+        "title": "Noi Cap Gttt"
+      },
+      "id": "ID",
+      "idNoiCap": "Id Noi Cap",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

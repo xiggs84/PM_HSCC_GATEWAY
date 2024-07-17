@@ -1,0 +1,82 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-cau-hinh-thong-tin-duong-su-heading"
+        data-cy="CauHinhThongTinDuongSuCreateUpdateHeading"
+        jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Cau Hinh Thong Tin Duong Su
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idCauHinh" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.idCauHinh">Id Cau Hinh</label>
+          <input type="number" class="form-control" name="idCauHinh" id="field_idCauHinh" data-cy="idCauHinh" formControlName="idCauHinh" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_noiDung" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.noiDung">Noi Dung</label>
+          <input type="text" class="form-control" name="noiDung" id="field_noiDung" data-cy="noiDung" formControlName="noiDung" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_javascript" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.javascript">Javascript</label>
+          <input
+            type="text"
+            class="form-control"
+            name="javascript"
+            id="field_javascript"
+            data-cy="javascript"
+            formControlName="javascript"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_css" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.css">Css</label>
+          <input type="text" class="form-control" name="css" id="field_css" data-cy="css" formControlName="css" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiDs" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.idLoaiDs">Id Loai Ds</label>
+          <input type="number" class="form-control" name="idLoaiDs" id="field_idLoaiDs" data-cy="idLoaiDs" formControlName="idLoaiDs" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.cauHinhThongTinDuongSu.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

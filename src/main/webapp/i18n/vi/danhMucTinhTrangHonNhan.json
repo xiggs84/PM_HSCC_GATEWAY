@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucTinhTrangHonNhan": {
+      "home": {
+        "title": "Danh Muc Tinh Trang Hon Nhans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Tinh Trang Hon Nhan",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Tinh Trang Hon Nhan",
+        "notFound": "No Danh Muc Tinh Trang Hon Nhans found"
+      },
+      "created": "Một Danh Muc Tinh Trang Hon Nhan mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Tinh Trang Hon Nhan cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Tinh Trang Hon Nhan đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Tinh Trang Hon Nhan {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Tinh Trang Hon Nhan"
+      },
+      "id": "ID",
+      "idTinhTrang": "Id Tinh Trang",
+      "dienGiai": "Dien Giai",
+      "trangThai": "Trang Thai",
+      "duongSu": "Duong Su"
+    }
+  }
+}

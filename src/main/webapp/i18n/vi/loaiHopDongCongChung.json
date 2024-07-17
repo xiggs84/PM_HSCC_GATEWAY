@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "loaiHopDongCongChung": {
+      "home": {
+        "title": "Loai Hop Dong Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Loai Hop Dong Cong Chung",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Loai Hop Dong Cong Chung",
+        "notFound": "No Loai Hop Dong Cong Chungs found"
+      },
+      "created": "Một Loai Hop Dong Cong Chung mới được tạo với định danh {{ param }}",
+      "updated": "Một Loai Hop Dong Cong Chung cập nhật với định danh {{ param }}",
+      "deleted": "Một Loai Hop Dong Cong Chung đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Loai Hop Dong Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "Loai Hop Dong Cong Chung"
+      },
+      "id": "ID",
+      "idLoaiHopDongCongChung": "Id Loai Hop Dong Cong Chung",
+      "dienGiai": "Dien Giai",
+      "giaTri": "Gia Tri",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "taisanSaiDgc": {
+      "home": {
+        "title": "Taisan Sai Dgcs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Taisan Sai Dgc",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Taisan Sai Dgc",
+        "notFound": "No Taisan Sai Dgcs found"
+      },
+      "created": "Một Taisan Sai Dgc mới được tạo với định danh {{ param }}",
+      "updated": "Một Taisan Sai Dgc cập nhật với định danh {{ param }}",
+      "deleted": "Một Taisan Sai Dgc đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Taisan Sai Dgc {{ id }}?"
+      },
+      "detail": {
+        "title": "Taisan Sai Dgc"
+      },
+      "id": "ID",
+      "idMaster": "Id Master",
+      "thongTinTs": "Thong Tin Ts",
+      "thongTinTsDung": "Thong Tin Ts Dung"
+    }
+  }
+}

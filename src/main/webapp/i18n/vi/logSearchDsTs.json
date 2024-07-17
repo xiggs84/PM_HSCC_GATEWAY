@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "logSearchDsTs": {
+      "home": {
+        "title": "Log Search Ds Ts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Search Ds Ts",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Search Ds Ts",
+        "notFound": "No Log Search Ds Ts found"
+      },
+      "created": "Một Log Search Ds Ts mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Search Ds Ts cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Search Ds Ts đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Search Ds Ts {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Search Ds Ts"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "noiDung": "Noi Dung",
+      "slKq": "Sl Kq",
+      "kqSearch": "Kq Search"
+    }
+  }
+}

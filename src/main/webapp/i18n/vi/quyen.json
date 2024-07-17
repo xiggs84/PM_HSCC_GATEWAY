@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "quyen": {
+      "home": {
+        "title": "Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Quyen",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Quyen",
+        "notFound": "No Quyens found"
+      },
+      "created": "Một Quyen mới được tạo với định danh {{ param }}",
+      "updated": "Một Quyen cập nhật với định danh {{ param }}",
+      "deleted": "Một Quyen đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "tenQuyen": "Ten Quyen"
+    }
+  }
+}

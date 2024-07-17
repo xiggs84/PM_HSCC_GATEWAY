@@ -1,0 +1,32 @@
+{
+  "gatewayApp": {
+    "danhsachDsNganchanTmp": {
+      "home": {
+        "title": "Danhsach Ds Nganchan Tmps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danhsach Ds Nganchan Tmp",
+        "createOrEditLabel": "Create or edit a Danhsach Ds Nganchan Tmp",
+        "notFound": "No Danhsach Ds Nganchan Tmps found"
+      },
+      "created": "A new Danhsach Ds Nganchan Tmp is created with identifier {{ param }}",
+      "updated": "A Danhsach Ds Nganchan Tmp is updated with identifier {{ param }}",
+      "deleted": "A Danhsach Ds Nganchan Tmp is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danhsach Ds Nganchan Tmp {{ id }}?"
+      },
+      "detail": {
+        "title": "Danhsach Ds Nganchan Tmp"
+      },
+      "id": "ID",
+      "idDoiTuong": "Id Doi Tuong",
+      "ngayNganChan": "Ngay Ngan Chan",
+      "soHsCv": "So Hs Cv",
+      "soCc": "So Cc",
+      "soVaoSo": "So Vao So",
+      "moTa": "Mo Ta",
+      "idDoituongGoc": "Id Doituong Goc",
+      "loaiNganChan": "Loai Ngan Chan",
+      "loaiDoiTuong": "Loai Doi Tuong"
+    }
+  }
+}

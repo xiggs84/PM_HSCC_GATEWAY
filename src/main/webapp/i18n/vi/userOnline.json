@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "userOnline": {
+      "home": {
+        "title": "User Onlines",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một User Online",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật User Online",
+        "notFound": "No User Onlines found"
+      },
+      "created": "Một User Online mới được tạo với định danh {{ param }}",
+      "updated": "Một User Online cập nhật với định danh {{ param }}",
+      "deleted": "Một User Online đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa User Online {{ id }}?"
+      },
+      "detail": {
+        "title": "User Online"
+      },
+      "id": "ID",
+      "sessionId": "Session Id",
+      "time": "Time",
+      "browser": "Browser"
+    }
+  }
+}

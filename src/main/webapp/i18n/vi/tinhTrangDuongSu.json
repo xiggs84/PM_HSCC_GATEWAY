@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "tinhTrangDuongSu": {
+      "home": {
+        "title": "Tinh Trang Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Tinh Trang Duong Su",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Tinh Trang Duong Su",
+        "notFound": "No Tinh Trang Duong Sus found"
+      },
+      "created": "Một Tinh Trang Duong Su mới được tạo với định danh {{ param }}",
+      "updated": "Một Tinh Trang Duong Su cập nhật với định danh {{ param }}",
+      "deleted": "Một Tinh Trang Duong Su đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Tinh Trang Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Tinh Trang Duong Su"
+      },
+      "id": "ID",
+      "idTinhTrang": "Id Tinh Trang",
+      "dienGiai": "Dien Giai",
+      "idLoaiDs": "Id Loai Ds"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "logDangNhap": {
+      "home": {
+        "title": "Log Dang Nhaps",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Log Dang Nhap",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Log Dang Nhap",
+        "notFound": "No Log Dang Nhaps found"
+      },
+      "created": "Một Log Dang Nhap mới được tạo với định danh {{ param }}",
+      "updated": "Một Log Dang Nhap cập nhật với định danh {{ param }}",
+      "deleted": "Một Log Dang Nhap đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Log Dang Nhap {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Dang Nhap"
+      },
+      "id": "ID",
+      "ngayDangNhap": "Ngay Dang Nhap",
+      "ipAddress": "Ip Address",
+      "idCanBo": "Id Can Bo",
+      "tenDangNhap": "Ten Dang Nhap"
+    }
+  }
+}

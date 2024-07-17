@@ -1,0 +1,33 @@
+{
+  "gatewayApp": {
+    "vanBan": {
+      "home": {
+        "title": "Van Bans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Van Ban",
+        "createOrEditLabel": "Create or edit a Van Ban",
+        "notFound": "No Van Bans found"
+      },
+      "created": "A new Van Ban is created with identifier {{ param }}",
+      "updated": "A Van Ban is updated with identifier {{ param }}",
+      "deleted": "A Van Ban is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Van Ban {{ id }}?"
+      },
+      "detail": {
+        "title": "Van Ban"
+      },
+      "id": "ID",
+      "idVanBan": "Id Van Ban",
+      "dienGiai": "Dien Giai",
+      "tenFile": "Ten File",
+      "srcFile": "Src File",
+      "idLoaiVb": "Id Loai Vb",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "idDonVi": "Id Don Vi",
+      "idVbGoc": "Id Vb Goc"
+    }
+  }
+}

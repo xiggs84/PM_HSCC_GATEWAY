@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cauHinhThongTinLoaiTaiSan()) {
+      <div>
+        <h2 data-cy="cauHinhThongTinLoaiTaiSanDetailsHeading">
+          <span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.detail.title">Cau Hinh Thong Tin Loai Tai San</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.idCauHinh">Id Cau Hinh</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.idCauHinh }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.noiDung">Noi Dung</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.noiDung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.javascript">Javascript</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.javascript }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.css">Css</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.css }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.idLoaiTs">Id Loai Ts</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.idLoaiTs }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.cauHinhThongTinLoaiTaiSan.xml">Xml</span></dt>
+          <dd>
+            <span>{{ cauHinhThongTinLoaiTaiSan()!.xml }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button
+          type="button"
+          [routerLink]="['/cau-hinh-thong-tin-loai-tai-san', cauHinhThongTinLoaiTaiSan()!.id, 'edit']"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

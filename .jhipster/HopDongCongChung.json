@@ -1,0 +1,215 @@
+{
+  "annotations": {
+    "changelogDate": "20240717025113"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayLapHd",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiLapHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinDuongSu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thongTinTaiSan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thongTinVanBan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idLoaiHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dieuKhoanHd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idHdGoc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinChuyenNhuong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayHen",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "soCongChung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "congChungVien",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayKyHd",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soTienRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayRutTrich",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hdThuCong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThaiRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "chuKyNgoaiTruSo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idMaster",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idHdSdHb",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srcDmMaster",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "repRefUnique",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayNum",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTacRutTrich",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "thuLaoCongChung",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quyenLaiSt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soLaiSt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quyenLaiTl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soLaiTl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcKySoPdf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcKySoPdfSigned",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "syncStatus",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayRutTrichText",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HopDongCongChung",
+  "relationships": [
+    {
+      "otherEntityName": "danhSachHopDong",
+      "otherEntityRelationshipName": "idHopDong",
+      "relationshipName": "danhSachHopDong",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "thongTinChungHopDong",
+      "otherEntityRelationshipName": "idHopDong",
+      "relationshipName": "thongTinChungHopDong",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "danhMucLoaiHopDong",
+      "relationshipName": "idLoaiHD",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "soCongChung",
+      "relationshipName": "idSoCongChung",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

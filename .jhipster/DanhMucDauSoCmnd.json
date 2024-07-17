@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717022713"
+  },
+  "applications": ["gateway", "CanBo"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDauSo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dauSo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tinhThanh",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idLoai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucDauSoCmnd",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,135 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-danhsach-ds-nganchan-tmp-heading"
+        data-cy="DanhsachDsNganchanTmpCreateUpdateHeading"
+        jhiTranslate="gatewayApp.danhsachDsNganchanTmp.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Danhsach Ds Nganchan Tmp
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDoiTuong" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.idDoiTuong">Id Doi Tuong</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idDoiTuong"
+            id="field_idDoiTuong"
+            data-cy="idDoiTuong"
+            formControlName="idDoiTuong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayNganChan" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.ngayNganChan"
+            >Ngay Ngan Chan</label
+          >
+          <div class="input-group">
+            <input
+              id="field_ngayNganChan"
+              data-cy="ngayNganChan"
+              type="text"
+              class="form-control"
+              name="ngayNganChan"
+              ngbDatepicker
+              #ngayNganChanDp="ngbDatepicker"
+              formControlName="ngayNganChan"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayNganChanDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soHsCv" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soHsCv">So Hs Cv</label>
+          <input type="text" class="form-control" name="soHsCv" id="field_soHsCv" data-cy="soHsCv" formControlName="soHsCv" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soCc" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soCc">So Cc</label>
+          <input type="text" class="form-control" name="soCc" id="field_soCc" data-cy="soCc" formControlName="soCc" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_soVaoSo" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soVaoSo">So Vao So</label>
+          <input type="text" class="form-control" name="soVaoSo" id="field_soVaoSo" data-cy="soVaoSo" formControlName="soVaoSo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_moTa" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.moTa">Mo Ta</label>
+          <input type="text" class="form-control" name="moTa" id="field_moTa" data-cy="moTa" formControlName="moTa" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDoituongGoc" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.idDoituongGoc"
+            >Id Doituong Goc</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="idDoituongGoc"
+            id="field_idDoituongGoc"
+            data-cy="idDoituongGoc"
+            formControlName="idDoituongGoc"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiNganChan" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.loaiNganChan"
+            >Loai Ngan Chan</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="loaiNganChan"
+            id="field_loaiNganChan"
+            data-cy="loaiNganChan"
+            formControlName="loaiNganChan"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_loaiDoiTuong" jhiTranslate="gatewayApp.danhsachDsNganchanTmp.loaiDoiTuong"
+            >Loai Doi Tuong</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="loaiDoiTuong"
+            id="field_loaiDoiTuong"
+            data-cy="loaiDoiTuong"
+            formControlName="loaiDoiTuong"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

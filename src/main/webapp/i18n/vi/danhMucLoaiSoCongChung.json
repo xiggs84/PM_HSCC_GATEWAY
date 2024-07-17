@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiSoCongChung": {
+      "home": {
+        "title": "Danh Muc Loai So Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Loai So Cong Chung",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Loai So Cong Chung",
+        "notFound": "No Danh Muc Loai So Cong Chungs found"
+      },
+      "created": "Một Danh Muc Loai So Cong Chung mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Loai So Cong Chung cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Loai So Cong Chung đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Loai So Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai So Cong Chung"
+      },
+      "id": "ID",
+      "idLoai": "Id Loai",
+      "tenLoai": "Ten Loai",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

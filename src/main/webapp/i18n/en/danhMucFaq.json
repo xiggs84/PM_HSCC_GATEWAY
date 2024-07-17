@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "danhMucFaq": {
+      "home": {
+        "title": "Danh Muc Faqs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Faq",
+        "createOrEditLabel": "Create or edit a Danh Muc Faq",
+        "notFound": "No Danh Muc Faqs found"
+      },
+      "created": "A new Danh Muc Faq is created with identifier {{ param }}",
+      "updated": "A Danh Muc Faq is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Faq is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Faq {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Faq"
+      },
+      "id": "ID",
+      "idCauHoi": "Id Cau Hoi",
+      "noiDung": "Noi Dung",
+      "cauTraLoi": "Cau Tra Loi",
+      "loai": "Loai"
+    }
+  }
+}

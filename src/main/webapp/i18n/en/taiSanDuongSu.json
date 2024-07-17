@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "taiSanDuongSu": {
+      "home": {
+        "title": "Tai San Duong Sus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tai San Duong Su",
+        "createOrEditLabel": "Create or edit a Tai San Duong Su",
+        "notFound": "No Tai San Duong Sus found"
+      },
+      "created": "A new Tai San Duong Su is created with identifier {{ param }}",
+      "updated": "A Tai San Duong Su is updated with identifier {{ param }}",
+      "deleted": "A Tai San Duong Su is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tai San Duong Su {{ id }}?"
+      },
+      "detail": {
+        "title": "Tai San Duong Su"
+      },
+      "id": "ID",
+      "trangThai": "Trang Thai",
+      "idDuongSu": "Id Duong Su",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idChungThuc": "Id Chung Thuc",
+      "idTaiSan": "Id Tai San"
+    }
+  }
+}

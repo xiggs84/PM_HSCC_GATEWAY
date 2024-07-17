@@ -1,0 +1,170 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhMucDonVi()) {
+      <div>
+        <h2 data-cy="danhMucDonViDetailsHeading"><span jhiTranslate="gatewayApp.danhMucDonVi.detail.title">Danh Muc Don Vi</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idDonVi">Id Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.idDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.tenDonVi">Ten Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.tenDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.diaChi">Dia Chi</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.diaChi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.nguoiDaiDien">Nguoi Dai Dien</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.nguoiDaiDien }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.soDienThoai">So Dien Thoai</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.soDienThoai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idDonViQl">Id Don Vi Ql</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.idDonViQl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.loaiDonVi">Loai Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.loaiDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.ngayKhaiBao">Ngay Khai Bao</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.ngayKhaiBao | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.soNha">So Nha</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.soNha }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.maSoThue">Ma So Thue</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.maSoThue }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idCapQl">Id Cap Ql</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.idCapQl }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.loaiNhiemVu">Loai Nhiem Vu</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.loaiNhiemVu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.hoaDonDt">Hoa Don Dt</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.hoaDonDt }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.maDonViIgate">Ma Don Vi Igate</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.maDonViIgate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.maCoQuanIgate">Ma Co Quan Igate</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.maCoQuanIgate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.capDonVi">Cap Don Vi</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.capDonVi }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.kySo">Ky So</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.kySo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.qrScan">Qr Scan</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.qrScan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.verifyIdCard">Verify Id Card</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.verifyIdCard }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.isVerifyFace">Is Verify Face</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.isVerifyFace }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.isElastic">Is Elastic</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.isElastic }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.apikeyCccd">Apikey Cccd</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.apikeyCccd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.apikeyFace">Apikey Face</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.apikeyFace }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.verifyCodeCccd">Verify Code Cccd</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.verifyCodeCccd }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.usernameElastic">Username Elastic</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.usernameElastic }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.passwordElastic">Password Elastic</span></dt>
+          <dd>
+            <span>{{ danhMucDonVi()!.passwordElastic }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idTinh">Id Tinh</span></dt>
+          <dd>
+            @if (danhMucDonVi()!.idTinh) {
+              <div>
+                <a [routerLink]="['/danh-muc-tinh', danhMucDonVi()!.idTinh?.id, 'view']">{{ danhMucDonVi()!.idTinh?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idHuyen">Id Huyen</span></dt>
+          <dd>
+            @if (danhMucDonVi()!.idHuyen) {
+              <div>
+                <a [routerLink]="['/danh-muc-huyen', danhMucDonVi()!.idHuyen?.id, 'view']">{{ danhMucDonVi()!.idHuyen?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idPhuongXa">Id Phuong Xa</span></dt>
+          <dd>
+            @if (danhMucDonVi()!.idPhuongXa) {
+              <div>
+                <a [routerLink]="['/danh-muc-xa', danhMucDonVi()!.idPhuongXa?.id, 'view']">{{ danhMucDonVi()!.idPhuongXa?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhMucDonVi.idLoaiDv">Id Loai Dv</span></dt>
+          <dd>
+            @if (danhMucDonVi()!.idLoaiDv) {
+              <div>
+                <a [routerLink]="['/danh-muc-loai-don-vi', danhMucDonVi()!.idLoaiDv?.id, 'view']">{{ danhMucDonVi()!.idLoaiDv?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danh-muc-don-vi', danhMucDonVi()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

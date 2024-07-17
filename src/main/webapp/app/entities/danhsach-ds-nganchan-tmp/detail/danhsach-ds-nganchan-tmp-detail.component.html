@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (danhsachDsNganchanTmp()) {
+      <div>
+        <h2 data-cy="danhsachDsNganchanTmpDetailsHeading">
+          <span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.detail.title">Danhsach Ds Nganchan Tmp</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.idDoiTuong">Id Doi Tuong</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.idDoiTuong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.ngayNganChan">Ngay Ngan Chan</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.ngayNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soHsCv">So Hs Cv</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.soHsCv }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soCc">So Cc</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.soCc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.soVaoSo">So Vao So</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.soVaoSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.moTa">Mo Ta</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.moTa }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.idDoituongGoc">Id Doituong Goc</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.idDoituongGoc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.loaiNganChan">Loai Ngan Chan</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.loaiNganChan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.danhsachDsNganchanTmp.loaiDoiTuong">Loai Doi Tuong</span></dt>
+          <dd>
+            <span>{{ danhsachDsNganchanTmp()!.loaiDoiTuong }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/danhsach-ds-nganchan-tmp', danhsachDsNganchanTmp()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

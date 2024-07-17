@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "cauHinhThongTinLoaiTaiSan": {
+      "home": {
+        "title": "Cau Hinh Thong Tin Loai Tai Sans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cau Hinh Thong Tin Loai Tai San",
+        "createOrEditLabel": "Create or edit a Cau Hinh Thong Tin Loai Tai San",
+        "notFound": "No Cau Hinh Thong Tin Loai Tai Sans found"
+      },
+      "created": "A new Cau Hinh Thong Tin Loai Tai San is created with identifier {{ param }}",
+      "updated": "A Cau Hinh Thong Tin Loai Tai San is updated with identifier {{ param }}",
+      "deleted": "A Cau Hinh Thong Tin Loai Tai San is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cau Hinh Thong Tin Loai Tai San {{ id }}?"
+      },
+      "detail": {
+        "title": "Cau Hinh Thong Tin Loai Tai San"
+      },
+      "id": "ID",
+      "idCauHinh": "Id Cau Hinh",
+      "noiDung": "Noi Dung",
+      "javascript": "Javascript",
+      "css": "Css",
+      "idLoaiTs": "Id Loai Ts",
+      "idDonVi": "Id Don Vi",
+      "trangThai": "Trang Thai",
+      "xml": "Xml"
+    }
+  }
+}

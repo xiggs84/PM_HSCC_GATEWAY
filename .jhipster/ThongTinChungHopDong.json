@@ -1,0 +1,155 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031713"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ngayLapHd",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiLapHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinVanBan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idLoaiHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dieuKhoanHd",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idHdGoc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "maHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayHen",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "soCongChung",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "congChungVien",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayKyHd",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soTienRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayRutTrich",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hdThuCong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThaiRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "chuKyNgoaiTruSo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idMaster",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idHdSdHb",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srcDmMaster",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "repRefUnique",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thongTinChung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "thongTinChungClob",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "ThongTinChungHopDong",
+  "relationships": [
+    {
+      "otherEntityName": "hopDongCongChung",
+      "relationshipName": "idHopDong",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "danhMucLoaiHopDong",
+      "relationshipName": "idLoaiHD",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "soCongChung",
+      "relationshipName": "idSoCongChung",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

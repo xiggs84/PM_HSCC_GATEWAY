@@ -1,0 +1,110 @@
+<div>
+  <h2 id="page-heading" data-cy="DanhMucLoaiVanBanHeading">
+    <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.home.title">Danh Muc Loai Van Bans</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-danh-muc-loai-van-ban"
+        [routerLink]="['/danh-muc-loai-van-ban/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.home.createLabel">Thêm mới một Danh Muc Loai Van Ban</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (danhMucLoaiVanBans?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.home.notFound">No Danh Muc Loai Van Bans found</span>
+    </div>
+  }
+
+  @if (danhMucLoaiVanBans && danhMucLoaiVanBans.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiVb">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.idLoaiVb">Id Loai Vb</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dienGiai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.dienGiai">Dien Giai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucLoaiVanBan.idLoaiHopDong">Id Loai Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (danhMucLoaiVanBan of danhMucLoaiVanBans; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/danh-muc-loai-van-ban', danhMucLoaiVanBan.id, 'view']">{{ danhMucLoaiVanBan.id }}</a>
+              </td>
+              <td>{{ danhMucLoaiVanBan.idLoaiVb }}</td>
+              <td>{{ danhMucLoaiVanBan.dienGiai }}</td>
+              <td>{{ danhMucLoaiVanBan.idLoaiHopDong }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/danh-muc-loai-van-ban', danhMucLoaiVanBan.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/danh-muc-loai-van-ban', danhMucLoaiVanBan.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(danhMucLoaiVanBan)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

@@ -1,0 +1,113 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-cau-hinh-hoa-don-dien-tu-heading"
+        data-cy="CauHinhHoaDonDienTuCreateUpdateHeading"
+        jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Cau Hinh Hoa Don Dien Tu
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDonVi" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.idDonVi">Id Don Vi</label>
+          <input type="number" class="form-control" name="idDonVi" id="field_idDonVi" data-cy="idDonVi" formControlName="idDonVi" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_apiUrl" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.apiUrl">Api Url</label>
+          <input type="text" class="form-control" name="apiUrl" id="field_apiUrl" data-cy="apiUrl" formControlName="apiUrl" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_account" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.account">Account</label>
+          <input type="text" class="form-control" name="account" id="field_account" data-cy="account" formControlName="account" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_accPass" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.accPass">Acc Pass</label>
+          <input type="text" class="form-control" name="accPass" id="field_accPass" data-cy="accPass" formControlName="accPass" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_username" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.username">Username</label>
+          <input type="text" class="form-control" name="username" id="field_username" data-cy="username" formControlName="username" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_password" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.password">Password</label>
+          <input type="text" class="form-control" name="password" id="field_password" data-cy="password" formControlName="password" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_mauSo" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.mauSo">Mau So</label>
+          <input type="text" class="form-control" name="mauSo" id="field_mauSo" data-cy="mauSo" formControlName="mauSo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_kyHieu" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.kyHieu">Ky Hieu</label>
+          <input type="text" class="form-control" name="kyHieu" id="field_kyHieu" data-cy="kyHieu" formControlName="kyHieu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nguoiThaoTac" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.nguoiThaoTac"
+            >Nguoi Thao Tac</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="nguoiThaoTac"
+            id="field_nguoiThaoTac"
+            data-cy="nguoiThaoTac"
+            formControlName="nguoiThaoTac"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.cauHinhHoaDonDienTu.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

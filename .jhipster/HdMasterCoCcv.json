@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240717023813"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "repRefUnique",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "persCode",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ldUnique",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenCanBo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idCanBo",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "HdMasterCoCcv",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

@@ -1,0 +1,70 @@
+{
+  "annotations": {
+    "changelogDate": "20240717022513"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "idSo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenSo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "giaTri",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idLoaiSo",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "SoCongChung",
+  "relationships": [
+    {
+      "otherEntityName": "hopDongCongChung",
+      "otherEntityRelationshipName": "idSoCongChung",
+      "relationshipName": "hopDongCongChung",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "thongTinChungHopDong",
+      "otherEntityRelationshipName": "idSoCongChung",
+      "relationshipName": "thongTinChungHopDong",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "danhSachHopDong",
+      "otherEntityRelationshipName": "idSoCongChung",
+      "relationshipName": "danhSachHopDong",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

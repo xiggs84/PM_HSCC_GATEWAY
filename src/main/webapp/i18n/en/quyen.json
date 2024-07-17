@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "quyen": {
+      "home": {
+        "title": "Quyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Quyen",
+        "createOrEditLabel": "Create or edit a Quyen",
+        "notFound": "No Quyens found"
+      },
+      "created": "A new Quyen is created with identifier {{ param }}",
+      "updated": "A Quyen is updated with identifier {{ param }}",
+      "deleted": "A Quyen is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Quyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Quyen"
+      },
+      "id": "ID",
+      "idQuyen": "Id Quyen",
+      "tenQuyen": "Ten Quyen"
+    }
+  }
+}

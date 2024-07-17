@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucLoaiGiayTo": {
+      "home": {
+        "title": "Danh Muc Loai Giay Tos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Loai Giay To",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Loai Giay To",
+        "notFound": "No Danh Muc Loai Giay Tos found"
+      },
+      "created": "Một Danh Muc Loai Giay To mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Loai Giay To cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Loai Giay To đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Loai Giay To {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Loai Giay To"
+      },
+      "id": "ID",
+      "idLoaiGiayTo": "Id Loai Giay To",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

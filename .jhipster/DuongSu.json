@@ -1,0 +1,85 @@
+{
+  "annotations": {
+    "changelogDate": "20240717024813"
+  },
+  "applications": ["gateway", "DuongSu"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDuongSu",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenDuongSu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "diaChi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "thongTinDs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDsGoc",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idMaster",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soGiayTo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idLoaiNganChan",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "syncStatus",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DuongSu",
+  "relationships": [
+    {
+      "otherEntityName": "danhMucTinhTrangHonNhan",
+      "relationshipName": "idTinhTrang",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "danhMucLoaiDuongSu",
+      "relationshipName": "idLoaiDs",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

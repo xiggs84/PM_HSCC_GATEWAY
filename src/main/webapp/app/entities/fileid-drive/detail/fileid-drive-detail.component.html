@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (fileidDrive()) {
+      <div>
+        <h2 data-cy="fileidDriveDetailsHeading"><span jhiTranslate="gatewayApp.fileidDrive.detail.title">Fileid Drive</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ fileidDrive()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.fileidDrive.fileId">File Id</span></dt>
+          <dd>
+            <span>{{ fileidDrive()!.fileId }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.fileidDrive.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ fileidDrive()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.fileidDrive.idHopDong">Id Hop Dong</span></dt>
+          <dd>
+            <span>{{ fileidDrive()!.idHopDong }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/fileid-drive', fileidDrive()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

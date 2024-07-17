@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucTheHtml": {
+      "home": {
+        "title": "Danh Muc The Htmls",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc The Html",
+        "createOrEditLabel": "Create or edit a Danh Muc The Html",
+        "notFound": "No Danh Muc The Htmls found"
+      },
+      "created": "A new Danh Muc The Html is created with identifier {{ param }}",
+      "updated": "A Danh Muc The Html is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc The Html is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc The Html {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc The Html"
+      },
+      "id": "ID",
+      "idType": "Id Type",
+      "type": "Type",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

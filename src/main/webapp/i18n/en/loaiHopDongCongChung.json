@@ -1,0 +1,27 @@
+{
+  "gatewayApp": {
+    "loaiHopDongCongChung": {
+      "home": {
+        "title": "Loai Hop Dong Cong Chungs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Loai Hop Dong Cong Chung",
+        "createOrEditLabel": "Create or edit a Loai Hop Dong Cong Chung",
+        "notFound": "No Loai Hop Dong Cong Chungs found"
+      },
+      "created": "A new Loai Hop Dong Cong Chung is created with identifier {{ param }}",
+      "updated": "A Loai Hop Dong Cong Chung is updated with identifier {{ param }}",
+      "deleted": "A Loai Hop Dong Cong Chung is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Loai Hop Dong Cong Chung {{ id }}?"
+      },
+      "detail": {
+        "title": "Loai Hop Dong Cong Chung"
+      },
+      "id": "ID",
+      "idLoaiHopDongCongChung": "Id Loai Hop Dong Cong Chung",
+      "dienGiai": "Dien Giai",
+      "giaTri": "Gia Tri",
+      "trangThai": "Trang Thai"
+    }
+  }
+}

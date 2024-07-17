@@ -1,0 +1,31 @@
+{
+  "gatewayApp": {
+    "menu": {
+      "home": {
+        "title": "Menus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Menu",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Menu",
+        "notFound": "No Menus found"
+      },
+      "created": "Một Menu mới được tạo với định danh {{ param }}",
+      "updated": "Một Menu cập nhật với định danh {{ param }}",
+      "deleted": "Một Menu đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Menu {{ id }}?"
+      },
+      "detail": {
+        "title": "Menu"
+      },
+      "id": "ID",
+      "idMenu": "Id Menu",
+      "tenMenu": "Ten Menu",
+      "idMenuCha": "Id Menu Cha",
+      "path": "Path",
+      "icon": "Icon",
+      "stt": "Stt",
+      "trangThai": "Trang Thai",
+      "idLoaiMenu": "Id Loai Menu"
+    }
+  }
+}

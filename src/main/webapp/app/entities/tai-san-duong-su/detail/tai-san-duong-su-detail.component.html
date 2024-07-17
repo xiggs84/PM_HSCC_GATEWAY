@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (taiSanDuongSu()) {
+      <div>
+        <h2 data-cy="taiSanDuongSuDetailsHeading"><span jhiTranslate="gatewayApp.taiSanDuongSu.detail.title">Tai San Duong Su</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.idLoaiHopDong">Id Loai Hop Dong</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.idLoaiHopDong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.idChungThuc">Id Chung Thuc</span></dt>
+          <dd>
+            <span>{{ taiSanDuongSu()!.idChungThuc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.taiSanDuongSu.idTaiSan">Id Tai San</span></dt>
+          <dd>
+            @if (taiSanDuongSu()!.idTaiSan) {
+              <div>
+                <a [routerLink]="['/tai-san', taiSanDuongSu()!.idTaiSan?.id, 'view']">{{ taiSanDuongSu()!.idTaiSan?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/tai-san-duong-su', taiSanDuongSu()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

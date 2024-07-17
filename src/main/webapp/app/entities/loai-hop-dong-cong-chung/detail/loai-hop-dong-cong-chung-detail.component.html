@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (loaiHopDongCongChung()) {
+      <div>
+        <h2 data-cy="loaiHopDongCongChungDetailsHeading">
+          <span jhiTranslate="gatewayApp.loaiHopDongCongChung.detail.title">Loai Hop Dong Cong Chung</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ loaiHopDongCongChung()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.loaiHopDongCongChung.idLoaiHopDongCongChung">Id Loai Hop Dong Cong Chung</span></dt>
+          <dd>
+            <span>{{ loaiHopDongCongChung()!.idLoaiHopDongCongChung }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.loaiHopDongCongChung.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ loaiHopDongCongChung()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.loaiHopDongCongChung.giaTri">Gia Tri</span></dt>
+          <dd>
+            <span>{{ loaiHopDongCongChung()!.giaTri }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.loaiHopDongCongChung.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ loaiHopDongCongChung()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/loai-hop-dong-cong-chung', loaiHopDongCongChung()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

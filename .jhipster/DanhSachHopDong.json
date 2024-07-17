@@ -1,0 +1,129 @@
+{
+  "annotations": {
+    "changelogDate": "20240717032213"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ngayLapHd",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiLapHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idLoaiHd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayThaoTac",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "nguoiThaoTac",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "srcHopDong",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soCongChung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "congChungVien",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soTienRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "hdThuCong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "trangThaiRutTrich",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "chuKyNgoaiTruSo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "strSearch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayRutTrichText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ngayThaoTacRutTrich",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "thuLaoCongChung",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quyenLaiSt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soLaiSt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quyenLaiTl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soLaiTl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcKySoPdf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "srcKySoPdfSigned",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhSachHopDong",
+  "relationships": [
+    {
+      "otherEntityName": "hopDongCongChung",
+      "relationshipName": "idHopDong",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "soCongChung",
+      "relationshipName": "idSoCongChung",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

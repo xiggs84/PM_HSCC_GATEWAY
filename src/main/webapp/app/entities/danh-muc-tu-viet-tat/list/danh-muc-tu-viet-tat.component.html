@@ -1,0 +1,142 @@
+<div>
+  <h2 id="page-heading" data-cy="DanhMucTuVietTatHeading">
+    <span jhiTranslate="gatewayApp.danhMucTuVietTat.home.title">Danh Muc Tu Viet Tats</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucTuVietTat.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-danh-muc-tu-viet-tat"
+        [routerLink]="['/danh-muc-tu-viet-tat/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.danhMucTuVietTat.home.createLabel">Thêm mới một Danh Muc Tu Viet Tat</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (danhMucTuVietTats?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.danhMucTuVietTat.home.notFound">No Danh Muc Tu Viet Tats found</span>
+    </div>
+  }
+
+  @if (danhMucTuVietTats && danhMucTuVietTats.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idVietTat">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.idVietTat">Id Viet Tat</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="tuVietTat">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.tuVietTat">Tu Viet Tat</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dienGiai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.dienGiai">Dien Giai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.danhMucTuVietTat.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (danhMucTuVietTat of danhMucTuVietTats; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/danh-muc-tu-viet-tat', danhMucTuVietTat.id, 'view']">{{ danhMucTuVietTat.id }}</a>
+              </td>
+              <td>{{ danhMucTuVietTat.idVietTat }}</td>
+              <td>{{ danhMucTuVietTat.tuVietTat }}</td>
+              <td>{{ danhMucTuVietTat.dienGiai }}</td>
+              <td>{{ danhMucTuVietTat.idDonVi }}</td>
+              <td>{{ danhMucTuVietTat.nguoiThaoTac }}</td>
+              <td>{{ danhMucTuVietTat.ngayThaoTac | formatMediumDatetime }}</td>
+              <td>{{ danhMucTuVietTat.trangThai }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/danh-muc-tu-viet-tat', danhMucTuVietTat.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/danh-muc-tu-viet-tat', danhMucTuVietTat.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(danhMucTuVietTat)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

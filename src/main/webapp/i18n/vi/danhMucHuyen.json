@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "danhMucHuyen": {
+      "home": {
+        "title": "Danh Muc Huyens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Huyen",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Huyen",
+        "notFound": "No Danh Muc Huyens found"
+      },
+      "created": "Một Danh Muc Huyen mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Huyen cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Huyen đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Huyen {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Huyen"
+      },
+      "id": "ID",
+      "maHuyen": "Ma Huyen",
+      "tenHuyen": "Ten Huyen",
+      "trangThai": "Trang Thai",
+      "danhMucXa": "Danh Muc Xa",
+      "danhMucDonVi": "Danh Muc Don Vi",
+      "maTinh": "Ma Tinh"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (chiTietNganChan()) {
+      <div>
+        <h2 data-cy="chiTietNganChanDetailsHeading">
+          <span jhiTranslate="gatewayApp.chiTietNganChan.detail.title">Chi Tiet Ngan Chan</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.stt">Stt</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.stt }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.idDoiTuong">Id Doi Tuong</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.idDoiTuong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.ngayThaoTac">Ngay Thao Tac</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.ngayThaoTac | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.loaiDoiTuong">Loai Doi Tuong</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.loaiDoiTuong }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.soHsCv">So Hs Cv</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.soHsCv }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.soCc">So Cc</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.soCc }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.soVaoSo">So Vao So</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.soVaoSo }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.moTa">Mo Ta</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.moTa }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.ngayNganChan">Ngay Ngan Chan</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.ngayNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.ngayBdNganChan">Ngay Bd Ngan Chan</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.ngayBdNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.ngayKtNganChan">Ngay Kt Ngan Chan</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.ngayKtNganChan | formatMediumDate }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.trangThai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.nguoiThaoTac">Nguoi Thao Tac</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.nguoiThaoTac }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.loaiNganChan">Loai Ngan Chan</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.loaiNganChan }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.chiTietNganChan.ngayCongVan">Ngay Cong Van</span></dt>
+          <dd>
+            <span>{{ chiTietNganChan()!.ngayCongVan | formatMediumDate }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/chi-tiet-ngan-chan', chiTietNganChan()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

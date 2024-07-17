@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucNhomHopDong": {
+      "home": {
+        "title": "Danh Muc Nhom Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Nhom Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Nhom Hop Dong",
+        "notFound": "No Danh Muc Nhom Hop Dongs found"
+      },
+      "created": "Một Danh Muc Nhom Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Nhom Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Nhom Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Nhom Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Nhom Hop Dong"
+      },
+      "id": "ID",
+      "idNhom": "Id Nhom",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

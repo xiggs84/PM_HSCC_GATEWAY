@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "taisanSaiQsddDgc": {
+      "home": {
+        "title": "Taisan Sai Qsdd Dgcs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Taisan Sai Qsdd Dgc",
+        "createOrEditLabel": "Create or edit a Taisan Sai Qsdd Dgc",
+        "notFound": "No Taisan Sai Qsdd Dgcs found"
+      },
+      "created": "A new Taisan Sai Qsdd Dgc is created with identifier {{ param }}",
+      "updated": "A Taisan Sai Qsdd Dgc is updated with identifier {{ param }}",
+      "deleted": "A Taisan Sai Qsdd Dgc is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Taisan Sai Qsdd Dgc {{ id }}?"
+      },
+      "detail": {
+        "title": "Taisan Sai Qsdd Dgc"
+      },
+      "id": "ID",
+      "idMaster": "Id Master",
+      "noiCapQsdd": "Noi Cap Qsdd"
+    }
+  }
+}

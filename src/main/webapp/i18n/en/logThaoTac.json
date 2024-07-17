@@ -1,0 +1,29 @@
+{
+  "gatewayApp": {
+    "logThaoTac": {
+      "home": {
+        "title": "Log Thao Tacs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Log Thao Tac",
+        "createOrEditLabel": "Create or edit a Log Thao Tac",
+        "notFound": "No Log Thao Tacs found"
+      },
+      "created": "A new Log Thao Tac is created with identifier {{ param }}",
+      "updated": "A Log Thao Tac is updated with identifier {{ param }}",
+      "deleted": "A Log Thao Tac is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Log Thao Tac {{ id }}?"
+      },
+      "detail": {
+        "title": "Log Thao Tac"
+      },
+      "id": "ID",
+      "idLog": "Id Log",
+      "dienGiai": "Dien Giai",
+      "tenBang": "Ten Bang",
+      "idKhoa": "Id Khoa",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "nguoiThaoTac": "Nguoi Thao Tac"
+    }
+  }
+}

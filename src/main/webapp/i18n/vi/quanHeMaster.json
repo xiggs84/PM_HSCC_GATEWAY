@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "quanHeMaster": {
+      "home": {
+        "title": "Quan He Masters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Quan He Master",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Quan He Master",
+        "notFound": "No Quan He Masters found"
+      },
+      "created": "Một Quan He Master mới được tạo với định danh {{ param }}",
+      "updated": "Một Quan He Master cập nhật với định danh {{ param }}",
+      "deleted": "Một Quan He Master đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Quan He Master {{ id }}?"
+      },
+      "detail": {
+        "title": "Quan He Master"
+      },
+      "id": "ID",
+      "idDuongSu": "Id Duong Su",
+      "idDuongSuQh": "Id Duong Su Qh"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "danhMucCapQuanLy": {
+      "home": {
+        "title": "Danh Muc Cap Quan Lies",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Cap Quan Ly",
+        "createOrEditLabel": "Create or edit a Danh Muc Cap Quan Ly",
+        "notFound": "No Danh Muc Cap Quan Lies found"
+      },
+      "created": "A new Danh Muc Cap Quan Ly is created with identifier {{ param }}",
+      "updated": "A Danh Muc Cap Quan Ly is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Cap Quan Ly is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Cap Quan Ly {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Cap Quan Ly"
+      },
+      "id": "ID",
+      "idCapQl": "Id Cap Ql",
+      "dienGiai": "Dien Giai"
+    }
+  }
+}

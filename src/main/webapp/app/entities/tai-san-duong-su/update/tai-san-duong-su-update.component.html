@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-tai-san-duong-su-heading"
+        data-cy="TaiSanDuongSuCreateUpdateHeading"
+        jhiTranslate="gatewayApp.taiSanDuongSu.home.createOrEditLabel"
+      >
+        Thêm mới hoặc cập nhật Tai San Duong Su
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.taiSanDuongSu.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_trangThai" jhiTranslate="gatewayApp.taiSanDuongSu.trangThai">Trang Thai</label>
+          <input type="number" class="form-control" name="trangThai" id="field_trangThai" data-cy="trangThai" formControlName="trangThai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idDuongSu" jhiTranslate="gatewayApp.taiSanDuongSu.idDuongSu">Id Duong Su</label>
+          <input type="number" class="form-control" name="idDuongSu" id="field_idDuongSu" data-cy="idDuongSu" formControlName="idDuongSu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ngayThaoTac" jhiTranslate="gatewayApp.taiSanDuongSu.ngayThaoTac">Ngay Thao Tac</label>
+          <div class="input-group">
+            <input
+              id="field_ngayThaoTac"
+              data-cy="ngayThaoTac"
+              type="text"
+              class="form-control"
+              name="ngayThaoTac"
+              ngbDatepicker
+              #ngayThaoTacDp="ngbDatepicker"
+              formControlName="ngayThaoTac"
+            />
+            <button type="button" class="btn btn-secondary" (click)="ngayThaoTacDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idLoaiHopDong" jhiTranslate="gatewayApp.taiSanDuongSu.idLoaiHopDong">Id Loai Hop Dong</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idLoaiHopDong"
+            id="field_idLoaiHopDong"
+            data-cy="idLoaiHopDong"
+            formControlName="idLoaiHopDong"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idChungThuc" jhiTranslate="gatewayApp.taiSanDuongSu.idChungThuc">Id Chung Thuc</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idChungThuc"
+            id="field_idChungThuc"
+            data-cy="idChungThuc"
+            formControlName="idChungThuc"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idTaiSan" jhiTranslate="gatewayApp.taiSanDuongSu.idTaiSan">Id Tai San</label>
+          <select
+            class="form-control"
+            id="field_idTaiSan"
+            data-cy="idTaiSan"
+            name="idTaiSan"
+            formControlName="idTaiSan"
+            [compareWith]="compareTaiSan"
+          >
+            <option [ngValue]="null"></option>
+            @for (taiSanOption of idTaiSansCollection; track $index) {
+              <option [ngValue]="taiSanOption">{{ taiSanOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

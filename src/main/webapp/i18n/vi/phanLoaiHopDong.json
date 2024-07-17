@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "phanLoaiHopDong": {
+      "home": {
+        "title": "Phan Loai Hop Dongs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Phan Loai Hop Dong",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Phan Loai Hop Dong",
+        "notFound": "No Phan Loai Hop Dongs found"
+      },
+      "created": "Một Phan Loai Hop Dong mới được tạo với định danh {{ param }}",
+      "updated": "Một Phan Loai Hop Dong cập nhật với định danh {{ param }}",
+      "deleted": "Một Phan Loai Hop Dong đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Phan Loai Hop Dong {{ id }}?"
+      },
+      "detail": {
+        "title": "Phan Loai Hop Dong"
+      },
+      "id": "ID",
+      "idPhanLoaiHopDong": "Id Phan Loai Hop Dong",
+      "dienGiai": "Dien Giai",
+      "cauHinhMauHopDong": "Cau Hinh Mau Hop Dong"
+    }
+  }
+}

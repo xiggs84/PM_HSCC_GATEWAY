@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (tinhTrangTaiSan()) {
+      <div>
+        <h2 data-cy="tinhTrangTaiSanDetailsHeading">
+          <span jhiTranslate="gatewayApp.tinhTrangTaiSan.detail.title">Tinh Trang Tai San</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ tinhTrangTaiSan()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.tinhTrangTaiSan.idTinhTrang">Id Tinh Trang</span></dt>
+          <dd>
+            <span>{{ tinhTrangTaiSan()!.idTinhTrang }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.tinhTrangTaiSan.dienGiai">Dien Giai</span></dt>
+          <dd>
+            <span>{{ tinhTrangTaiSan()!.dienGiai }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.tinhTrangTaiSan.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ tinhTrangTaiSan()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/tinh-trang-tai-san', tinhTrangTaiSan()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

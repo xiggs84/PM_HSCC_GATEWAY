@@ -1,0 +1,25 @@
+{
+  "gatewayApp": {
+    "migrations": {
+      "home": {
+        "title": "Migrations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Migrations",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Migrations",
+        "notFound": "No Migrations found"
+      },
+      "created": "Một Migrations mới được tạo với định danh {{ param }}",
+      "updated": "Một Migrations cập nhật với định danh {{ param }}",
+      "deleted": "Một Migrations đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Migrations {{ id }}?"
+      },
+      "detail": {
+        "title": "Migrations"
+      },
+      "id": "ID",
+      "migration": "Migration",
+      "batch": "Batch"
+    }
+  }
+}

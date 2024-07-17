@@ -1,0 +1,28 @@
+{
+  "gatewayApp": {
+    "danhMucTinh": {
+      "home": {
+        "title": "Danh Muc Tinhs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Danh Muc Tinh",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Danh Muc Tinh",
+        "notFound": "No Danh Muc Tinhs found"
+      },
+      "created": "Một Danh Muc Tinh mới được tạo với định danh {{ param }}",
+      "updated": "Một Danh Muc Tinh cập nhật với định danh {{ param }}",
+      "deleted": "Một Danh Muc Tinh đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Danh Muc Tinh {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Tinh"
+      },
+      "id": "ID",
+      "maTinh": "Ma Tinh",
+      "tenTinh": "Ten Tinh",
+      "trangThai": "Trang Thai",
+      "danhMucHuyen": "Danh Muc Huyen",
+      "danhMucDonVi": "Danh Muc Don Vi"
+    }
+  }
+}

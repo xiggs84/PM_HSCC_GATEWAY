@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240717022213"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLoaiHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "chieuDai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tienTo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "giaTri",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "hienThi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "CauHinhHopDong",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

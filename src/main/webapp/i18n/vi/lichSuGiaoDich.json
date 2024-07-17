@@ -1,0 +1,30 @@
+{
+  "gatewayApp": {
+    "lichSuGiaoDich": {
+      "home": {
+        "title": "Lich Su Giao Diches",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Lich Su Giao Dich",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Lich Su Giao Dich",
+        "notFound": "No Lich Su Giao Diches found"
+      },
+      "created": "Một Lich Su Giao Dich mới được tạo với định danh {{ param }}",
+      "updated": "Một Lich Su Giao Dich cập nhật với định danh {{ param }}",
+      "deleted": "Một Lich Su Giao Dich đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Lich Su Giao Dich {{ id }}?"
+      },
+      "detail": {
+        "title": "Lich Su Giao Dich"
+      },
+      "id": "ID",
+      "idTaiSan": "Id Tai San",
+      "idDuongSu": "Id Duong Su",
+      "trangThai": "Trang Thai",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "idHopDong": "Id Hop Dong",
+      "idLoaiHopDong": "Id Loai Hop Dong",
+      "idChungThuc": "Id Chung Thuc"
+    }
+  }
+}

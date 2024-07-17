@@ -1,0 +1,49 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021713"
+  },
+  "applications": ["gateway", "CanBo"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "maHuyen",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenHuyen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucHuyen",
+  "relationships": [
+    {
+      "otherEntityName": "danhMucXa",
+      "otherEntityRelationshipName": "maHuyen",
+      "relationshipName": "danhMucXa",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "danhMucDonVi",
+      "otherEntityRelationshipName": "idHuyen",
+      "relationshipName": "danhMucDonVi",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "danhMucTinh",
+      "relationshipName": "maTinh",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

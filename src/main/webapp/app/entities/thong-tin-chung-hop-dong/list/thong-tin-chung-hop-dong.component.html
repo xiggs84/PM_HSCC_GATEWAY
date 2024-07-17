@@ -1,0 +1,371 @@
+<div>
+  <h2 id="page-heading" data-cy="ThongTinChungHopDongHeading">
+    <span jhiTranslate="gatewayApp.thongTinChungHopDong.home.title">Thong Tin Chung Hop Dongs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [animation]="isLoading ? 'spin' : undefined"></fa-icon>
+        <span jhiTranslate="gatewayApp.thongTinChungHopDong.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-thong-tin-chung-hop-dong"
+        [routerLink]="['/thong-tin-chung-hop-dong/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="gatewayApp.thongTinChungHopDong.home.createLabel">Thêm mới một Thong Tin Chung Hop Dong</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (thongTinChungHopDongs?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="gatewayApp.thongTinChungHopDong.home.notFound">No Thong Tin Chung Hop Dongs found</span>
+    </div>
+  }
+
+  @if (thongTinChungHopDongs && thongTinChungHopDongs.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayLapHd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayLapHd">Ngay Lap Hd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiLapHd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.nguoiLapHd">Nguoi Lap Hd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinVanBan">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.thongTinVanBan">Thong Tin Van Ban</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThai">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.trangThai">Trang Thai</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiHd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idLoaiHd">Id Loai Hd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dieuKhoanHd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.dieuKhoanHd">Dieu Khoan Hd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idDonVi">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idDonVi">Id Don Vi</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayThaoTac">Ngay Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiThaoTac">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.nguoiThaoTac">Nguoi Thao Tac</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHdGoc">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idHdGoc">Id Hd Goc</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="maHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.maHopDong">Ma Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="srcHopDong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.srcHopDong">Src Hop Dong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayHen">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayHen">Ngay Hen</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soCongChung">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.soCongChung">So Cong Chung</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="congChungVien">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.congChungVien">Cong Chung Vien</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayKyHd">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayKyHd">Ngay Ky Hd</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nguoiRutTrich">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.nguoiRutTrich">Nguoi Rut Trich</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="soTienRutTrich">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.soTienRutTrich">So Tien Rut Trich</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayRutTrich">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayRutTrich">Ngay Rut Trich</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="hdThuCong">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.hdThuCong">Hd Thu Cong</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="trangThaiRutTrich">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.trangThaiRutTrich">Trang Thai Rut Trich</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="chuKyNgoaiTruSo">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.chuKyNgoaiTruSo">Chu Ky Ngoai Tru So</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="strSearch">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.strSearch">Str Search</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idMaster">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idMaster">Id Master</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHdSdHb">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idHdSdHb">Id Hd Sd Hb</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="srcDmMaster">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.srcDmMaster">Src Dm Master</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="repRefUnique">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.repRefUnique">Rep Ref Unique</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="ngayText">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.ngayText">Ngay Text</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinChung">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.thongTinChung">Thong Tin Chung</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="thongTinChungClob">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.thongTinChungClob">Thong Tin Chung Clob</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idHopDong.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idHopDong">Id Hop Dong</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idLoaiHD.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idLoaiHD">Id Loai HD</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="idSoCongChung.id">
+              <div class="d-flex">
+                <span jhiTranslate="gatewayApp.thongTinChungHopDong.idSoCongChung">Id So Cong Chung</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (thongTinChungHopDong of thongTinChungHopDongs; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/thong-tin-chung-hop-dong', thongTinChungHopDong.id, 'view']">{{ thongTinChungHopDong.id }}</a>
+              </td>
+              <td>{{ thongTinChungHopDong.ngayLapHd | formatMediumDate }}</td>
+              <td>{{ thongTinChungHopDong.nguoiLapHd }}</td>
+              <td>{{ thongTinChungHopDong.thongTinVanBan }}</td>
+              <td>{{ thongTinChungHopDong.trangThai }}</td>
+              <td>{{ thongTinChungHopDong.idLoaiHd }}</td>
+              <td>{{ thongTinChungHopDong.dieuKhoanHd }}</td>
+              <td>{{ thongTinChungHopDong.idDonVi }}</td>
+              <td>{{ thongTinChungHopDong.ngayThaoTac | formatMediumDate }}</td>
+              <td>{{ thongTinChungHopDong.nguoiThaoTac }}</td>
+              <td>{{ thongTinChungHopDong.idHdGoc }}</td>
+              <td>{{ thongTinChungHopDong.maHopDong }}</td>
+              <td>{{ thongTinChungHopDong.srcHopDong }}</td>
+              <td>{{ thongTinChungHopDong.ngayHen | formatMediumDate }}</td>
+              <td>{{ thongTinChungHopDong.soCongChung }}</td>
+              <td>{{ thongTinChungHopDong.congChungVien }}</td>
+              <td>{{ thongTinChungHopDong.ngayKyHd | formatMediumDate }}</td>
+              <td>{{ thongTinChungHopDong.nguoiRutTrich }}</td>
+              <td>{{ thongTinChungHopDong.soTienRutTrich }}</td>
+              <td>{{ thongTinChungHopDong.ngayRutTrich | formatMediumDate }}</td>
+              <td>{{ thongTinChungHopDong.hdThuCong }}</td>
+              <td>{{ thongTinChungHopDong.trangThaiRutTrich }}</td>
+              <td>{{ thongTinChungHopDong.chuKyNgoaiTruSo }}</td>
+              <td>{{ thongTinChungHopDong.strSearch }}</td>
+              <td>{{ thongTinChungHopDong.idMaster }}</td>
+              <td>{{ thongTinChungHopDong.idHdSdHb }}</td>
+              <td>{{ thongTinChungHopDong.srcDmMaster }}</td>
+              <td>{{ thongTinChungHopDong.repRefUnique }}</td>
+              <td>{{ thongTinChungHopDong.ngayText }}</td>
+              <td>{{ thongTinChungHopDong.thongTinChung }}</td>
+              <td>{{ thongTinChungHopDong.thongTinChungClob }}</td>
+              <td>
+                @if (thongTinChungHopDong.idHopDong) {
+                  <div>
+                    <a [routerLink]="['/hop-dong-cong-chung', thongTinChungHopDong.idHopDong.id, 'view']">{{
+                      thongTinChungHopDong.idHopDong.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (thongTinChungHopDong.idLoaiHD) {
+                  <div>
+                    <a [routerLink]="['/danh-muc-loai-hop-dong', thongTinChungHopDong.idLoaiHD.id, 'view']">{{
+                      thongTinChungHopDong.idLoaiHD.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (thongTinChungHopDong.idSoCongChung) {
+                  <div>
+                    <a [routerLink]="['/so-cong-chung', thongTinChungHopDong.idSoCongChung.id, 'view']">{{
+                      thongTinChungHopDong.idSoCongChung.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a
+                    [routerLink]="['/thong-tin-chung-hop-dong', thongTinChungHopDong.id, 'view']"
+                    class="btn btn-info btn-sm"
+                    data-cy="entityDetailsButton"
+                  >
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Xem</span>
+                  </a>
+
+                  <a
+                    [routerLink]="['/thong-tin-chung-hop-dong', thongTinChungHopDong.id, 'edit']"
+                    class="btn btn-primary btn-sm"
+                    data-cy="entityEditButton"
+                  >
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Sửa</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(thongTinChungHopDong)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Xóa</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

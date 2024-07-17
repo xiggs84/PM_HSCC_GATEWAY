@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717031013"
+  },
+  "applications": ["gateway", "HopDong"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idPhanLoaiHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "PhanLoaiHopDong",
+  "relationships": [
+    {
+      "otherEntityName": "cauHinhMauHopDong",
+      "otherEntityRelationshipName": "idPhanLoaiHD",
+      "relationshipName": "cauHinhMauHopDong",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

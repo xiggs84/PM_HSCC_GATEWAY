@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "hdccCoTien": {
+      "home": {
+        "title": "Hdcc Co Tiens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Hdcc Co Tien",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Hdcc Co Tien",
+        "notFound": "No Hdcc Co Tiens found"
+      },
+      "created": "Một Hdcc Co Tien mới được tạo với định danh {{ param }}",
+      "updated": "Một Hdcc Co Tien cập nhật với định danh {{ param }}",
+      "deleted": "Một Hdcc Co Tien đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Hdcc Co Tien {{ id }}?"
+      },
+      "detail": {
+        "title": "Hdcc Co Tien"
+      },
+      "id": "ID",
+      "idMaster": "Id Master",
+      "soCongChung": "So Cong Chung",
+      "soTienRutTrich": "So Tien Rut Trich"
+    }
+  }
+}

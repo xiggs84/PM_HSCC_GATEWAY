@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "userOnline": {
+      "home": {
+        "title": "User Onlines",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Online",
+        "createOrEditLabel": "Create or edit a User Online",
+        "notFound": "No User Onlines found"
+      },
+      "created": "A new User Online is created with identifier {{ param }}",
+      "updated": "A User Online is updated with identifier {{ param }}",
+      "deleted": "A User Online is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Online {{ id }}?"
+      },
+      "detail": {
+        "title": "User Online"
+      },
+      "id": "ID",
+      "sessionId": "Session Id",
+      "time": "Time",
+      "browser": "Browser"
+    }
+  }
+}

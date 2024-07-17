@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240717023113"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idDonVi",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "idHopDong",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "fKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ketQua",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trangThai",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "ngayPhatHanh",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "LogHoaDonDienTu",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

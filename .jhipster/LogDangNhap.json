@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021413"
+  },
+  "applications": ["gateway"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ngayDangNhap",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idCanBo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tenDangNhap",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "LogDangNhap",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

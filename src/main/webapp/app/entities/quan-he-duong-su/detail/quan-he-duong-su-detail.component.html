@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (quanHeDuongSu()) {
+      <div>
+        <h2 data-cy="quanHeDuongSuDetailsHeading"><span jhiTranslate="gatewayApp.quanHeDuongSu.detail.title">Quan He Duong Su</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSu">Id Duong Su</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.idDuongSu }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeDuongSu.idDuongSuQh">Id Duong Su Qh</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.idDuongSuQh }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeDuongSu.idQuanHe">Id Quan He</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.idQuanHe }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeDuongSu.thongTinQuanHe">Thong Tin Quan He</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.thongTinQuanHe }}</span>
+          </dd>
+          <dt><span jhiTranslate="gatewayApp.quanHeDuongSu.trangThai">Trang Thai</span></dt>
+          <dd>
+            <span>{{ quanHeDuongSu()!.trangThai }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Quay lại</span>
+        </button>
+
+        <button type="button" [routerLink]="['/quan-he-duong-su', quanHeDuongSu()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Sửa</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

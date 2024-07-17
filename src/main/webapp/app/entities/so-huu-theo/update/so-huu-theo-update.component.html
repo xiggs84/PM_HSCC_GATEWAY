@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-so-huu-theo-heading" data-cy="SoHuuTheoCreateUpdateHeading" jhiTranslate="gatewayApp.soHuuTheo.home.createOrEditLabel">
+        Thêm mới hoặc cập nhật So Huu Theo
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="gatewayApp.soHuuTheo.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idSoHuu" jhiTranslate="gatewayApp.soHuuTheo.idSoHuu">Id So Huu</label>
+          <input type="number" class="form-control" name="idSoHuu" id="field_idSoHuu" data-cy="idSoHuu" formControlName="idSoHuu" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dienGiai" jhiTranslate="gatewayApp.soHuuTheo.dienGiai">Dien Giai</label>
+          <input type="text" class="form-control" name="dienGiai" id="field_dienGiai" data-cy="dienGiai" formControlName="dienGiai" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_tenGcn" jhiTranslate="gatewayApp.soHuuTheo.tenGcn">Ten Gcn</label>
+          <input type="text" class="form-control" name="tenGcn" id="field_tenGcn" data-cy="tenGcn" formControlName="tenGcn" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Hủy</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Lưu</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "gatewayApp": {
+    "danhMucNoiCapQsh": {
+      "home": {
+        "title": "Danh Muc Noi Cap Qshes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Danh Muc Noi Cap Qsh",
+        "createOrEditLabel": "Create or edit a Danh Muc Noi Cap Qsh",
+        "notFound": "No Danh Muc Noi Cap Qshes found"
+      },
+      "created": "A new Danh Muc Noi Cap Qsh is created with identifier {{ param }}",
+      "updated": "A Danh Muc Noi Cap Qsh is updated with identifier {{ param }}",
+      "deleted": "A Danh Muc Noi Cap Qsh is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Danh Muc Noi Cap Qsh {{ id }}?"
+      },
+      "detail": {
+        "title": "Danh Muc Noi Cap Qsh"
+      },
+      "id": "ID",
+      "idNoiCap": "Id Noi Cap",
+      "dienGiai": "Dien Giai",
+      "idDonVi": "Id Don Vi"
+    }
+  }
+}

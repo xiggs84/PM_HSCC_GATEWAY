@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240717021013"
+  },
+  "applications": ["gateway", "CanBo"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "idLoaiDv",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dienGiai",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "DanhMucLoaiDonVi",
+  "relationships": [
+    {
+      "otherEntityName": "danhMucDonVi",
+      "otherEntityRelationshipName": "idLoaiDv",
+      "relationshipName": "danhMucDonVi",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl",
+  "skipServer": true
+}

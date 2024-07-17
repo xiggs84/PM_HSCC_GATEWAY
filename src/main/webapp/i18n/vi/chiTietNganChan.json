@@ -1,0 +1,38 @@
+{
+  "gatewayApp": {
+    "chiTietNganChan": {
+      "home": {
+        "title": "Chi Tiet Ngan Chans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Chi Tiet Ngan Chan",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Chi Tiet Ngan Chan",
+        "notFound": "No Chi Tiet Ngan Chans found"
+      },
+      "created": "Một Chi Tiet Ngan Chan mới được tạo với định danh {{ param }}",
+      "updated": "Một Chi Tiet Ngan Chan cập nhật với định danh {{ param }}",
+      "deleted": "Một Chi Tiet Ngan Chan đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Chi Tiet Ngan Chan {{ id }}?"
+      },
+      "detail": {
+        "title": "Chi Tiet Ngan Chan"
+      },
+      "id": "ID",
+      "stt": "Stt",
+      "idDoiTuong": "Id Doi Tuong",
+      "ngayThaoTac": "Ngay Thao Tac",
+      "loaiDoiTuong": "Loai Doi Tuong",
+      "soHsCv": "So Hs Cv",
+      "soCc": "So Cc",
+      "soVaoSo": "So Vao So",
+      "moTa": "Mo Ta",
+      "ngayNganChan": "Ngay Ngan Chan",
+      "ngayBdNganChan": "Ngay Bd Ngan Chan",
+      "ngayKtNganChan": "Ngay Kt Ngan Chan",
+      "trangThai": "Trang Thai",
+      "nguoiThaoTac": "Nguoi Thao Tac",
+      "loaiNganChan": "Loai Ngan Chan",
+      "ngayCongVan": "Ngay Cong Van"
+    }
+  }
+}
