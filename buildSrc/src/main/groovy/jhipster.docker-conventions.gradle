@@ -13,7 +13,8 @@ jib {
         }
     }
     to {
-        image = "gateway:latest"
+        image = "localhost:5000/gateway:latest"
+        allowInsecureRegistries = true
     }
     container {
         entrypoint = ["bash", "-c", "/entrypoint.sh"]

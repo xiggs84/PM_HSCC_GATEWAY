@@ -2,7 +2,7 @@
 name: gateway
 services:
   app:
-    image: gateway
+    image: localhost:5000/gateway
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
